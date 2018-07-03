@@ -1,0 +1,536 @@
+"
+Windows Cryptography constants
+"
+Class {
+	#name : #WinCryptConstants,
+	#superclass : #SharedPool,
+	#classVars : [
+		'ALG_CLASS_ALL',
+		'ALG_CLASS_ANY',
+		'ALG_CLASS_DATA_ENCRYPT',
+		'ALG_CLASS_HASH',
+		'ALG_CLASS_KEY_EXCHANGE',
+		'ALG_CLASS_MSG_ENCRYPT',
+		'ALG_CLASS_SIGNATURE',
+		'ALG_SID_3DES',
+		'ALG_SID_3DES_112',
+		'ALG_SID_AES',
+		'ALG_SID_AES_128',
+		'ALG_SID_AES_192',
+		'ALG_SID_AES_256',
+		'ALG_SID_AGREED_KEY_ANY',
+		'ALG_SID_ANY',
+		'ALG_SID_CAST',
+		'ALG_SID_CYLINK_MEK',
+		'ALG_SID_DES',
+		'ALG_SID_DESX',
+		'ALG_SID_DH_EPHEM',
+		'ALG_SID_DH_SANDF',
+		'ALG_SID_DSS_ANY',
+		'ALG_SID_DSS_DMS',
+		'ALG_SID_DSS_PKCS',
+		'ALG_SID_HASH_REPLACE_OWF',
+		'ALG_SID_HMAC',
+		'ALG_SID_IDEA',
+		'ALG_SID_KEA',
+		'ALG_SID_MAC',
+		'ALG_SID_MD2',
+		'ALG_SID_MD4',
+		'ALG_SID_MD5',
+		'ALG_SID_PCT1_MASTER',
+		'ALG_SID_RC2',
+		'ALG_SID_RC4',
+		'ALG_SID_RC5',
+		'ALG_SID_RIPEMD',
+		'ALG_SID_RIPEMD160',
+		'ALG_SID_RSA_ANY',
+		'ALG_SID_RSA_ENTRUST',
+		'ALG_SID_RSA_MSATWORK',
+		'ALG_SID_RSA_PGP',
+		'ALG_SID_RSA_PKCS',
+		'ALG_SID_SAFERSK128',
+		'ALG_SID_SAFERSK64',
+		'ALG_SID_SCHANNEL_ENC_KEY',
+		'ALG_SID_SCHANNEL_MAC_KEY',
+		'ALG_SID_SCHANNEL_MASTER_HASH',
+		'ALG_SID_SEAL',
+		'ALG_SID_SHA',
+		'ALG_SID_SHA1',
+		'ALG_SID_SHA_256',
+		'ALG_SID_SHA_384',
+		'ALG_SID_SHA_512',
+		'ALG_SID_SKIPJACK',
+		'ALG_SID_SSL2_MASTER',
+		'ALG_SID_SSL3SHAMD5',
+		'ALG_SID_SSL3_MASTER',
+		'ALG_SID_TEK',
+		'ALG_SID_TLS1PRF',
+		'ALG_SID_TLS1_MASTER',
+		'ALG_TYPE_ANY',
+		'ALG_TYPE_BLOCK',
+		'ALG_TYPE_DH',
+		'ALG_TYPE_DSS',
+		'ALG_TYPE_RSA',
+		'ALG_TYPE_SECURECHANNEL',
+		'ALG_TYPE_STREAM',
+		'AT_KEYEXCHANGE',
+		'AT_SIGNATURE',
+		'CALG_3DES',
+		'CALG_AES',
+		'CALG_AES_128',
+		'CALG_AES_192',
+		'CALG_AES_256',
+		'CALG_CYLINK_MEK',
+		'CALG_DES',
+		'CALG_DESX',
+		'CALG_DH_EPHEM',
+		'CALG_DSS_SIGN',
+		'CALG_KEA_KEYX',
+		'CALG_MAC',
+		'CALG_MD2',
+		'CALG_MD4',
+		'CALG_MD5',
+		'CALG_RC2',
+		'CALG_RC4',
+		'CALG_RSA_KEYX',
+		'CALG_RSA_SIGN',
+		'CALG_SEAL',
+		'CALG_SHA',
+		'CALG_SHA1',
+		'CALG_SKIPJACK',
+		'CALG_TLS1PRF',
+		'CRYPT_CREATE_SALT',
+		'CRYPT_DECRYPT',
+		'CRYPT_DELETEKEYSET',
+		'CRYPT_ENCRYPT',
+		'CRYPT_EXPORT',
+		'CRYPT_EXPORTABLE',
+		'CRYPT_FAILED',
+		'CRYPT_FIRST',
+		'CRYPT_IMPL_HARDWARE',
+		'CRYPT_IMPL_MIXED',
+		'CRYPT_IMPL_SOFTWARE',
+		'CRYPT_IMPL_UNKNOWN',
+		'CRYPT_MAC',
+		'CRYPT_MACHINE_KEYSET',
+		'CRYPT_MODE_CBC',
+		'CRYPT_MODE_CBCI',
+		'CRYPT_MODE_CBCOFM',
+		'CRYPT_MODE_CBCOFMI',
+		'CRYPT_MODE_CFB',
+		'CRYPT_MODE_CFBP',
+		'CRYPT_MODE_CTS',
+		'CRYPT_MODE_ECB',
+		'CRYPT_MODE_OFB',
+		'CRYPT_MODE_OFBP',
+		'CRYPT_NEWKEYSET',
+		'CRYPT_NEXT',
+		'CRYPT_READ',
+		'CRYPT_SILENT',
+		'CRYPT_SUCCEED',
+		'CRYPT_UPDATE_KEY',
+		'CRYPT_USERDATA',
+		'CRYPT_USER_PROTECTED',
+		'CRYPT_VERIFYCONTEXT',
+		'CRYPT_WRITE',
+		'HCRYPTPROV',
+		'HP_ALGID',
+		'HP_HASHSIZE',
+		'HP_HASHVAL',
+		'HP_HMAC_INFO',
+		'OPAQUEKEYBLOB',
+		'PKCS5_PADDING',
+		'PLAINTEXTKEYBLOB',
+		'PP_ADMIN_PIN',
+		'PP_APPLI_CERT',
+		'PP_CERTCHAIN',
+		'PP_CHANGE_PASSWORD',
+		'PP_CONTAINER',
+		'PP_ENUMALGS',
+		'PP_ENUMALGS_EX',
+		'PP_ENUMCONTAINERS',
+		'PP_ENUMELECTROOTS',
+		'PP_ENUMEX_SIGNING_PROT',
+		'PP_ENUMMANDROOTS',
+		'PP_IMPTYPE',
+		'PP_KEYEXCHANGE_PIN',
+		'PP_KEYSET_SEC_DESCR',
+		'PP_KEYSET_TYPE',
+		'PP_KEYSPEC',
+		'PP_KEYSTORAGE',
+		'PP_KEYX_KEYSIZE_INC',
+		'PP_KEY_TYPE_SUBTYPE',
+		'PP_NAME',
+		'PP_PROVTYPE',
+		'PP_SESSION_KEYSIZE',
+		'PP_SGC_INFO',
+		'PP_SIGNATURE_PIN',
+		'PP_SIG_KEYSIZE_INC',
+		'PP_SYM_KEYSIZE',
+		'PP_UI_PROMPT',
+		'PP_UNIQUE_CONTAINER',
+		'PP_USE_HARDWARE_RNG',
+		'PP_VERSION',
+		'PRIVATEKEYBLOB',
+		'PROV_DH_SCHANNEL',
+		'PROV_DSS',
+		'PROV_DSS_DH',
+		'PROV_EC_ECDSA_FULL',
+		'PROV_EC_ECDSA_SIG',
+		'PROV_EC_ECNRA_FULL',
+		'PROV_EC_ECNRA_SIG',
+		'PROV_FORTEZZA',
+		'PROV_INTEL_SEC',
+		'PROV_MS_EXCHANGE',
+		'PROV_MS_MAIL',
+		'PROV_RNG',
+		'PROV_RSA_AES',
+		'PROV_RSA_FULL',
+		'PROV_RSA_SCHANNEL',
+		'PROV_RSA_SIG',
+		'PROV_SPYRUS_LYNKS',
+		'PROV_SSL',
+		'PROV_STT_ACQ',
+		'PROV_STT_BRND',
+		'PROV_STT_ISS',
+		'PROV_STT_MER',
+		'PROV_STT_ROOT',
+		'PUBLICKEYBLOB',
+		'PUBLICKEYBLOBEX',
+		'SIMPLEBLOB',
+		'SYMMETRICWRAPKEYBLOB'
+	],
+	#pools : [
+		'WinTypes'
+	],
+	#category : #'OS-Windows-Cryptography-Support'
+}
+
+{ #category : #'private - initialization flags' }
+WinCryptConstants class >> initAlgID [
+
+	CALG_MD2 := ALG_CLASS_HASH | ALG_TYPE_ANY | ALG_SID_MD2.
+	CALG_MD4 := ALG_CLASS_HASH | ALG_TYPE_ANY | ALG_SID_MD4.
+	CALG_MD5 := ALG_CLASS_HASH | ALG_TYPE_ANY | ALG_SID_MD5.
+	CALG_SHA := ALG_CLASS_HASH | ALG_TYPE_ANY | ALG_SID_SHA.
+	CALG_SHA1 := CALG_SHA.
+	CALG_MAC := ALG_CLASS_HASH | ALG_TYPE_ANY | ALG_SID_MAC.
+	CALG_3DES := ALG_CLASS_DATA_ENCRYPT | ALG_TYPE_BLOCK | 3.
+	CALG_CYLINK_MEK := ALG_CLASS_DATA_ENCRYPT | ALG_TYPE_BLOCK | 12.
+	CALG_SKIPJACK := ALG_CLASS_DATA_ENCRYPT | ALG_TYPE_BLOCK | 10.
+	CALG_KEA_KEYX := ALG_CLASS_KEY_EXCHANGE | ALG_TYPE_STREAM | ALG_TYPE_DSS | 4.
+	CALG_RSA_SIGN := ALG_CLASS_SIGNATURE | ALG_TYPE_RSA | ALG_SID_RSA_ANY.
+	CALG_DSS_SIGN := ALG_CLASS_SIGNATURE | ALG_TYPE_DSS | ALG_SID_DSS_ANY.
+	CALG_RSA_KEYX := ALG_CLASS_KEY_EXCHANGE | ALG_TYPE_RSA | ALG_SID_RSA_ANY.
+	CALG_DES := ALG_CLASS_DATA_ENCRYPT | ALG_TYPE_BLOCK | ALG_SID_DES.
+	CALG_RC2 := ALG_CLASS_DATA_ENCRYPT | ALG_TYPE_BLOCK | ALG_SID_RC2.
+	CALG_RC4 := ALG_CLASS_DATA_ENCRYPT | ALG_TYPE_STREAM | ALG_SID_RC4.
+	CALG_SEAL := ALG_CLASS_DATA_ENCRYPT | ALG_TYPE_STREAM | ALG_SID_SEAL.
+	CALG_DH_EPHEM := ALG_CLASS_KEY_EXCHANGE | ALG_TYPE_STREAM | ALG_TYPE_DSS | ALG_SID_DSS_DMS.
+	CALG_DESX := ALG_CLASS_DATA_ENCRYPT | ALG_TYPE_BLOCK | ALG_SID_DESX.
+	CALG_TLS1PRF := ALG_CLASS_HASH | ALG_TYPE_ANY | ALG_SID_TLS1PRF.
+	CALG_AES_128 := ALG_CLASS_DATA_ENCRYPT | ALG_TYPE_BLOCK | ALG_SID_AES_128.
+	CALG_AES_192 := ALG_CLASS_DATA_ENCRYPT | ALG_TYPE_BLOCK | ALG_SID_AES_192.
+	CALG_AES_256 := ALG_CLASS_DATA_ENCRYPT | ALG_TYPE_BLOCK | ALG_SID_AES_256.
+	CALG_AES := ALG_CLASS_DATA_ENCRYPT | ALG_TYPE_BLOCK | ALG_SID_AES.
+	
+]
+
+{ #category : #'private - initialization flags' }
+WinCryptConstants class >> initAlgorithmClasses [
+
+	ALG_CLASS_ANY := 0.
+	ALG_CLASS_SIGNATURE := 1 << 13.
+	ALG_CLASS_MSG_ENCRYPT := 2 << 13.
+	ALG_CLASS_DATA_ENCRYPT := 3 << 13.
+	ALG_CLASS_HASH := 4 << 13.
+	ALG_CLASS_KEY_EXCHANGE := 5 << 13.
+	ALG_CLASS_ALL := 7 << 13.
+
+  
+]
+
+{ #category : #'private - initialization flags' }
+WinCryptConstants class >> initAlgorithmTypes [
+
+	ALG_TYPE_ANY := 0.
+	ALG_TYPE_DSS := 1 << 9.
+   ALG_TYPE_RSA := 2 << 9.
+   ALG_TYPE_BLOCK := 3 << 9.
+   ALG_TYPE_STREAM := 4 << 9.
+   ALG_TYPE_DH := 5 << 9.
+   ALG_TYPE_SECURECHANNEL := 6 << 9.
+
+  
+]
+
+{ #category : #'private - initialization flags' }
+WinCryptConstants class >> initBLOBFlags [
+
+	SIMPLEBLOB := 1.
+	PUBLICKEYBLOB := 6.
+	PRIVATEKEYBLOB := 7.
+	PLAINTEXTKEYBLOB := 8.
+	OPAQUEKEYBLOB := 9.
+	PUBLICKEYBLOBEX := 10.
+	SYMMETRICWRAPKEYBLOB := 11
+	
+]
+
+{ #category : #'private - initialization flags' }
+WinCryptConstants class >> initBlockCipherSubID [
+
+	ALG_SID_DES := 1.
+	ALG_SID_RC2 := 2.
+	ALG_SID_3DES := 3.
+	ALG_SID_DESX := 4.
+	ALG_SID_IDEA := 5.
+	ALG_SID_CAST := 6.
+	ALG_SID_SAFERSK64 := 7.
+	ALG_SID_SAFERSK128 := 8.
+	ALG_SID_3DES_112 := 9.
+	ALG_SID_SKIPJACK := 10.
+	ALG_SID_TEK := 11.
+	ALG_SID_CYLINK_MEK := 12.
+	ALG_SID_RC5 := 13.
+	ALG_SID_AES_128 := 14.
+	ALG_SID_AES_192 := 15.
+	ALG_SID_AES_256 := 16.
+	ALG_SID_AES := 17.
+]
+
+{ #category : #'private - initialization' }
+WinCryptConstants class >> initConstants [
+
+	self 
+		initAlgorithmClasses;
+		initAlgorithmTypes;
+		initGenericSubID;
+		initRSASubID;
+		initRSASubID;
+		initDSSSubID;
+		initBlockCipherSubID;
+		initStreamCipherSubID;
+		initDHSubID;
+		initHashSubID;
+		initSChannelSubID;
+		initAlgID;
+		initContexts;
+		initKeyGenerateFlags;
+		initBLOBFlags;
+		initKeySpecifiers;
+		initOtherConstants;
+		initProviders
+	
+]
+
+{ #category : #'private - initialization flags' }
+WinCryptConstants class >> initContexts [
+
+	CRYPT_VERIFYCONTEXT := 16rF0000000.
+	CRYPT_NEWKEYSET := 16r00000008.
+ 	CRYPT_DELETEKEYSET := 16r00000010.
+  	CRYPT_MACHINE_KEYSET := 16r00000020.
+   	CRYPT_SILENT := 16r00000040.
+]
+
+{ #category : #'private - initialization flags' }
+WinCryptConstants class >> initDHSubID [
+
+	ALG_SID_DH_SANDF := 1.
+	ALG_SID_DH_EPHEM := 2.
+	ALG_SID_AGREED_KEY_ANY := 3.
+	ALG_SID_KEA := 4.
+]
+
+{ #category : #'private - initialization flags' }
+WinCryptConstants class >> initDSSSubID [
+
+	ALG_SID_DSS_ANY := 0.
+	ALG_SID_DSS_PKCS := 1.
+	ALG_SID_DSS_DMS := 2.      
+]
+
+{ #category : #'private - initialization flags' }
+WinCryptConstants class >> initGenericSubID [
+
+	ALG_SID_ANY := 0.
+
+  
+]
+
+{ #category : #'private - initialization flags' }
+WinCryptConstants class >> initHashSubID [
+
+	ALG_SID_MD2 := 1.
+	ALG_SID_MD4 := 2.
+	ALG_SID_MD5 := 3.
+	ALG_SID_SHA := 4.
+	ALG_SID_SHA1 := 4.
+	ALG_SID_MAC := 5.
+	ALG_SID_RIPEMD := 6.
+	ALG_SID_RIPEMD160 := 7.
+	ALG_SID_SSL3SHAMD5 := 8.
+	ALG_SID_HMAC := 9.
+	ALG_SID_TLS1PRF := 10.
+	ALG_SID_HASH_REPLACE_OWF := 11.
+	ALG_SID_SHA_256 := 12.
+	ALG_SID_SHA_384 := 13.
+	ALG_SID_SHA_512 := 14.
+	
+]
+
+{ #category : #'private - initialization flags' }
+WinCryptConstants class >> initKeyGenerateFlags [
+
+	CRYPT_EXPORTABLE := 1.
+	CRYPT_USER_PROTECTED := 2.
+	CRYPT_CREATE_SALT := 4.
+	CRYPT_UPDATE_KEY := 8.
+]
+
+{ #category : #'private - initialization flags' }
+WinCryptConstants class >> initKeySpecifiers [
+
+	AT_KEYEXCHANGE := 1.
+	AT_SIGNATURE := 2.
+]
+
+{ #category : #'private - initialization flags' }
+WinCryptConstants class >> initOtherConstants [
+
+	CRYPT_USERDATA := 1.
+	PKCS5_PADDING := 1.	
+	
+	CRYPT_MODE_CBC := 1.
+	CRYPT_MODE_ECB := 2.
+	CRYPT_MODE_OFB := 3.
+	CRYPT_MODE_CFB := 4.
+	CRYPT_MODE_CTS := 5.
+	CRYPT_MODE_CBCI := 6.
+	CRYPT_MODE_CFBP := 7.
+	CRYPT_MODE_OFBP := 8.
+	CRYPT_MODE_CBCOFM := 9.
+	CRYPT_MODE_CBCOFMI := 10.
+	CRYPT_ENCRYPT := 1.
+	CRYPT_DECRYPT := 2.
+	CRYPT_EXPORT := 4.
+	CRYPT_READ := 8.
+	CRYPT_WRITE := 16.
+	CRYPT_MAC := 32.
+	HP_ALGID := 1.
+	HP_HASHVAL := 2.
+	HP_HASHSIZE := 4.
+	HP_HMAC_INFO := 5.
+	CRYPT_FAILED := 0.
+	CRYPT_SUCCEED := -1.
+	PP_ENUMALGS := 1.
+	PP_ENUMCONTAINERS := 2.
+	PP_IMPTYPE := 3.
+	PP_NAME := 4.
+	PP_VERSION := 5.
+	PP_CONTAINER := 6.
+	PP_CHANGE_PASSWORD := 7.
+	PP_KEYSET_SEC_DESCR := 8.
+	PP_CERTCHAIN	:= 9.
+	PP_KEY_TYPE_SUBTYPE := 10.
+	PP_PROVTYPE := 16.
+	PP_KEYSTORAGE := 17.
+	PP_APPLI_CERT := 18.
+	PP_SYM_KEYSIZE := 19.
+	PP_SESSION_KEYSIZE := 20.
+	PP_UI_PROMPT := 21.
+	PP_ENUMALGS_EX := 22.
+	PP_ENUMMANDROOTS := 25.
+	PP_ENUMELECTROOTS := 26.
+	PP_KEYSET_TYPE := 27.
+	PP_ADMIN_PIN := 31.
+	PP_KEYEXCHANGE_PIN := 32.
+ 	PP_SIGNATURE_PIN := 33.
+ 	PP_SIG_KEYSIZE_INC := 34.
+ 	PP_KEYX_KEYSIZE_INC := 35.
+ 	PP_UNIQUE_CONTAINER := 36.
+ 	PP_SGC_INFO := 37.
+ 	PP_USE_HARDWARE_RNG := 38.
+ 	PP_KEYSPEC := 39.
+ 	PP_ENUMEX_SIGNING_PROT := 40.
+ 	CRYPT_FIRST := 1.
+ 	CRYPT_NEXT := 2.
+ 	CRYPT_IMPL_HARDWARE := 1.
+ 	CRYPT_IMPL_SOFTWARE := 2.
+ 	CRYPT_IMPL_MIXED := 3.
+	CRYPT_IMPL_UNKNOWN := 4.	
+]
+
+{ #category : #'private - initialization flags' }
+WinCryptConstants class >> initProviders [
+	PROV_RSA_FULL := 1.
+	PROV_RSA_SIG := 2.
+	PROV_DSS := 3.
+	PROV_FORTEZZA := 4.
+	PROV_MS_EXCHANGE := 5.
+	PROV_MS_MAIL := 5.
+	PROV_SSL := 6.
+	PROV_STT_MER := 7.
+	PROV_STT_ACQ := 8.
+	PROV_STT_BRND := 9.
+	PROV_STT_ROOT := 10.
+	PROV_STT_ISS := 11.
+	PROV_RSA_SCHANNEL := 12.
+	PROV_DSS_DH := 13.
+	PROV_EC_ECDSA_SIG := 14.
+	PROV_EC_ECNRA_SIG := 15.
+	PROV_EC_ECDSA_FULL := 16.
+	PROV_EC_ECNRA_FULL := 17.
+	PROV_DH_SCHANNEL := 18.
+	PROV_SPYRUS_LYNKS := 20.
+	PROV_RNG := 21.
+	PROV_INTEL_SEC := 22.
+	PROV_RSA_AES := 24.
+]
+
+{ #category : #'private - initialization flags' }
+WinCryptConstants class >> initRSASubID [
+
+	ALG_SID_RSA_ANY := 0.
+	ALG_SID_RSA_PKCS := 1.
+	ALG_SID_RSA_MSATWORK := 2.
+   ALG_SID_RSA_ENTRUST := 3.
+   ALG_SID_RSA_PGP := 4.
+]
+
+{ #category : #'private - initialization flags' }
+WinCryptConstants class >> initSChannelSubID [
+
+	ALG_SID_SSL3_MASTER := 1.
+	ALG_SID_SCHANNEL_MASTER_HASH := 2.
+	ALG_SID_SCHANNEL_MAC_KEY := 3.
+	ALG_SID_PCT1_MASTER := 4.
+	ALG_SID_SSL2_MASTER := 5.
+	ALG_SID_TLS1_MASTER := 6.
+	ALG_SID_SCHANNEL_ENC_KEY := 7.
+]
+
+{ #category : #'private - initialization flags' }
+WinCryptConstants class >> initStreamCipherSubID [
+
+	ALG_SID_RC4 := 1.
+	ALG_SID_SEAL := 2.
+ 
+]
+
+{ #category : #'private - initialization' }
+WinCryptConstants class >> initTypes [ 
+
+	HCRYPTPROV := #WinCryptoProvider 
+]
+
+{ #category : #initialization }
+WinCryptConstants class >> initialize [
+	"
+		self initialize
+	"
+	self 
+		initConstants;
+		initTypes 
+]

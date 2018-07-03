@@ -1,0 +1,161 @@
+"
+This pool includes constants as defined in wincon.h header file
+"
+Class {
+	#name : #WinConsoleConstants,
+	#superclass : #SharedPool,
+	#classVars : [
+		'BACKGROUND_BLUE',
+		'BACKGROUND_GREEN',
+		'BACKGROUND_INTENSITY',
+		'BACKGROUND_RED',
+		'CAPSLOCK_ON',
+		'CONSOLE_CURSOR_INFO',
+		'CONSOLE_FONT_INFO',
+		'CONSOLE_FULLSCREEN_MODE',
+		'CONSOLE_SCREEN_BUFFER_INFO',
+		'CONSOLE_WINDOWED_MODE',
+		'COORD',
+		'CTRL_BREAK_EVENT',
+		'CTRL_CLOSE_EVENT',
+		'CTRL_C_EVENT',
+		'CTRL_LOGOFF_EVENT',
+		'CTRL_SHUTDOWN_EVENT',
+		'DOUBLE_CLICK',
+		'ENABLE_AUTO_POSITION',
+		'ENABLE_ECHO_INPUT',
+		'ENABLE_EXTENDED_FLAGS',
+		'ENABLE_INSERT_MODE',
+		'ENABLE_LINE_INPUT',
+		'ENABLE_MOUSE_INPUT',
+		'ENABLE_PROCESSED_INPUT',
+		'ENABLE_PROCESSED_OUTPUT',
+		'ENABLE_QUICK_EDIT_MODE',
+		'ENABLE_WINDOW_INPUT',
+		'ENABLE_WRAP_AT_EOL_OUTPUT',
+		'ENHANCED_KEY',
+		'FOCUS_EVENT',
+		'FOREGROUND_BLUE',
+		'FOREGROUND_GREEN',
+		'FOREGROUND_INTENSITY',
+		'FOREGROUND_RED',
+		'FROM_LEFT_1ST_BUTTON_PRESSED',
+		'FROM_LEFT_2ND_BUTTON_PRESSED',
+		'FROM_LEFT_3RD_BUTTON_PRESSED',
+		'FROM_LEFT_4TH_BUTTON_PRESSED',
+		'KEY_EVENT',
+		'LEFT_ALT_PRESSED',
+		'LEFT_CTRL_PRESSED',
+		'MENU_EVENT',
+		'MOUSE_EVENT',
+		'MOUSE_MOVED',
+		'MOUSE_WHEELED',
+		'NUMLOCK_ON',
+		'PCONSOLE_CURSOR_INFO',
+		'PCONSOLE_FONT_INFO',
+		'PCONSOLE_SCREEN_BUFFER_INFO',
+		'PCOORD',
+		'RIGHTMOST_BUTTON_PRESSED',
+		'SCROLLLOCK_ON',
+		'SHIFT_PRESSED',
+		'SMALL_RECT',
+		'WINDOW_BUFFER_SIZE_EVENT'
+	],
+	#category : #'OS-Windows-Environment-Console-Support'
+}
+
+{ #category : #'private - initialization' }
+WinConsoleConstants class >> initConsoleConstants [
+	"
+	Initializes the console constants as defined in winconenvironment .h
+	
+		self initConsoleConstants
+	"
+
+	"Colors"
+	FOREGROUND_BLUE := 1.	
+	FOREGROUND_GREEN := 2.
+	FOREGROUND_RED := 4.
+	FOREGROUND_INTENSITY := 8.
+	BACKGROUND_BLUE := 16.
+	BACKGROUND_GREEN := 32.
+	BACKGROUND_RED := 64.
+	BACKGROUND_INTENSITY := 128.
+	
+	CONSOLE_FULLSCREEN_MODE := 1.
+	CONSOLE_WINDOWED_MODE := 2.
+	
+	CTRL_C_EVENT := 0.
+	CTRL_BREAK_EVENT := 1.
+	CTRL_CLOSE_EVENT := 2.
+	CTRL_LOGOFF_EVENT := 5.
+	CTRL_SHUTDOWN_EVENT := 6.
+	ENABLE_LINE_INPUT := 2.
+	ENABLE_ECHO_INPUT := 4.
+	ENABLE_PROCESSED_INPUT := 1.
+	ENABLE_WINDOW_INPUT := 8.
+	ENABLE_MOUSE_INPUT := 16.
+	ENABLE_INSERT_MODE := 32.
+	ENABLE_QUICK_EDIT_MODE := 64.
+	ENABLE_EXTENDED_FLAGS := 128.
+	ENABLE_AUTO_POSITION := 256.
+	
+	ENABLE_PROCESSED_OUTPUT := 1.
+	ENABLE_WRAP_AT_EOL_OUTPUT := 2.
+	
+	"Events"
+	KEY_EVENT := 1.
+	MOUSE_EVENT := 2.
+	WINDOW_BUFFER_SIZE_EVENT := 4.
+	MENU_EVENT := 8.
+	FOCUS_EVENT := 16.
+	CAPSLOCK_ON := 128.
+	ENHANCED_KEY := 256.
+	ENHANCED_KEY := 1.
+	LEFT_ALT_PRESSED := 2.
+	LEFT_ALT_PRESSED := 4.
+	LEFT_CTRL_PRESSED := 8.
+	SHIFT_PRESSED := 16.
+	NUMLOCK_ON := 32.
+	SCROLLLOCK_ON := 64.
+	FROM_LEFT_1ST_BUTTON_PRESSED := 1.
+	RIGHTMOST_BUTTON_PRESSED := 2.
+	FROM_LEFT_2ND_BUTTON_PRESSED := 4.
+	FROM_LEFT_3RD_BUTTON_PRESSED := 8.
+	FROM_LEFT_4TH_BUTTON_PRESSED := 16.
+	MOUSE_MOVED := 1.
+	DOUBLE_CLICK := 2.
+	MOUSE_WHEELED := 4.
+	
+	
+]
+
+{ #category : #'private - initialization' }
+WinConsoleConstants class >> initTypeConstants [
+
+	COORD := #WinConsoleCoordinates.
+	PCOORD := 'COORD*'.
+	SMALL_RECT := #WinConsoleSmallRectangle.
+	
+	CONSOLE_SCREEN_BUFFER_INFO := #WinConsoleScreenBuffer.
+	PCONSOLE_SCREEN_BUFFER_INFO  := 'CONSOLE_SCREEN_BUFFER_INFO*'. 
+	
+	CONSOLE_CURSOR_INFO := #WinConsoleCursor.
+	PCONSOLE_CURSOR_INFO := 'CONSOLE_CURSOR_INFO*'.	
+		
+	CONSOLE_FONT_INFO := #WinConsoleFont.
+	PCONSOLE_FONT_INFO := 'CONSOLE_FONT_INFO*'		
+]
+
+{ #category : #'class initialization' }
+WinConsoleConstants class >> initialize [ 
+	"Initializes the receiver class
+	
+		self initialize
+	"
+	
+	self 
+		initConsoleConstants;
+		initTypeConstants
+	 
+]

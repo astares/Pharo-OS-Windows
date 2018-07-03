@@ -1,0 +1,236 @@
+"
+This pool includes constants as defined in winuser.h header file
+"
+Class {
+	#name : #WinUserConstants,
+	#superclass : #SharedPool,
+	#classVars : [
+		'GWL_EXSTYLE',
+		'GWL_HINSTANCE',
+		'GWL_HWNDPARENT',
+		'GWL_ID',
+		'GWL_STYLE',
+		'GWL_USERDATA',
+		'GWL_WNDPROC',
+		'IDABORT',
+		'IDCANCEL',
+		'IDCONTINUE',
+		'IDIGNORE',
+		'IDNO',
+		'IDOK',
+		'IDRETRY',
+		'IDTRYAGAIN',
+		'IDYES',
+		'MB_ABORTRETRYIGNORE',
+		'MB_APPLMODAL',
+		'MB_CANCELTRYCONTINUE',
+		'MB_DEFAULT_DESKTOP_ONLY',
+		'MB_DEFBUTTON1',
+		'MB_DEFBUTTON2',
+		'MB_DEFBUTTON3',
+		'MB_DEFBUTTON4',
+		'MB_HELP',
+		'MB_ICONASTERISK',
+		'MB_ICONERROR',
+		'MB_ICONEXCLAMATION',
+		'MB_ICONHAND',
+		'MB_ICONINFORMATION',
+		'MB_ICONQUESTION',
+		'MB_ICONSTOP',
+		'MB_ICONWARNING',
+		'MB_OK',
+		'MB_OKCANCEL',
+		'MB_RETRYCANCEL',
+		'MB_RIGHT',
+		'MB_RTLREADING',
+		'MB_SERVICE_NOTIFICATION',
+		'MB_SETFOREGROUND',
+		'MB_SYSTEMMODAL',
+		'MB_TASKMODAL',
+		'MB_TOPMOST',
+		'MB_YESNO',
+		'MB_YESNOCANCEL',
+		'SW_FORCEMINIMIZE',
+		'SW_HIDE',
+		'SW_MAX',
+		'SW_MAXIMIZE',
+		'SW_MINIMIZE',
+		'SW_NORMAL',
+		'SW_RESTORE',
+		'SW_SHOW',
+		'SW_SHOWDEFAULT',
+		'SW_SHOWMAXIMIZED',
+		'SW_SHOWMINIMIZED',
+		'SW_SHOWMINNOACTIVE',
+		'SW_SHOWNA',
+		'SW_SHOWNOACTIVATE',
+		'SW_SHOWNORMAL',
+		'WS_BORDER',
+		'WS_CAPTION',
+		'WS_CHILD',
+		'WS_CHILDWINDOW',
+		'WS_CLIPCHILDREN',
+		'WS_CLIPSIBLINGS',
+		'WS_DISABLED',
+		'WS_DLGFRAME',
+		'WS_GROUP',
+		'WS_HSCROLL',
+		'WS_ICONIC',
+		'WS_MAXIMIZE',
+		'WS_MAXIMIZEBOX',
+		'WS_MINIMIZE',
+		'WS_MINIMIZEBOX',
+		'WS_OVERLAPPED',
+		'WS_OVERLAPPEDWINDOW',
+		'WS_POPUP',
+		'WS_POPUPWINDOW',
+		'WS_SIZEBOX',
+		'WS_SYSMENU',
+		'WS_TABSTOP',
+		'WS_THICKFRAME',
+		'WS_TILED',
+		'WS_TILEDWINDOW',
+		'WS_VISIBLE',
+		'WS_VSCROLL'
+	],
+	#category : #'OS-Windows-Core-Support'
+}
+
+{ #category : #'private - initialization' }
+WinUserConstants class >> initMessageBoxConstants [
+		
+	MB_ABORTRETRYIGNORE := 16r00000002.
+	MB_CANCELTRYCONTINUE := 16r00000006.
+	MB_HELP := 16r00004000.
+	MB_OK := 16r00000000.
+	MB_OKCANCEL := 16r00000001.
+	MB_RETRYCANCEL := 16r00000005.
+	MB_YESNO := 16r00000004.
+	MB_YESNOCANCEL := 16r00000003.
+	
+	"To display an icon in the message box, specify one of the following values."
+	MB_ICONEXCLAMATION := 16r00000030. 
+	MB_ICONWARNING := 16r00000030.
+	MB_ICONINFORMATION := 16r00000040.
+	MB_ICONASTERISK := 16r00000040.
+	MB_ICONQUESTION := 16r00000020.
+	MB_ICONSTOP := 16r00000010.
+	MB_ICONERROR := 16r00000010.
+	MB_ICONHAND := 16r00000010.
+	
+	"To indicate the default button, specify one of the following values."
+	MB_DEFBUTTON1 := 16r00000000.
+	MB_DEFBUTTON2 := 16r00000100.
+	MB_DEFBUTTON3 := 16r00000200.
+	MB_DEFBUTTON4 := 16r00000300.
+	
+	"To indicate the modality of the dialog box, specify one of the following values."
+	MB_APPLMODAL := 16r00000000.
+	MB_SYSTEMMODAL := 16r00001000.
+	MB_TASKMODAL := 16r00002000.
+	
+	"To specify other options, use one or more of the following values."
+	MB_DEFAULT_DESKTOP_ONLY := 16r00020000.
+	MB_RIGHT := 16r00080000. "text is right justified"
+	MB_RTLREADING := 16r00100000.
+	MB_SETFOREGROUND := 16r00010000.
+	MB_TOPMOST := 16r00040000.
+	MB_SERVICE_NOTIFICATION := 16r00200000.
+	
+	IDABORT := 3.
+	IDCANCEL := 2.
+	IDCONTINUE := 11.
+	IDIGNORE := 5.
+	IDNO := 7.
+	IDOK := 1.
+	IDRETRY := 4.
+	IDTRYAGAIN := 10.
+	IDYES := 6.
+]
+
+{ #category : #'private - initialization' }
+WinUserConstants class >> initShowWindowConstants [
+
+	SW_HIDE := 0.
+	SW_SHOWNORMAL := 1.
+	SW_NORMAL := 1.
+	SW_SHOWMINIMIZED := 2.
+	SW_SHOWMAXIMIZED := 3.
+	SW_MAXIMIZE := 3.
+	SW_SHOWNOACTIVATE := 4.
+	SW_SHOW := 5.
+	SW_MINIMIZE := 6.
+	SW_SHOWMINNOACTIVE := 7.
+	SW_SHOWNA :=  8.
+	SW_RESTORE :=  9.
+	SW_SHOWDEFAULT := 10.
+	SW_FORCEMINIMIZE := 11.
+	SW_MAX := 11.
+]
+
+{ #category : #'private - initialization' }
+WinUserConstants class >> initWindowLongConstants [
+
+	GWL_EXSTYLE := -20.
+	GWL_HINSTANCE := -6.
+	GWL_HWNDPARENT := -8.
+	GWL_ID := -12.
+	GWL_STYLE := -16.
+	GWL_USERDATA := -21.
+	GWL_WNDPROC := -4
+]
+
+{ #category : #'private - initialization' }
+WinUserConstants class >> initWindowStyleConstants [ 
+
+	WS_OVERLAPPED := 16r00000000.
+	WS_POPUP := 16r80000000.
+	WS_CHILD := 16r40000000.
+	WS_MINIMIZE := 16r20000000.
+	WS_VISIBLE := 16r10000000.
+	WS_DISABLED := 16r08000000.
+	WS_CLIPSIBLINGS := 16r04000000.
+	WS_CLIPCHILDREN := 16r02000000.
+	WS_MAXIMIZE := 16r01000000.
+	WS_CAPTION := 16r00C00000. " WS_BORDER | WS_DLGFRAME "
+	WS_BORDER := 16r00800000.
+	WS_DLGFRAME := 16r00400000.
+	WS_VSCROLL := 16r00200000.
+	WS_HSCROLL := 16r00100000.
+	WS_SYSMENU := 16r00080000.
+	WS_THICKFRAME := 16r00040000.
+	WS_GROUP := 16r00020000.
+	WS_TABSTOP := 16r00010000.
+
+	WS_MINIMIZEBOX := 16r00020000.
+	WS_MAXIMIZEBOX := 16r00010000.
+
+	"Common Window Styles"
+
+	WS_OVERLAPPEDWINDOW := ((((WS_OVERLAPPED bitOr: WS_CAPTION ) bitOr: WS_SYSMENU ) bitOr: WS_THICKFRAME ) bitOr: WS_MINIMIZEBOX )bitOr: WS_MAXIMIZEBOX.
+
+	WS_POPUPWINDOW := (WS_POPUP bitOr: WS_BORDER) bitOr: WS_SYSMENU.
+
+	WS_CHILDWINDOW := WS_CHILD.
+
+	WS_TILED := WS_OVERLAPPED.
+	WS_ICONIC := WS_MINIMIZE.
+	WS_SIZEBOX := WS_THICKFRAME.
+	WS_TILEDWINDOW := WS_OVERLAPPEDWINDOW.
+
+]
+
+{ #category : #'class initialization' }
+WinUserConstants class >> initialize [ 
+	"Initializes the receiver class
+	
+		self initialize
+	"
+	
+	self 
+		initShowWindowConstants;
+		initMessageBoxConstants;
+		initWindowStyleConstants;
+		initWindowLongConstants
+		 
+]
