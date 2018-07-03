@@ -1,3 +1,6 @@
+"
+SUnit tests for WinDebugger
+"
 Class {
 	#name : #WinDebuggerTest,
 	#superclass : #WindowsSpecificTest,

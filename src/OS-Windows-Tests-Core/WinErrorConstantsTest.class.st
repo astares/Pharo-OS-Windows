@@ -1,3 +1,6 @@
+"
+SUnit tests for WinErrorConstants pool
+"
 Class {
 	#name : #WinErrorConstantsTest,
 	#superclass : #WindowsSpecificTest,

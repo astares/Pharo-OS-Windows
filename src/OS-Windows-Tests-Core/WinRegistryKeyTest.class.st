@@ -1,3 +1,6 @@
+"
+SUnit tests for WinRegistryKey
+"
 Class {
 	#name : #WinRegistryKeyTest,
 	#superclass : #WindowsSpecificTest,
