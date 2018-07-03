@@ -4,6 +4,12 @@ The PROCESS_INFORMATION structure
 Class {
 	#name : #WinProcessInformation,
 	#superclass : #FFIExternalStructure,
+	#classVars : [
+		'OFFSET_DWPROCESSID',
+		'OFFSET_DWTHREADID',
+		'OFFSET_HPROCESS',
+		'OFFSET_HTHREAD'
+	],
 	#pools : [
 		'WinTypes'
 	],

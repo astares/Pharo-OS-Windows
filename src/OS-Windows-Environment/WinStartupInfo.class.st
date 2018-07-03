@@ -6,6 +6,26 @@ Specifies the window station, desktop, standard handles, and appearance of the m
 Class {
 	#name : #WinStartupInfo,
 	#superclass : #FFIExternalStructure,
+	#classVars : [
+		'OFFSET_CB',
+		'OFFSET_CBRESERVED2',
+		'OFFSET_DWFILLATTRIBUTE',
+		'OFFSET_DWFLAGS',
+		'OFFSET_DWX',
+		'OFFSET_DWXCOUNTCHARS',
+		'OFFSET_DWXSIZE',
+		'OFFSET_DWY',
+		'OFFSET_DWYCOUNTCHARS',
+		'OFFSET_DWYSIZE',
+		'OFFSET_HSTDERROR',
+		'OFFSET_HSTDINPUT',
+		'OFFSET_HSTDOUTPUT',
+		'OFFSET_LPDESKTOP',
+		'OFFSET_LPRESERVED',
+		'OFFSET_LPRESERVED2',
+		'OFFSET_LPTITLE',
+		'OFFSET_WSHOWWINDOW'
+	],
 	#pools : [
 		'WinBaseConstants',
 		'WinTypes'
