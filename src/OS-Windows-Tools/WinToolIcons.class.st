@@ -58,6 +58,8 @@ WinToolIcons class >> menuCommandOn: aBuilder [
 	<worldMenu> 
 	
 	(aBuilder item: #'OS-Windows Tools')	 
+		parent: #'Tools';
+		order: 12;
 		help: 'Windows Tools';
 		icon: (self iconNamed: #winIcon);
 		withSeparatorAfter
