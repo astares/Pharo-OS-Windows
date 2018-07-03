@@ -145,7 +145,7 @@ WinUserConstants class >> initMessageBoxConstants [
 	IDOK := 1.
 	IDRETRY := 4.
 	IDTRYAGAIN := 10.
-	IDYES := 6.
+	IDYES := 6
 ]
 
 { #category : #'private - initialization' }
@@ -165,7 +165,7 @@ WinUserConstants class >> initShowWindowConstants [
 	SW_RESTORE :=  9.
 	SW_SHOWDEFAULT := 10.
 	SW_FORCEMINIMIZE := 11.
-	SW_MAX := 11.
+	SW_MAX := 11
 ]
 
 { #category : #'private - initialization' }
@@ -216,7 +216,7 @@ WinUserConstants class >> initWindowStyleConstants [
 	WS_TILED := WS_OVERLAPPED.
 	WS_ICONIC := WS_MINIMIZE.
 	WS_SIZEBOX := WS_THICKFRAME.
-	WS_TILEDWINDOW := WS_OVERLAPPEDWINDOW.
+	WS_TILEDWINDOW := WS_OVERLAPPEDWINDOW
 
 ]
 

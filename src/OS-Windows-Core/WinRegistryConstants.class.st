@@ -100,7 +100,7 @@ WinRegistryConstants class >> initRegistryConstants [
 	KEY_SET_VALUE := 16r0002.
 	KEY_WOW64_32KEY := 16r0200.
 	KEY_WOW64_64KEY := 16r0100.
-	KEY_WRITE := 16r20006.
+	KEY_WRITE := 16r20006
 	
 ]
 
@@ -108,7 +108,7 @@ WinRegistryConstants class >> initRegistryConstants [
 WinRegistryConstants class >> initRegistryTypes [
 
 	HKEY := #WinRegistryKey.
-	PHKEY := 'HKEY*'.
+	PHKEY := 'HKEY*'
 ]
 
 { #category : #'class initialization' }

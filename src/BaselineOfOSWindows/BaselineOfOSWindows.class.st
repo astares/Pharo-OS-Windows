@@ -32,6 +32,6 @@ BaselineOfOSWindows >> baseline: spec [
 			group: 'default' with: #('Core' 'Tests' 'Tools');
 			group: 'Tests' with: #('OS-Windows-Tests-Core' 'OS-Windows-Tests-UI' 'OS-Windows-Tests-Environment' );
 			group: 'Core' with: #('OS-Windows-Core' 'OS-Windows-Environment' 'OS-Windows-UI');
-			group: 'Tools' with: #('OS-Windows-Tools' ). ].
+			group: 'Tools' with: #('OS-Windows-Tools' ) ]
 
 ]

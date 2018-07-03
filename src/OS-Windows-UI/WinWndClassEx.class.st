@@ -130,7 +130,7 @@ WinWndClassEx >> hbrBackground: anObject [
 { #category : #initialization }
 WinWndClassEx >> initialize [
 	super initialize.
-	self cbSize: (self class structureSize).
+	self cbSize: (self class structureSize)
 ]
 
 { #category : #'accessing structure variables' }
@@ -142,7 +142,7 @@ WinWndClassEx >> lpfnWndProc [
 { #category : #'accessing structure variables' }
 WinWndClassEx >> lpfnWndProc: anObject [
 	"This method was automatically generated"
-	handle pointerAt: 9 put: anObject getHandle.
+	handle pointerAt: 9 put: anObject getHandle
 ]
 
 { #category : #'accessing structure variables' }
@@ -154,7 +154,7 @@ WinWndClassEx >> lpszClassName [
 { #category : #'accessing structure variables' }
 WinWndClassEx >> lpszClassName: anObject [
 	"This method was automatically generated"
-	handle pointerAt: 57 put: anObject getHandle.
+	handle pointerAt: 57 put: anObject getHandle
 ]
 
 { #category : #'accessing structure variables' }
@@ -166,7 +166,7 @@ WinWndClassEx >> lpszMenuName [
 { #category : #'accessing structure variables' }
 WinWndClassEx >> lpszMenuName: anObject [
 	"This method was automatically generated"
-	handle pointerAt: 53 put: anObject getHandle.
+	handle pointerAt: 53 put: anObject getHandle
 ]
 
 { #category : #registration }

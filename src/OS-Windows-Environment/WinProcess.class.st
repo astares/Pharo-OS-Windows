@@ -44,7 +44,7 @@ WinProcess class >> createAndWaitForProcess: szExe [
 	self createProcess: szExe startupInfo: si processInformation: pi.
 	self waitForSingleObject: pi hProcess timeout: INFINITE.
 	pi hProcess closeHandle. 
-	pi hThread closeHandle.
+	pi hThread closeHandle
 ]
 
 { #category : #'process creation' }
@@ -58,7 +58,7 @@ WinProcess class >> createAndWaitForProcess: szExe withCurrentDirectory: szCurre
 	self createProcess: szExe currentDirectory: szCurrentDirectory startupInfo: si processInformation: pi.
 	self waitForSingleObject: pi hProcess timeout: INFINITE.
 	pi hProcess closeHandle. 
-	pi hThread closeHandle.
+	pi hThread closeHandle
 ]
 
 { #category : #'process creation' }

@@ -54,8 +54,7 @@ WinNTConstants class >> initConstants [
 	SYSTEM_ALARM_ACE_TYPE := 16r3.
 	
 	DUPLICATE_CLOSE_SOURCE := 16r1.
-	DUPLICATE_SAME_ACCESS := 16r2.
-	
+	DUPLICATE_SAME_ACCESS := 16r2
 ]
 
 { #category : #'class initialization' }

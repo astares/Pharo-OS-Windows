@@ -14,7 +14,7 @@ Class {
 WinSystemTimeTest >> setUp [
 
 	super setUp.
-	localTime := WinSystemTime localTime.
+	localTime := WinSystemTime localTime
 ]
 
 { #category : #running }

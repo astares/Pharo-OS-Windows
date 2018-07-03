@@ -99,7 +99,7 @@ WinWindow class >> pharoWindow [
 
 	| handle |
 	handle := (ExternalAddress loadSymbol: 'stWindow' module: nil) unsignedLongAt: 1.
-	^self fromExternalHandle: handle.
+	^self fromExternalHandle: handle
 ]
 
 { #category : #accessing }
@@ -253,7 +253,7 @@ WinWindow >> setNonResizable [
 
 	| newStyle |
 	newStyle := self windowStyle bitClear: (WS_SIZEBOX|WS_MINIMIZE|WS_MAXIMIZE). 
-	self setWindowLong: self index: GWL_STYLE newVale: newStyle. 	
+	self setWindowLong: self index: GWL_STYLE newVale: newStyle 	
  
 		
 ]
@@ -317,6 +317,6 @@ WinWindow >> windowText [
 	| len str |	
 	str := ByteString new: 1000.
 	len := self getWindowText: self buffer: str bufferSize: 1000.
-	^ str first: len.
+	^ str first: len
 
 ]

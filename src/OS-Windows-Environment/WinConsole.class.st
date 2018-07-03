@@ -180,7 +180,7 @@ WinConsole class >> getStdHandle: nStdHandle [
 WinConsole class >> reset [
 	<script>
 	self freeConsole.
-	Default := nil.
+	Default := nil
 ]
 
 { #category : #'accessing - color management' }

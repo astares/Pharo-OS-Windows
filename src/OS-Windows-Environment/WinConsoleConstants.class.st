@@ -125,7 +125,7 @@ WinConsoleConstants class >> initConsoleConstants [
 	FROM_LEFT_4TH_BUTTON_PRESSED := 16.
 	MOUSE_MOVED := 1.
 	DOUBLE_CLICK := 2.
-	MOUSE_WHEELED := 4.
+	MOUSE_WHEELED := 4
 	
 	
 ]

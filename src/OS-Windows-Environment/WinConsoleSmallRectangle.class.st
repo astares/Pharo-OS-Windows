@@ -6,6 +6,12 @@ Defines the coordinates of the upper left and lower right corners of a rectangle
 Class {
 	#name : #WinConsoleSmallRectangle,
 	#superclass : #FFIExternalStructure,
+	#classVars : [
+		'OFFSET_BOTTOM',
+		'OFFSET_LEFT',
+		'OFFSET_RIGHT',
+		'OFFSET_TOP'
+	],
 	#pools : [
 		'WinConsoleConstants',
 		'WinTypes'

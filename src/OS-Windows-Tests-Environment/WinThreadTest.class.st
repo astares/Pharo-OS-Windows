@@ -27,7 +27,7 @@ WinThreadTest >> setUp [
 WinThreadTest >> tearDown [
 
 	vmThread := nil.
-	super tearDown.
+	super tearDown
 ]
 
 { #category : #tests }

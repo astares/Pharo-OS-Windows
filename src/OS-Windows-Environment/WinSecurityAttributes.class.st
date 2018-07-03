@@ -44,7 +44,7 @@ WinSecurityAttributes >> lpSecurityDescriptor [
 { #category : #'accessing structure variables' }
 WinSecurityAttributes >> lpSecurityDescriptor: anObject [
 	"This method was automatically generated"
-	handle pointerAt: 5 put: anObject getHandle.
+	handle pointerAt: 5 put: anObject getHandle
 ]
 
 { #category : #'accessing structure variables' }

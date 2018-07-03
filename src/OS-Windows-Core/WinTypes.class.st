@@ -98,7 +98,7 @@ WinTypes class >> initBasicTypes [
 	HMENU := #WinMenu.
 	
 	SYSTEMTIME := #WinSystemTime.
-	LPSYSTEMTIME := #'SYSTEMTIME*'.
+	LPSYSTEMTIME := #'SYSTEMTIME*'
 ]
 
 { #category : #'private - initialization' }
@@ -159,7 +159,7 @@ WinTypes class >> initKnownTypes [
 	WNDPROC := #'void*'.
 	HANDLE := #WinHandle.
 	LPHANDLE := #'HANDLE*'.
-	HINSTANCE := HMODULE := HICON := HCURSOR := HBRUSH := #HANDLE.
+	HINSTANCE := HMODULE := HICON := HCURSOR := HBRUSH := #HANDLE
 ]
 
 { #category : #'private - initialization' }
@@ -182,7 +182,7 @@ WinTypes class >> initStringTypes [
 	LPTSTR := #WinTString.
 	LPWSTR := #WinWideString.
 	
-	LPCTSTR := #LPTSTR.
+	LPCTSTR := #LPTSTR
 ]
 
 { #category : #'class initialization' }

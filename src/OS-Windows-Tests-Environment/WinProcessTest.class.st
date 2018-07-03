@@ -104,7 +104,7 @@ WinProcessTest >> testStartAndTerminateCommandShell [
 	processInfo := self defaultTestClass createProcess: 'cmd.exe'.
 	process := processInfo process.
 	self assert: process notNil.
-	processInfo process terminateProcessWithExitCode: 0.
+	processInfo process terminateProcessWithExitCode: 0
  
 ]
 
@@ -117,6 +117,6 @@ WinProcessTest >> testStartedFromShortcut [
 { #category : #tests }
 WinProcessTest >> testStartupInfo [
 
-	self assert: (self defaultTestClass startupInfo) notNil.
+	self assert: (self defaultTestClass startupInfo) notNil
 	
 ]

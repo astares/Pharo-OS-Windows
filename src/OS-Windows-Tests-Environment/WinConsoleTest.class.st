@@ -23,7 +23,7 @@ WinConsoleTest >> defaultTestClass [
 WinConsoleTest >> setUp [ 
 
 	super setUp.
-	stdoutConsole := self defaultTestClass createOutputConsoleForCurrentProcess.
+	stdoutConsole := self defaultTestClass createOutputConsoleForCurrentProcess
 ]
 
 { #category : #running }
@@ -60,7 +60,7 @@ WinConsoleTest >> testCursorSettingSize [
 	|size|
 	size := 100.
 	stdoutConsole cursorSize: size.
-	self assert: stdoutConsole cursor size = size.
+	self assert: stdoutConsole cursor size equals: size
 ]
 
 { #category : #tests }

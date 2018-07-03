@@ -792,7 +792,7 @@ WinBaseConstants class >> initEventLogConstants [
 	RTS_CONTROL_DISABLE := 0.
 	RTS_CONTROL_ENABLE := 1.
 	RTS_CONTROL_HANDSHAKE := 2.
-	RTS_CONTROL_TOGGLE := 3.
+	RTS_CONTROL_TOGGLE := 3
 	 
 ]
 
@@ -859,10 +859,7 @@ WinBaseConstants class >> initExceptionHandlingConstants [
 	EXCEPTION_INVALID_DISPOSITION := STATUS_INVALID_DISPOSITION.
 	EXCEPTION_GUARD_PAGE := STATUS_GUARD_PAGE_VIOLATION.
 	EXCEPTION_INVALID_HANDLE := STATUS_INVALID_HANDLE.
-	CONTROL_C_EXIT := STATUS_CONTROL_C_EXIT.
-	
-	
-	
+	CONTROL_C_EXIT := STATUS_CONTROL_C_EXIT
 ]
 
 { #category : #'private - initialization' }
@@ -999,16 +996,7 @@ WinBaseConstants class >> initFileConstants [
 	
 	STD_INPUT_HANDLE := "(DWORD)" 16rfffffff6.
 	STD_OUTPUT_HANDLE := "(DWORD)" 16rfffffff5.
-	STD_ERROR_HANDLE := "(DWORD)" 16rfffffff4.
-		
-	
-	
-	
-	
-	
-	
-			
-																
+	STD_ERROR_HANDLE := "(DWORD)" 16rfffffff4
 ]
 
 { #category : #'private - initialization' }
@@ -1029,11 +1017,7 @@ WinBaseConstants class >> initFileSystemConstants [
 	FS_UNICODE_STORED_ON_DISK := 4.
 	FS_PERSISTENT_ACLS := 8.
 	FS_FILE_COMPRESSION := 16.
-	FS_VOL_IS_COMPRESSED := 32768.
-	
-	
-	
-	
+	FS_VOL_IS_COMPRESSED := 32768
 ]
 
 { #category : #'private - initialization' }
@@ -1061,7 +1045,7 @@ WinBaseConstants class >> initMemoryConstants [
 	GMEM_DISCARDED := 16384.
 	GMEM_INVALID_HANDLE := 32768.
 	GMEM_LOCKCOUNT := 255.
-	GMEM_VALID_FLAGS := 32626.
+	GMEM_VALID_FLAGS := 32626
 	
 	
 	
@@ -1138,7 +1122,7 @@ WinBaseConstants class >> initMemoryManagementConstants [
 	PURGE_TXABORT := 1.
 	PURGE_RXABORT := 2.
 	PURGE_TXCLEAR := 4.
-	PURGE_RXCLEAR := 8.
+	PURGE_RXCLEAR := 8
 ]
 
 { #category : #'private - initialization' }
@@ -1253,8 +1237,7 @@ WinBaseConstants class >> initProcessConstants [
 	THREAD_PRIORITY_TIME_CRITICAL := 15.
 	THREAD_PRIORITY_ERROR_RETURN := 2147483647.
 		
-	INFINITE := 16rFFFFFFFF.
-	
+	INFINITE := 16rFFFFFFFF
 ]
 
 { #category : #'private - initialization' }
@@ -1268,7 +1251,7 @@ WinBaseConstants class >> initTimeZoneConstants [
 	TIME_ZONE_ID_UNKNOWN := 0.
 	TIME_ZONE_ID_STANDARD := 1.
 	TIME_ZONE_ID_DAYLIGHT := 2.
-	TIME_ZONE_ID_INVALID := 16rFFFFFFFF.
+	TIME_ZONE_ID_INVALID := 16rFFFFFFFF
 	
 	
 	

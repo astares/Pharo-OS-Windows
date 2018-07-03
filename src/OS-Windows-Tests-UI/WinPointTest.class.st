@@ -25,8 +25,8 @@ WinPointTest >> testInstanceCreation [
 	|instance|
 	instance := self defaultTestClass x: 1 y: 2.
 	self 
-		assert: instance x = 1;
-		assert: instance y = 2.
+		assert: instance x equals: 1;
+		assert: instance y equals: 2
 ]
 
 { #category : #tests }
@@ -35,6 +35,6 @@ WinPointTest >> testInstanceCreationFromPoint [
 	|instance|
 	instance := self defaultTestClass fromPoint: 1@2.
 	self 
-		assert: instance x = 1;
-		assert: instance y = 2.
+		assert: instance x equals: 1;
+		assert: instance y equals: 2
 ]

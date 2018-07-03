@@ -6,6 +6,10 @@ Defines the coordinates of a character cell in a console screen buffer. The orig
 Class {
 	#name : #WinConsoleCoordinates,
 	#superclass : #FFIExternalStructure,
+	#classVars : [
+		'OFFSET_X',
+		'OFFSET_Y'
+	],
 	#pools : [
 		'WinTypes'
 	],

@@ -27,7 +27,7 @@ WinWindowTest >> defaultTestClass [
 WinWindowTest >> setUp [
 
 	super setUp.
-	window := WinWindow activeWindow.
+	window := WinWindow activeWindow
 	
 ]
 

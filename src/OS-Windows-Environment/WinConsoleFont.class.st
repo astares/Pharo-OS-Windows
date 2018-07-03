@@ -32,7 +32,7 @@ WinConsoleFont >> dwFontSize [
 { #category : #'private - accessing structure variables' }
 WinConsoleFont >> dwFontSize: anObject [
 	"This method was automatically generated"
-	handle structAt: 5 put: anObject getHandle length: 4.
+	handle structAt: 5 put: anObject getHandle length: 4
 ]
 
 { #category : #accessing }

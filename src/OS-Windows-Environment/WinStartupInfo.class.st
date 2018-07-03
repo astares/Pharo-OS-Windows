@@ -224,7 +224,7 @@ WinStartupInfo >> lpDesktop [
 { #category : #'accessing structure variables' }
 WinStartupInfo >> lpDesktop: anObject [
 	"This method was automatically generated"
-	handle pointerAt: 9 put: anObject getHandle.
+	handle pointerAt: 9 put: anObject getHandle
 ]
 
 { #category : #'accessing structure variables' }
@@ -242,13 +242,13 @@ WinStartupInfo >> lpReserved2 [
 { #category : #'accessing structure variables' }
 WinStartupInfo >> lpReserved2: anObject [
 	"This method was automatically generated"
-	handle pointerAt: 53 put: anObject getHandle.
+	handle pointerAt: 53 put: anObject getHandle
 ]
 
 { #category : #'accessing structure variables' }
 WinStartupInfo >> lpReserved: anObject [
 	"This method was automatically generated"
-	handle pointerAt: 5 put: anObject getHandle.
+	handle pointerAt: 5 put: anObject getHandle
 ]
 
 { #category : #'accessing structure variables' }
@@ -260,7 +260,7 @@ WinStartupInfo >> lpTitle [
 { #category : #'accessing structure variables' }
 WinStartupInfo >> lpTitle: anObject [
 	"This method was automatically generated"
-	handle pointerAt: 13 put: anObject getHandle.
+	handle pointerAt: 13 put: anObject getHandle
 ]
 
 { #category : #testing }
