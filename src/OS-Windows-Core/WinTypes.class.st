@@ -38,6 +38,7 @@ Class {
 		'LONG32',
 		'LONG64',
 		'LONGLONG',
+		'LONG_PTR',
 		'LPARAM',
 		'LPBOOL',
 		'LPBYTE',
@@ -48,6 +49,7 @@ Class {
 		'LPCWSTR',
 		'LPDWORD',
 		'LPHANDLE',
+		'LPOFNHOOKPROC',
 		'LPSTR',
 		'LPSYSTEMTIME',
 		'LPTCH',
@@ -143,10 +145,12 @@ WinTypes class >> initKnownTypes [
 
 	LONG32 := #long.
 	LONG64 := #longlong.
+	LONG_PTR := #long.
 	LPARAM := #'LONG_PTR'.
 	LPBOOL := #'BOOL*'.
 	LPBYTE := #'BYTE*'.
 	LPCOLORREF := #'DWORD*'.
+	LPOFNHOOKPROC := LONG_PTR.
 	
 	PVOID := 'void*'.
 	LPVOID := 'void*'.

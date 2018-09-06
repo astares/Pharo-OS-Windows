@@ -6,6 +6,11 @@ The SECURITY_ATTRIBUTES structure contains the security descriptor for an object
 Class {
 	#name : #WinSecurityAttributes,
 	#superclass : #FFIExternalStructure,
+	#classVars : [
+		'OFFSET_BINHERITHANDLE',
+		'OFFSET_LPSECURITYDESCRIPTOR',
+		'OFFSET_NLENGTH'
+	],
 	#pools : [
 		'WinTypes'
 	],
@@ -26,35 +31,35 @@ WinSecurityAttributes class >> fieldsDesc [
 { #category : #'accessing structure variables' }
 WinSecurityAttributes >> bInheritHandle [
 	"This method was automatically generated"
-	^handle booleanAt: 9
+	^handle booleanAt: OFFSET_BINHERITHANDLE
 ]
 
 { #category : #'accessing structure variables' }
 WinSecurityAttributes >> bInheritHandle: anObject [
 	"This method was automatically generated"
-	handle booleanAt: 9 put: anObject
+	handle booleanAt: OFFSET_BINHERITHANDLE put: anObject
 ]
 
 { #category : #'accessing structure variables' }
 WinSecurityAttributes >> lpSecurityDescriptor [
 	"This method was automatically generated"
-	^ExternalData fromHandle: (handle pointerAt: 5) type: ExternalType void asPointerType
+	^ExternalData fromHandle: (handle pointerAt: OFFSET_LPSECURITYDESCRIPTOR) type: ExternalType void asPointerType
 ]
 
 { #category : #'accessing structure variables' }
 WinSecurityAttributes >> lpSecurityDescriptor: anObject [
 	"This method was automatically generated"
-	handle pointerAt: 5 put: anObject getHandle
+	handle pointerAt: OFFSET_LPSECURITYDESCRIPTOR put: anObject getHandle.
 ]
 
 { #category : #'accessing structure variables' }
 WinSecurityAttributes >> nLength [
 	"This method was automatically generated"
-	^handle unsignedLongAt: 1
+	^handle platformUnsignedLongAt: OFFSET_NLENGTH
 ]
 
 { #category : #'accessing structure variables' }
 WinSecurityAttributes >> nLength: anObject [
 	"This method was automatically generated"
-	handle unsignedLongAt: 1 put: anObject
+	^handle platformUnsignedLongAt: OFFSET_NLENGTH put: anObject
 ]

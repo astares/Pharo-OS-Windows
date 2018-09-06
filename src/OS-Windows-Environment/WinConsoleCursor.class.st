@@ -6,6 +6,10 @@ Contains information about the console cursor.
 Class {
 	#name : #WinConsoleCursor,
 	#superclass : #FFIExternalStructure,
+	#classVars : [
+		'OFFSET_BVISIBLE',
+		'OFFSET_DWSIZE'
+	],
 	#pools : [
 		'WinConsoleConstants',
 		'WinTypes'
@@ -23,16 +27,16 @@ WinConsoleCursor class >> fieldsDesc [
 		)
 ]
 
-{ #category : #'private - accessing structure variables' }
+{ #category : #'accessing structure variables' }
 WinConsoleCursor >> bVisible [
 	"This method was automatically generated"
-	^(handle at: 5) == 1
+	^handle booleanAt: OFFSET_BVISIBLE
 ]
 
-{ #category : #'private - accessing structure variables' }
+{ #category : #'accessing structure variables' }
 WinConsoleCursor >> bVisible: anObject [
 	"This method was automatically generated"
-	handle booleanAt: 5 put: anObject
+	handle booleanAt: OFFSET_BVISIBLE put: anObject
 ]
 
 { #category : #accessing }
@@ -47,16 +51,16 @@ WinConsoleCursor >> beVisible [
 	self bVisible: true
 ]
 
-{ #category : #'private - accessing structure variables' }
+{ #category : #'accessing structure variables' }
 WinConsoleCursor >> dwSize [
 	"This method was automatically generated"
-	^handle unsignedLongAt: 1
+	^handle platformUnsignedLongAt: OFFSET_DWSIZE
 ]
 
-{ #category : #'private - accessing structure variables' }
+{ #category : #'accessing structure variables' }
 WinConsoleCursor >> dwSize: anObject [
 	"This method was automatically generated"
-	handle unsignedLongAt: 1 put: anObject
+	^handle platformUnsignedLongAt: OFFSET_DWSIZE put: anObject
 ]
 
 { #category : #testing }

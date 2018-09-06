@@ -44,23 +44,23 @@ WinConsoleCoordinates >> asPoint [
 { #category : #'accessing structure variables' }
 WinConsoleCoordinates >> x [
 	"This method was automatically generated"
-	^handle signedShortAt: 1
+	^handle signedShortAt: OFFSET_X
 ]
 
 { #category : #'accessing structure variables' }
 WinConsoleCoordinates >> x: anObject [
 	"This method was automatically generated"
-	handle signedShortAt: 1 put: anObject
+	handle signedShortAt: OFFSET_X put: anObject
 ]
 
 { #category : #'accessing structure variables' }
 WinConsoleCoordinates >> y [
 	"This method was automatically generated"
-	^handle signedShortAt: 3
+	^handle signedShortAt: OFFSET_Y
 ]
 
 { #category : #'accessing structure variables' }
 WinConsoleCoordinates >> y: anObject [
 	"This method was automatically generated"
-	handle signedShortAt: 3 put: anObject
+	handle signedShortAt: OFFSET_Y put: anObject
 ]

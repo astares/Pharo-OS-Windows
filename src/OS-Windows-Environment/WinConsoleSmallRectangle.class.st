@@ -34,47 +34,47 @@ WinConsoleSmallRectangle class >> fieldsDesc [
 { #category : #'accessing structure variables' }
 WinConsoleSmallRectangle >> bottom [
 	"This method was automatically generated"
-	^handle signedShortAt: 7
+	^handle signedShortAt: OFFSET_BOTTOM
 ]
 
 { #category : #'accessing structure variables' }
 WinConsoleSmallRectangle >> bottom: anObject [
 	"This method was automatically generated"
-	handle signedShortAt: 7 put: anObject
+	handle signedShortAt: OFFSET_BOTTOM put: anObject
 ]
 
 { #category : #'accessing structure variables' }
 WinConsoleSmallRectangle >> left [
 	"This method was automatically generated"
-	^handle signedShortAt: 1
+	^handle signedShortAt: OFFSET_LEFT
 ]
 
 { #category : #'accessing structure variables' }
 WinConsoleSmallRectangle >> left: anObject [
 	"This method was automatically generated"
-	handle signedShortAt: 1 put: anObject
+	handle signedShortAt: OFFSET_LEFT put: anObject
 ]
 
 { #category : #'accessing structure variables' }
 WinConsoleSmallRectangle >> right [
 	"This method was automatically generated"
-	^handle signedShortAt: 5
+	^handle signedShortAt: OFFSET_RIGHT
 ]
 
 { #category : #'accessing structure variables' }
 WinConsoleSmallRectangle >> right: anObject [
 	"This method was automatically generated"
-	handle signedShortAt: 5 put: anObject
+	handle signedShortAt: OFFSET_RIGHT put: anObject
 ]
 
 { #category : #'accessing structure variables' }
 WinConsoleSmallRectangle >> top [
 	"This method was automatically generated"
-	^handle signedShortAt: 3
+	^handle signedShortAt: OFFSET_TOP
 ]
 
 { #category : #'accessing structure variables' }
 WinConsoleSmallRectangle >> top: anObject [
 	"This method was automatically generated"
-	handle signedShortAt: 3 put: anObject
+	handle signedShortAt: OFFSET_TOP put: anObject
 ]

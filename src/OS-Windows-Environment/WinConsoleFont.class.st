@@ -6,6 +6,10 @@ Contains information for a console font.
 Class {
 	#name : #WinConsoleFont,
 	#superclass : #FFIExternalStructure,
+	#classVars : [
+		'OFFSET_DWFONTSIZE',
+		'OFFSET_NFONT'
+	],
 	#pools : [
 		'WinConsoleConstants',
 		'WinTypes'
@@ -23,16 +27,16 @@ WinConsoleFont class >> fieldsDesc [
 		)
 ]
 
-{ #category : #'private - accessing structure variables' }
+{ #category : #'accessing structure variables' }
 WinConsoleFont >> dwFontSize [
 	"This method was automatically generated"
-	^WinConsoleCoordinates fromHandle: (handle referenceStructAt: 5 length: 8)
+	^ WinConsoleCoordinates fromHandle: (handle referenceStructAt: OFFSET_DWFONTSIZE length: WinConsoleCoordinates byteSize)
 ]
 
-{ #category : #'private - accessing structure variables' }
+{ #category : #'accessing structure variables' }
 WinConsoleFont >> dwFontSize: anObject [
 	"This method was automatically generated"
-	handle structAt: 5 put: anObject getHandle length: 4
+	handle structAt: OFFSET_DWFONTSIZE put: anObject getHandle length: WinConsoleCoordinates byteSize
 ]
 
 { #category : #accessing }
@@ -48,14 +52,14 @@ WinConsoleFont >> fontSize [
 	^(self dwFontSize x @ self dwFontSize y)
 ]
 
-{ #category : #'private - accessing structure variables' }
+{ #category : #'accessing structure variables' }
 WinConsoleFont >> nFont [
 	"This method was automatically generated"
-	^handle unsignedLongAt: 1
+	^handle platformUnsignedLongAt: OFFSET_NFONT
 ]
 
-{ #category : #'private - accessing structure variables' }
+{ #category : #'accessing structure variables' }
 WinConsoleFont >> nFont: anObject [
 	"This method was automatically generated"
-	handle unsignedLongAt: 1 put: anObject
+	^handle platformUnsignedLongAt: OFFSET_NFONT put: anObject
 ]
