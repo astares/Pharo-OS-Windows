@@ -19,7 +19,7 @@ WinControlPanel class >> showAccessibilityCommonSettings [
 	
 		self showAccessibilityCommonSettings
 	"
-
+	<script>
 	^self shellRunDLL: 'shell32.dll,Control_RunDLL access.cpl,,5'
 ]
 
@@ -29,7 +29,7 @@ WinControlPanel class >> showAccessibilityDisplaySettings [
 	
 		self showAccessibilityDisplaySettings
 	"
-
+	<script>
 	^self shellRunDLL: 'shell32.dll,Control_RunDLL access.cpl,,3'
 ]
 
@@ -39,7 +39,7 @@ WinControlPanel class >> showAccessibilityKeyboardSettings [
 	
 		self showAccessibilityKeyboardSettings
 	"
-
+	<script>
 	^self shellRunDLL: 'shell32.dll,Control_RunDLL access.cpl,,1'
 ]
 
@@ -49,7 +49,7 @@ WinControlPanel class >> showAccessibilityMouseSettings [
 	
 		self showAccessibilityMouseSettings
 	"
-
+	<script>
 	^self shellRunDLL: 'shell32.dll,Control_RunDLL access.cpl,,4'
 ]
 
@@ -59,7 +59,7 @@ WinControlPanel class >> showAccessibilitySoundSettings [
 	
 		self showAccessibilitySoundSettings
 	"
-
+	<script>
 	^self shellRunDLL: 'shell32.dll,Control_RunDLL access.cpl,,2'
 ]
 
@@ -68,7 +68,7 @@ WinControlPanel class >> showAddPrinterWizard [
 	"
 	self showAddPrinterWizard
 	"
-
+	<script>
 	^self shellRunDLL: 'shell32.dll,SHHelpShortcuts_RunDLL AddPrinter' 
 ]
 
@@ -77,7 +77,7 @@ WinControlPanel class >> showBluetoothSettings [
 	"	
 		self showBluetoothSettings
 	"
-
+	<script>
 	^self shellRunDLL: 'irprops.cpl,,BluetoothAuthenticationAgent'
 ]
 
@@ -86,7 +86,7 @@ WinControlPanel class >> showCOMPortsSettings [
 	"
 	self showCOMPortsSettings
 	"
-
+	<script>
 	^self shellRunDLL: 'shell32.dll,Control_RunDLL ports.cpl' 
 ]
 
@@ -96,7 +96,7 @@ WinControlPanel class >> showContentAdvisor [
 	
 		self showContentAdvisor
 	"
-
+	<script>
 	^self shellRunDLL: 'msrating.dll,RatingSetupUI'
 ]
 
@@ -105,13 +105,13 @@ WinControlPanel class >> showControlPanel [
 	"
 	self showControlPanel
 	"
-
+	<script>
 	^self shellRunDLL: 'Shell32.dll,Control_RunDLL'
 ]
 
 { #category : #utilities }
 WinControlPanel class >> showControlPanelFolder [
-
+	<script>
 	WinExplorer openControlPanelFolder
 ]
 
@@ -120,7 +120,7 @@ WinControlPanel class >> showDateTimeProperties [
 	"
 	self showDateTimeProperties
 	"
-
+	<script>
 	^self shellRunDLL: 'Shell32.dll,Control_RunDLL Timedate.cpl'
 ]
 
@@ -129,7 +129,7 @@ WinControlPanel class >> showDateTimePropertiesTimezone [
 	"
 	self showDateTimePropertiesTimezone
 	"
-
+	<script>
 	^self shellRunDLL: 'shell32.dll,Control_RunDLL timedate.cpl,,/f'
 ]
 
@@ -138,7 +138,7 @@ WinControlPanel class >> showDeviceManager [
 	"
 	self showDeviceManager
 	"
-
+	<script>	
 	^self shellRunDLL: 'devmgr.dll DeviceManager_Execute'
 ]
 
@@ -147,7 +147,7 @@ WinControlPanel class >> showDisplaySettingsAppearance [
 	"  	
 		self showDisplaySettingsAppearance
 	"
-
+	<script>
 	^self shellRunDLL: 'shell32.dll,Control_RunDLL desk.cpl,,2'
 ]
 
@@ -156,7 +156,7 @@ WinControlPanel class >> showDisplaySettingsBackground [
 	"  	
 		self showDisplaySettingsBackground
 	"
-
+	<script>
 	^self shellRunDLL: 'shell32.dll,Control_RunDLL desk.cpl,,0'
 ]
 
@@ -165,7 +165,7 @@ WinControlPanel class >> showDisplaySettingsCommon [
 	"  	
 		self showDisplaySettingsCommon
 	"
-
+	<script>
 	^self shellRunDLL: 'shell32.dll,Control_RunDLL desk.cpl,,3'
 ]
 
@@ -174,7 +174,7 @@ WinControlPanel class >> showDisplaySettingsScreenSaver [
 	"  	
 		self showDisplaySettingsScreenSaver
 	"
-
+	<script>
 	^self shellRunDLL: 'shell32.dll,Control_RunDLL desk.cpl,,1'
 ]
 
@@ -183,7 +183,7 @@ WinControlPanel class >> showFindFastSetting [
 	"
 		self showFindFastSetting
 	"
-
+	<script>	
 	^self shellRunDLL: 'shell32.dll,Control_RunDLL findfast.cpl'
 ]
 
@@ -192,7 +192,7 @@ WinControlPanel class >> showFolderOptionsFileTypes [
 	"
 	self showFolderOptionsFileTypes
 	"
-
+	<script>
 	^self shellRunDLL: 'shell32.dll,Options_RunDLL 1' 
 ]
 
@@ -201,7 +201,7 @@ WinControlPanel class >> showFolderOptionsGeneral [
 	"
 	self showFolderOptionsGeneral
 	"
-
+	<script>
 	^self shellRunDLL: 'shell32.dll,Options_RunDLL 0'
 ]
 
@@ -210,7 +210,7 @@ WinControlPanel class >> showFolderOptionsSearch [
 	"
 	self showFolderOptionsSearch
 	"
-
+	<script>
 	^self shellRunDLL: 'shell32.dll,Options_RunDLL 2' 
 ]
 
@@ -219,7 +219,7 @@ WinControlPanel class >> showFontsInstallationFolder [
 	"
 	self showFontsInstallationFolder
 	"
-
+	<script>
 	^self shellRunDLL: 'Shell32.dll,SHHelpShortcuts_RunDLL FontsFolder'
 ]
 
@@ -228,7 +228,7 @@ WinControlPanel class >> showFontsProperties [
 	"
 	self showFontsProperties
 	"
-
+	<script>
 	^self shellRunDLL: 'shell32.dll,Control_RunDLL main.cpl @3'
 ]
 
@@ -237,7 +237,7 @@ WinControlPanel class >> showForgottenPasswordWizard [
 	"
 	self showForgottenPasswordWizard
 	"
-
+	<script>
 	^self shellRunDLL: 'keymgr.dll,PRShowSaveWizardExW' 
 ]
 
@@ -246,7 +246,7 @@ WinControlPanel class >> showFormatDrive [
 	"
 	self showFormatDrive
 	"
-
+	<script>
 	^self shellRunDLL: 'shell32.dll,SHFormatDrive'
 ]
 
@@ -255,7 +255,7 @@ WinControlPanel class >> showHotPlugRemoveDialog [
 	"
 	self showHotPlugRemoveDialog
 	"
-
+	<script>
 	^self shellRunDLL: 'Shell32.dll,Control_RunDLL HotPlug.dll'
 ]
 
@@ -264,7 +264,7 @@ WinControlPanel class >> showInternationalSettingsCurrency [
 	"	
 		self showInternationalSettingsCurrency
 	"
-
+	<script>
 	^self shellRunDLL: 'Shell32.dll,Control_RunDLL Intl.cpl,,2'
 ]
 
@@ -274,7 +274,7 @@ WinControlPanel class >> showInternationalSettingsDate [
 	
 		self showInternationalSettingsDate
 	"
-
+	<script>
 	^self shellRunDLL: 'Shell32.dll,Control_RunDLL Intl.cpl,,4'
 ]
 
@@ -284,7 +284,7 @@ WinControlPanel class >> showInternationalSettingsInputLocales [
 	
 		self showInternationalSettingsInputLocales
 	"
-
+	<script>
 	^self shellRunDLL: 'Shell32.dll,Control_RunDLL Intl.cpl,,5'
 ]
 
@@ -294,7 +294,7 @@ WinControlPanel class >> showInternationalSettingsNumber [
 	
 		self showInternationalSettingsNumber
 	"
-
+	<script>
 	^self shellRunDLL: 'Shell32.dll,Control_RunDLL Intl.cpl,,1'
 ]
 
@@ -304,7 +304,7 @@ WinControlPanel class >> showInternationalSettingsRegionalSettings [
 	
 		self showInternationalSettingsRegionalSettings
 	"
-
+	<script>
 	^self shellRunDLL: 'Shell32.dll,Control_RunDLL Intl.cpl,,0'
 ]
 
@@ -314,7 +314,7 @@ WinControlPanel class >> showInternationalSettingsTime [
 	
 		self showInternationalSettingsTime
 	"
-
+	<script>
 	^self shellRunDLL: 'Shell32.dll,Control_RunDLL Intl.cpl,,3'
 ]
 
@@ -323,7 +323,7 @@ WinControlPanel class >> showInternetExplorerFavoriteManager [
 	"
 	self showInternetExplorerFavoriteManager
 	"
-
+	<script>
 	^self shellRunDLL: 'shdocvw.dll,DoOrganizeFavDlg'
 ]
 
@@ -333,6 +333,7 @@ WinControlPanel class >> showInternetExplorerSettings [
 	
 		self showInternetExplorerSettings
 	"
+	<script>
 
 	^self shellRunDLL: 'Shell32.dll,Control_RunDLL Inetcpl.cpl,,6'
 ]
@@ -342,7 +343,7 @@ WinControlPanel class >> showInternetSettingsAdvanced [
 	"  	
 		self showInternetSettingsAdvanced
 	"
-
+	<script>
 	^self shellRunDLL: 'Shell32.dll,Control_RunDLL Inetcpl.cpl,,6'
 ]
 
@@ -351,7 +352,7 @@ WinControlPanel class >> showInternetSettingsConnections [
 	"  	
 		self showInternetSettingsConnections
 	"
-
+	<script>
 	^self shellRunDLL: 'Shell32.dll,Control_RunDLL Inetcpl.cpl,,4'
 ]
 
@@ -360,7 +361,7 @@ WinControlPanel class >> showInternetSettingsContent [
 	"  	
 		self showInternetSettingsContent
 	"
-
+	<script>
 	^self shellRunDLL: 'Shell32.dll,Control_RunDLL Inetcpl.cpl,,3'
 ]
 
@@ -369,7 +370,7 @@ WinControlPanel class >> showInternetSettingsGeneral [
 	"  	
 		self showInternetSettingsGeneral
 	"
-
+	<script>
 	^self shellRunDLL: 'Shell32.dll,Control_RunDLL Inetcpl.cpl,,0'
 ]
 
@@ -378,7 +379,7 @@ WinControlPanel class >> showInternetSettingsPrograms [
 	"  	
 		self showInternetSettingsPrograms
 	"
-
+	<script>
 	^self shellRunDLL: 'Shell32.dll,Control_RunDLL Inetcpl.cpl,,5'
 ]
 
@@ -387,7 +388,7 @@ WinControlPanel class >> showInternetSettingsSecurity [
 	"  	
 		self showInternetSettingsSecurity
 	"
-
+	<script>
 	^self shellRunDLL: 'Shell32.dll,Control_RunDLL Inetcpl.cpl,,1'
 ]
 
@@ -396,7 +397,7 @@ WinControlPanel class >> showJoystickSettings [
 	"	
 		self showJoystickSettings
 	"
-
+	<script>
 	^self shellRunDLL: 'shell32.dll,Control_RunDLL joy.cpl'
 ]
 
@@ -405,7 +406,7 @@ WinControlPanel class >> showKeyboardProperties [
 	"
 	self showKeyboardProperties
 	"
-
+	<script>
 	^self shellRunDLL: 'shell32.dll,Control_RunDLL main.cpl @1'
 ]
 
@@ -414,7 +415,7 @@ WinControlPanel class >> showMailAndFaxSettings [
 	"
 	self showMailAndFaxSettings
 	"
-
+	<script>
 	^self shellRunDLL: 'shell32.dll,Control_RunDLL mlcfg32.cpl'
 ]
 
@@ -423,7 +424,7 @@ WinControlPanel class >> showMapNetworkDriveWizard [
 	"
 	self showMapNetworkDriveWizard
 	"
-
+	<script>
 	^self shellRunDLL: 'Shell32.dll,SHHelpShortcuts_RunDLL Connect'
 ]
 
@@ -432,7 +433,7 @@ WinControlPanel class >> showMicrosoftWorkgroupPostofficeSettings [
 	"
 	self showMicrosoftWorkgroupPostofficeSettings
 	"
-
+	<script>
 	^self shellRunDLL: 'shell32.dll,Control_RunDLL wgpocpl.cpl'
 ]
 
@@ -441,7 +442,7 @@ WinControlPanel class >> showModemSettings [
 	"
 	self showModemSettings
 	"
-
+	<script>
 	^self shellRunDLL: 'shell32.dll,Control_RunDLL modem.cpl' 
 ]
 
@@ -450,7 +451,7 @@ WinControlPanel class >> showMouseProperties [
 	"
 	self showMouseProperties
 	"
-
+	<script>
 	^self shellRunDLL: 'Shell32.dll,Control_RunDLL main.cpl @0,0'
 ]
 
@@ -459,7 +460,7 @@ WinControlPanel class >> showMultimediaSettingsAudio [
 	"
 	self showMultimediaSettingsAudio
 	"
-
+	<script>
 	^self shellRunDLL: 'shell32.dll,Control_RunDLL mmsys.cpl,,0'
 ]
 
@@ -468,7 +469,7 @@ WinControlPanel class >> showMultimediaSettingsCDMusic [
 	"
 	self showMultimediaSettingsCDMusic
 	"
-
+	<script>
 	^self shellRunDLL: 'shell32.dll,Control_RunDLL mmsys.cpl,,3'
 ]
 
@@ -477,7 +478,7 @@ WinControlPanel class >> showMultimediaSettingsDevices [
 	"
 	self showMultimediaSettingsDevices
 	"
-
+	<script>
 	^self shellRunDLL: 'shell32.dll,Control_RunDLL mmsys.cpl,,4'
 ]
 
@@ -486,7 +487,7 @@ WinControlPanel class >> showMultimediaSettingsMIDI [
 	"
 	self showMultimediaSettingsMIDI
 	"
-
+	<script>
 	^self shellRunDLL: 'shell32.dll,Control_RunDLL mmsys.cpl,,2'
 ]
 
@@ -495,7 +496,7 @@ WinControlPanel class >> showMultimediaSettingsVideo [
 	"
 	self showMultimediaSettingsVideo
 	"
-
+	<script>
 	^self shellRunDLL: 'shell32.dll,Control_RunDLL mmsys.cpl,,1'
 ]
 
@@ -504,7 +505,7 @@ WinControlPanel class >> showODBCSettings [
 	"
 	self showODBCSettings
 	"
-
+	<script>
 	^self shellRunDLL: 'shell32.dll,Control_RunDLL odbccp32.cpl' 
 ]
 
@@ -513,7 +514,7 @@ WinControlPanel class >> showPassportWizard [
 	"
 	self showPassportWizard
 	"
-
+	<script>
 	^self shellRunDLL: 'netplwiz.dll, PassportWizardRunDll'
 ]
 
@@ -522,7 +523,7 @@ WinControlPanel class >> showPowerOptions [
 	"
 	self showPowerOptions
 	"
-
+	<script>
 	^self shellRunDLL: 'Shell32.dll,Control_RunDLL Ups.cpl'
 ]
 
@@ -531,7 +532,7 @@ WinControlPanel class >> showPrinterManagementFolder [
 	"
 	self showPrinterManagementFolder
 	"
-
+	<script>
 	^self shellRunDLL: 'Shell32.dll,SHHelpShortcuts_RunDLL PrintersFolder'
 ]
 
@@ -540,7 +541,7 @@ WinControlPanel class >> showPrinterProperties [
 	"
 	self showPrinterProperties
 	"
-
+	<script>
 	^self shellRunDLL: 'shell32.dll,Control_RunDLL main.cpl @2'
 ]
 
@@ -549,7 +550,7 @@ WinControlPanel class >> showProgramPropertiesInstallUninstall [
 	"  	
 		self showProgramPropertiesInstallUninstall
 	"
-
+	<script>
 	^self shellRunDLL: 'shell32.dll,Control_RunDLL appwiz.cpl,,1'
 ]
 
@@ -558,7 +559,7 @@ WinControlPanel class >> showProgramPropertiesStartupDisk [
 	"  	
 		self showProgramPropertiesStartupDisk
 	"
-
+	<script>
 	^self shellRunDLL: 'shell32.dll,Control_RunDLL appwiz.cpl,,3'
 ]
 
@@ -567,7 +568,7 @@ WinControlPanel class >> showProgramPropertiesWindowsSetup [
 	"  	
 		self showProgramPropertiesWindowsSetup
 	"
-
+	<script>
 	^self shellRunDLL: 'shell32.dll,Control_RunDLL appwiz.cpl,,2'
 ]
 
@@ -576,7 +577,7 @@ WinControlPanel class >> showServerProperties [
 	"
 		self showServerProperties
 	"
-
+	<script>
 	^self shellRunDLL: 'shell32.dll,Control_RunDLL srvmgr.cpl' 
 ]
 
@@ -586,7 +587,7 @@ WinControlPanel class >> showSoundSettings [
 	
 		self showSoundSettings
 	"
-
+	<script>
 	^self shellRunDLL: 'Shell32.dll,Control_RunDLL Mmsys.cpl,,0'
 ]
 
@@ -595,7 +596,7 @@ WinControlPanel class >> showStoredUsernamesAndPasswords [
 	"
 	self showStoredUsernamesAndPasswords
 	"
-
+	<script>
 	^self shellRunDLL: 'keymgr.dll,KRShowKeyMgr'
 ]
 
@@ -605,7 +606,7 @@ WinControlPanel class >> showSystemSettings [
 	
 		self showSystemSettings
 	"
-
+	<script>
 	^self shellRunDLL: 'shell32.dll,Control_RunDLL wscui.cpl'
 ]
 
@@ -614,7 +615,7 @@ WinControlPanel class >> showTaskbarProperties [
 	"
 	self showTaskbarProperties
 	"
-
+	<script>
 	^self shellRunDLL: 'shell32.dll,Options_RunDLL 1'
 ]
 
@@ -623,7 +624,7 @@ WinControlPanel class >> showTelephonySettings [
 	"
 		self showTelephonySettings
 	"
-
+	<script>
 	^self shellRunDLL: 'shell32.dll,Control_RunDLL telephon.cpl' 
 ]
 
@@ -632,7 +633,7 @@ WinControlPanel class >> showThemesSettings [
 	"
 	self showThemesSettings
 	"
-
+	<script>
 	^self shellRunDLL: 'shell32.dll,Control_RunDLL themes.cpl' 
 ]
 
@@ -641,7 +642,7 @@ WinControlPanel class >> showUserAccounts [
 	"
 	self showUserAccounts
 	"
-
+	<script>
 	^self shellRunDLL: 'shell32.dll,Control_RunDLL nusrmgr.cpl'
 ]
 
@@ -651,7 +652,7 @@ WinControlPanel class >> showWelcomeCenter [
 	
 		self showWelcomeCenter
 	"
-
+	<script>
 	^self shellRunDLL: 'oobefldr.dll,ShowWelcomeCenter'
 ]
 
@@ -660,7 +661,7 @@ WinControlPanel class >> showWindowsFirewall [
 	"
 	self showWindowsFirewall
 	"
-
+	<script>
 	^self shellRunDLL: 'shell32.dll,Control_RunDLL firewall.cpl'
 ]
 
@@ -669,6 +670,6 @@ WinControlPanel class >> showWindowsSecurityCenter [
 	"
 	self showWindowsSecurityCenter
 	"
-
+	<script>
 	^self shellRunDLL: 'shell32.dll,Control_RunDLL wscui.cpl'
 ]

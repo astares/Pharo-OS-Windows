@@ -99,7 +99,7 @@ WinInternetExplorer class >> internetExplorerRegistryKey [
 
 { #category : #'instance creation' }
 WinInternetExplorer class >> open [
-
+	<script>
 	self openWithArguments: String empty
 ]
 
@@ -114,7 +114,7 @@ WinInternetExplorer class >> open: aUrl [
 
 { #category : #'instance creation' }
 WinInternetExplorer class >> openKioskMode [
-
+	<script>
 	^self openWithArguments: '-k'
 ]
 
