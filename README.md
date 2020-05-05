@@ -34,11 +34,10 @@ Windows support is defined in the project The **[OS-Windows][2]** - a subproject
 You can install the packages either directly from the Pharo configuration browser or with the following script: 
 
 ```Smalltalk
-Gofer new
-   smalltalkhubUser: 'OS' project: 'OS-Windows';
-   package: 'ConfigurationOfOSWindows';
-   load.
-(Smalltalk at: #ConfigurationOfOSWindows) load 
+Metacello new 
+	repository: 'github://astares/Pharo-OS-Windows/src';
+	baseline: 'OSWindows' ;
+	load
 ```
 
 By default all packages are loaded as well as the tests. Open the test runner and run all tests from the "OS" category to see if its fully working and report any issue you may find.
