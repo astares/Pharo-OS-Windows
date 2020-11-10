@@ -33,6 +33,20 @@ WinProcess class >> allProcessIdentifiers [
 	^ids sorted
 ]
 
+{ #category : #'process creation - console' }
+WinProcess class >> createAndWaitForHeadlessConsoleProcess: szExe [ 
+	"
+	self createAndWaitForHeadlessConsoleProcess: 'cmd.exe /c TIMEOUT /T 5'
+	"
+	| si pi |
+	si := WinStartupInfo new.
+	pi := WinProcessInformation new.
+	self createProcess: szExe startupInfo: si processInformation: pi creationFlags: CREATE_NO_WINDOW.
+	self waitForSingleObject: pi hProcess timeout: INFINITE.
+	pi hProcess closeHandle. 
+	pi hThread closeHandle
+]
+
 { #category : #'process creation' }
 WinProcess class >> createAndWaitForProcess: szExe [ 
 	"
@@ -61,10 +75,25 @@ WinProcess class >> createAndWaitForProcess: szExe withCurrentDirectory: szCurre
 	pi hThread closeHandle
 ]
 
+{ #category : #'process creation - console' }
+WinProcess class >> createHeadlessConsoleProcess: szExe [ 
+	"
+	Create a console process without any window.
+	
+		self createHeadlessConsoleProcess: 'cmd.exe /c dir > directory.txt'.  
+		FileSystem workingDirectory openInOSFileBrowser 		
+	"
+	| si pi |
+	si := WinStartupInfo new.
+	pi := WinProcessInformation new.
+	self createProcess: szExe startupInfo: si processInformation: pi creationFlags: CREATE_NO_WINDOW.
+	^pi
+]
+
 { #category : #'process creation' }
 WinProcess class >> createHeadlessProcess: szExe [ 
 	"
-	self createProcess: 'cmd.exe'
+	self createHeadlessProcess: 'cmd.exe'
 	"
 	| si pi |
 	si := WinStartupInfo new.
@@ -99,6 +128,14 @@ WinProcess class >> createProcess: szExe startupInfo: lpStartupInfo processInfor
 	"Retrieves the contents of the STARTUPINFO structure that was specified when the calling process was created."	
 		
 	^ self ffiCall: #(BOOL CreateProcessA(0, LPCTSTR szExe, 0, 0, false, 0, 0, 0, WinStartupInfo* lpStartupInfo, WinProcessInformation* pi)) module: #kernel32	 
+
+]
+
+{ #category : #primitives }
+WinProcess class >> createProcess: szExe startupInfo: lpStartupInfo processInformation: pi creationFlags: dwCreationFlags [
+	"Retrieves the contents of the STARTUPINFO structure that was specified when the calling process was created."	
+		
+	^ self ffiCall: #(BOOL CreateProcessA(0, LPCTSTR szExe, 0, 0, false, DWORD dwCreationFlags, 0, 0, WinStartupInfo* lpStartupInfo, WinProcessInformation* pi)) module: #kernel32	 
 
 ]
 
