@@ -148,6 +148,14 @@ WinProcess class >> fgetc: stream [
 			 
 ]
 
+{ #category : #accessing }
+WinProcess class >> getProcessId: hProcess [ 
+	"Return the PID of the process represented by the given process handle."	
+
+	^ self ffiCall: #(DWORD GetProcessId(HANDLE hProcess)) module: #kernel32	
+
+]
+
 { #category : #primitives }
 WinProcess class >> getStartupInfo: info [
 	"Retrieves the contents of the STARTUPINFO structure that was specified when the calling process was created."	

@@ -133,7 +133,7 @@ WinConsoleColor class >> yellow [
 ]
 
 { #category : #printing }
-WinConsoleColor >> printOn: aStream. [
+WinConsoleColor >> printOn: aStream [.
 	super printOn: aStream.
 	aStream cr; nextPutAll: 'value: '.
 	self value printOn: aStream
