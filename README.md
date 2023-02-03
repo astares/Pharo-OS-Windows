@@ -1,5 +1,5 @@
 # Pharo-OS-Windows
-Support for Windows operating system for Pharo, migrated from [http://www.smalltalkhub.com/#!/~OS/OS-Windows](http://www.smalltalkhub.com/#!/~OS/OS-Windows)
+Support for Windows operating system for [Pharo](https://www.pharo.org)
 
 # The OS PROJECT FOR PHARO
 
@@ -596,6 +596,10 @@ The project is checked using the Pharo CI server, see the following locations:
 - [https://ci.inria.fr/pharo-contribution/job/OSWindows/][8]
 
 ----------------------------------------------------------------------
+## History
+
+Migrated from [http://www.smalltalkhub.com/#!/~OS/OS-Windows](http://www.smalltalkhub.com/#!/~OS/OS-Windows)
+
 ## Contribute
 ### How to contribute
 
