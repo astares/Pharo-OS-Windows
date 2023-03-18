@@ -51,7 +51,7 @@ WinProcessTest >> testAllProcessIdentifiers [
 { #category : #tests }
 WinProcessTest >> testCurrentProcess [
 
-	self assert: self defaultTestClass currentProcess handle value > 0
+	self assert: self defaultTestClass currentProcess getHandle value > 0
 ]
 
 { #category : #tests }

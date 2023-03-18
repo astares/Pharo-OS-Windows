@@ -11,7 +11,7 @@ Class {
 WinDeviceContextTest >> checkValidDeviceContext: aDeviceContext [
 
 	self assert: aDeviceContext notNil.
-	self assert: aDeviceContext handle asInteger > 0
+	self assert: aDeviceContext getHandle asInteger > 0
 ]
 
 { #category : #accessing }

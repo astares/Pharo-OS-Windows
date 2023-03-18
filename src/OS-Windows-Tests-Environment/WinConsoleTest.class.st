@@ -72,7 +72,8 @@ WinConsoleTest >> testFontSize [
 { #category : #tests }
 WinConsoleTest >> testIsConsoleType [
 
-	|fileType|
-	fileType := WinConsole getFileType: (WinHandle fromExternalHandle: stdoutConsole handle).
-	self assert: fileType = FILE_TYPE_CHAR  "The specified file is a character file, typically an LPT device or a console."
+	| fileType |
+	fileType := WinConsole getFileType:
+		            (WinHandle fromExternalHandle: stdoutConsole getHandle).
+	self assert: fileType = FILE_TYPE_CHAR "The specified file is a character file, typically an LPT device or a console."
 ]

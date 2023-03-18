@@ -30,6 +30,6 @@ WinThread class >> currentThreadId [
 { #category : #testing }
 WinThread >> isThreadAllAccess [
 	"For systems that do not support security descriptors, the (pseudo) handle  is THREAD_ALL_ACCESS. "
-	
-	^self handle value = 2032639 "THREAD_ALL_ACCESS"
+
+	^ self getHandle value = 2032639 "THREAD_ALL_ACCESS"
 ]

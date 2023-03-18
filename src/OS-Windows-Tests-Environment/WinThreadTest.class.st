@@ -33,7 +33,7 @@ WinThreadTest >> tearDown [
 { #category : #tests }
 WinThreadTest >> testCurrentThread [
 
-	self assert: self defaultTestClass currentThread handle value > 0
+	self assert: self defaultTestClass currentThread getHandle value > 0
 ]
 
 { #category : #tests }

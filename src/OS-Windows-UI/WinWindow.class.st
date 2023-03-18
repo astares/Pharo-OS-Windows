@@ -186,7 +186,7 @@ WinWindow >> getWindowText: hWnd buffer: lpString bufferSize: nMaxCount [
 { #category : #comparing }
 WinWindow >> hash [
 
-	^self handle asInteger hash
+	^ self getHandle asInteger hash
 ]
 
 { #category : #visibility }

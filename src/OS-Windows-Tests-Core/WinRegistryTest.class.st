@@ -50,16 +50,17 @@ WinRegistryTest >> testQueryStringValue [
 
 { #category : #'tests - primitives' }
 WinRegistryTest >> testRegistryKeyOpenAndClose [
-	
-	|hKey|
+
+	| hKey |
 	hKey := WinRegistryKey new.
-	self assert: (WinRegistry regOpenKeyExA: WinRegistryKey localMachine 
-												 with: 'HARDWARE\\DESCRIPTION\\System\\CentralProcessor\\0' 
-												 with: 0
-												 with: KEY_QUERY_VALUE
-												 with: hKey) = ERROR_SUCCESS.
-	self assert: hKey handle value > 0. "Assert we have a valid handle"
-	
+	self assert: (WinRegistry
+			 regOpenKeyExA: WinRegistryKey localMachine
+			 with: 'HARDWARE\\DESCRIPTION\\System\\CentralProcessor\\0'
+			 with: 0
+			 with: KEY_QUERY_VALUE
+			 with: hKey) = ERROR_SUCCESS.
+	self assert: hKey getHandle value > 0. "Assert we have a valid handle"
+
 	self assert: (WinRegistry regCloseKey: hKey) = ERROR_SUCCESS
 ]
 

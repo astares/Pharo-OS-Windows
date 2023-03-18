@@ -14,7 +14,7 @@ Class {
 WinWindowTest >> checkValidWindow: aWindow [
 
 	self assert: aWindow notNil.
-	self assert: aWindow handle asInteger > 0
+	self assert: aWindow getHandle asInteger > 0
 ]
 
 { #category : #accessing }
@@ -61,17 +61,20 @@ WinWindowTest >> testCaptureWindow [
 
 { #category : #'tests - default instances' }
 WinWindowTest >> testClipboardOwnerWindow [
-	|win|
+
+	| win |
 	win := self defaultTestClass clipboardOwnerWindow.
-	win handle asInteger > 0 ifTrue: [ self checkValidWindow: win ] "we can not assume that someone used the clipboard from Pharo already, if so test"
+	win getHandle asInteger > 0 ifTrue: [ "we can not assume that someone used the clipboard from Pharo already, if so test"
+		self checkValidWindow: win ]
 ]
 
 { #category : #'tests - default instances' }
 WinWindowTest >> testClipboardViewerWindow [
-	
-	|win|
+
+	| win |
 	win := self defaultTestClass clipboardViewerWindow.
-	win handle asInteger > 0 ifTrue: [ self checkValidWindow: win ] "we can not assume that someone used the clipboard from Pharo already, if so test"
+	win getHandle asInteger > 0 ifTrue: [ "we can not assume that someone used the clipboard from Pharo already, if so test"
+		self checkValidWindow: win ]
 ]
 
 { #category : #'tests - other' }
