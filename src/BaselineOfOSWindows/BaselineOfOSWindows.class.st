@@ -21,11 +21,14 @@ BaselineOfOSWindows >> baseline: spec [
 			package: 'OS-Windows-Environment' with: [ spec requires: #('OS-Windows-Core') ];
 			package: 'OS-Windows-Environment-Tests' with: [ spec requires: #('OS-Windows-Environment') ];
 			package: 'OS-Windows-Cryptography' with: [ spec requires: #('OS-Windows-Core' ) ];
+			package: 'OS-Windows-Services' with: [ spec requires: #('OS-Windows-Core' ) ];
+			package: 'OS-Windows-LDAP' with: [ spec requires: #('OS-Windows-Core' ) ];
+			package: 'OS-Windows-LDAP-Tests' with: [ spec requires: #('OS-Windows-LDAP') ];
 			package: 'OS-Windows-Tools' with: [ spec requires: #('OS-Windows-Core' 'OS-Windows-Environment') ].
 		"Groups"
 		spec
 			group: 'default' with: #('Core' 'Tests' 'Tools');
-			group: 'Tests' with: #('OS-Windows-Core-Tests' 'OS-Windows-UI-Tests' 'OS-Windows-Environment-Tests');
+			group: 'Tests' with: #('OS-Windows-Core-Tests' 'OS-Windows-UI-Tests' 'OS-Windows-Environment-Tests' 'OS-Windows-LDAP-Tests');
 			group: 'Core' with: #('OS-Windows-Core' 'OS-Windows-Environment' 'OS-Windows-UI');
 			group: 'Tools' with: #('OS-Windows-Tools' ) ]
 ]
