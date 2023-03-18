@@ -41,9 +41,16 @@ WinRegistryKeyTest >> testDynamicData [
 ]
 
 { #category : #tests }
-WinRegistryKeyTest >> testKeyName [
+WinRegistryKeyTest >> testKeyNames [
 
-	self assert: WinRegistryKey allUsers keyName  equals: #HKEY_USERS
+	self
+		assert: WinRegistryKey allUsers keyName equals: #HKEY_USERS;
+		assert: WinRegistryKey classesRoot keyName equals: #HKEY_CLASSES_ROOT;
+		assert: WinRegistryKey currentConfig keyName equals: #HKEY_CURRENT_CONFIG;
+	   assert: WinRegistryKey currentUser keyName equals: #HKEY_CURRENT_USER;
+		assert: WinRegistryKey dynamicData keyName equals: #HKEY_DYN_DATA;
+	   assert: WinRegistryKey localMachine keyName equals: #HKEY_LOCAL_MACHINE;
+		assert: WinRegistryKey performanceData keyName equals: #HKEY_PERFORMANCE_DATA
 ]
 
 { #category : #'tests - defaults' }
