@@ -96,10 +96,14 @@ WinWindow class >> foregroundWindow [
 
 { #category : #'accessing instances' }
 WinWindow class >> pharoWindow [
+	<script: 'self pharoWindow inspect'>
 
-	| handle |
-	handle := (ExternalAddress loadSymbol: 'stWindow' module: nil) unsignedLongAt: 1.
-	^self fromExternalHandle: handle
+	| sdlWindowInfo handle osWindow |
+	osWindow := self currentWorld worldState worldRenderer window.
+	sdlWindowInfo := osWindow backendWindow getWMInfo.
+	handle := sdlWindowInfo info win window.
+
+	^ self fromExternalHandle: handle
 ]
 
 { #category : #accessing }
@@ -110,11 +114,11 @@ WinWindow class >> windowFromPoint: point [
 ]
 
 { #category : #comparing }
-WinWindow >> = anotherWindow [ 
+WinWindow >> = anotherWindow [
 	"Compare using the external give handle"
-	
-	^self species = anotherWindow species
-		and: [ self handle = anotherWindow handle ]
+
+	^ self species = anotherWindow species and: [
+		  self getHandle = anotherWindow getHandle ]
 ]
 
 { #category : #positioning }
