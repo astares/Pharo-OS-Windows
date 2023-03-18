@@ -75,12 +75,11 @@ WinProcessTest >> testCurrentProcessIsRunning [
 { #category : #tests }
 WinProcessTest >> testGetVMModuleHandle [
 
-	|handle|
+	| handle |
 	handle := WinProcess getVMModuleHandle.
-	self 
+	self
 		assert: handle notNil;
-		assert: handle handle > 0
-
+		assert: handle getHandle value > 0
 ]
 
 { #category : #tests }
