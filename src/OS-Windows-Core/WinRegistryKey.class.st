@@ -13,7 +13,7 @@ Class {
 { #category : #defaults }
 WinRegistryKey class >> allUsers [
 
-	^self fromExternalHandle: HKEY_USERS
+	^ self fromExternalHandle: HKEY_USERS
 ]
 
 { #category : #converting }
@@ -24,7 +24,7 @@ WinRegistryKey class >> asExternalTypeOn: generator [
 { #category : #defaults }
 WinRegistryKey class >> classesRoot [
 
-	^self fromExternalHandle: HKEY_CLASSES_ROOT
+	^ self fromExternalHandle: HKEY_CLASSES_ROOT
 ]
 
 { #category : #'private - finalization' }
@@ -38,19 +38,19 @@ WinRegistryKey class >> closeHandle: aHandle [
 { #category : #defaults }
 WinRegistryKey class >> currentConfig [
 
-	^self fromExternalHandle: HKEY_CURRENT_CONFIG  
+	^ self fromExternalHandle: HKEY_CURRENT_CONFIG
 ]
 
 { #category : #defaults }
 WinRegistryKey class >> currentUser [
 
-	^self fromExternalHandle: HKEY_CURRENT_USER
+	^ self fromExternalHandle: HKEY_CURRENT_USER
 ]
 
 { #category : #defaults }
-WinRegistryKey class >> dynamicData [ 
+WinRegistryKey class >> dynamicData [
 
-	^self fromExternalHandle: HKEY_DYN_DATA   
+	^ self fromExternalHandle: HKEY_DYN_DATA
 ]
 
 { #category : #examples }
@@ -70,13 +70,13 @@ WinRegistryKey class >> example2 [
 { #category : #defaults }
 WinRegistryKey class >> localMachine [
 
-	^self fromExternalHandle: HKEY_LOCAL_MACHINE
+	^ self fromExternalHandle: HKEY_LOCAL_MACHINE
 ]
 
 { #category : #defaults }
 WinRegistryKey class >> performanceData [
 
-	^self fromExternalHandle: HKEY_PERFORMANCE_DATA 
+	^ self fromExternalHandle: HKEY_PERFORMANCE_DATA
 ]
 
 { #category : #lifetime }
