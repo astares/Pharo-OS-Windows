@@ -83,11 +83,11 @@ WinProcessTest >> testGetVMModuleHandle [
 ]
 
 { #category : #tests }
-WinProcessTest >> testIsRunningUnderWOW64 [
-	"Pharo is still a 32 bit app running under WOW64 on 64 bit systems. We assume running on a 64 bit machine here"
-	
-	self assert: WinProcess currentProcess isWow64Process 
-	
+WinProcessTest >> testIsNotRunningUnderWOW64 [
+	"Pharo is running with a 64bit VM (so it is not running as a 32 bit app under
+	 WOW64 on 64 bit systems anymore). We assume running on a 64 bit machine here"
+
+	self deny: WinProcess currentProcess isWow64Process
 ]
 
 { #category : #tests }
