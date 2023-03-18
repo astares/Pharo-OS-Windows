@@ -272,7 +272,7 @@ WinWindow >> setWindowLong: hWnd index: nIndex newVale: dwNewLong [
 { #category : #primitives }
 WinWindow >> setWindowText: lpString [
 
-	^self nbCall: #(BOOL SetWindowTextA(HWND self, LPCTSTR lpString)) module: #user32
+	^self ffiCall: #(BOOL SetWindowTextA(HWND self, LPCTSTR lpString)) module: #user32
 
 ]
 
