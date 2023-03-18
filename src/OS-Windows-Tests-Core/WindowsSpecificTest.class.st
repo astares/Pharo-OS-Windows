@@ -10,7 +10,7 @@ Class {
 { #category : #testing }
 WindowsSpecificTest class >> isAbstract [
   	"only run test subclasses on Windows"
-	
+
 	^(self name = #WindowsSpecificTest)
-		or: [ Smalltalk os isWin32 not ]
+		or: [ Smalltalk os isWindows not ]
 ]
