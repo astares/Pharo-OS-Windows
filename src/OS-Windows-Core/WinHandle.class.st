@@ -18,11 +18,11 @@ WinHandle class >> closeHandle: aHandle [
 
 ]
 
-{ #category : #'private - finalization' }
+{ #category : #finalization }
 WinHandle class >> finalizeResourceData: aWinHandle [
 	"Finalize the external resource by closing"
-	
-	(aWinHandle handle = 0 or: [ aWinHandle handle isNull ]) ifTrue: [ ^ self ]. 
+
+	(aWinHandle value = 0) ifTrue: [ ^ self ].
 	self closeHandle: aWinHandle
 ]
 
