@@ -65,17 +65,18 @@ WinRegistryTest >> testRegistryKeyOpenAndClose [
 
 { #category : #'tests - primitives' }
 WinRegistryTest >> testSubkeyCreationAndDeletion [
-	"Depending on rights the key is created either under HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\PHAROTEST or under
-    HKEY_USERS\S-X-X-XX-XXXXXXXXXX-XXXXXXXXXX-XXXXXXXXXX-XXXX\Software\Classes\VirtualStore\MACHINE\SOFTWARE\Wow6432Node\PHAROTEST"
-	
-	|hKey hNewKey|
-	hKey := WinRegistryKey localMachine queryOpenSubkey: 'SOFTWARE'.
-	self assert: hKey handle value > 0. "make sure we have a valid handle to a key"
-	
-	hNewKey := WinRegistryKey new.	
-	self assert: (WinRegistry regCreateKeyA: hKey with: 'PHAROTEST' with: hNewKey) = ERROR_SUCCESS.
-	self assert: hNewKey handle value > 0. "make sure we have a valid handle to a new key now"
-	
-	self assert: (WinRegistry regDeleteKeyA: hKey with: 'PHAROTEST') = ERROR_SUCCESS
-	
+	"Due to permissions we can only create registry key HKEY_CURRENT_USER\SOFTWARE\"
+
+	| hKey hNewKey |
+	hKey := WinRegistryKey currentUser queryOpenSubkey: 'SOFTWARE'.
+	self assert: hKey value > 0. "make sure we have a valid handle to a key"
+
+	hNewKey := WinRegistryKey new.
+	self assert: (WinRegistry regCreateKeyA: hKey with: 'PHAROTEST' with: hNewKey)
+		  equals: ERROR_SUCCESS.
+
+	self assert: hNewKey value > 0. "make sure we have a valid handle to a new key now"
+
+	self assert: (WinRegistry regDeleteKeyA: hKey with: 'PHAROTEST')
+		  equals: ERROR_SUCCESS
 ]
