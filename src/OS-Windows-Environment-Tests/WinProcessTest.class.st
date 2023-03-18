@@ -17,7 +17,7 @@ Class {
 	#pools : [
 		'WinBaseConstants'
 	],
-	#category : #'OS-Windows-Tests-Environment-Processing'
+	#category : #'OS-Windows-Environment-Tests-Processing'
 }
 
 { #category : #accessing }

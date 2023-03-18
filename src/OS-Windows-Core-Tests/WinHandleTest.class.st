@@ -4,7 +4,7 @@ Unit test for WinHandle
 Class {
 	#name : #WinHandleTest,
 	#superclass : #WindowsSpecificTest,
-	#category : #'OS-Windows-Tests-Core-Common'
+	#category : #'OS-Windows-Core-Tests-Common'
 }
 
 { #category : #tests }

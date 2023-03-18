@@ -4,6 +4,12 @@ Represents a RECT structure
 Class {
 	#name : #WinRectangle,
 	#superclass : #FFIExternalStructure,
+	#classVars : [
+		'OFFSET_BOTTOM',
+		'OFFSET_LEFT',
+		'OFFSET_RIGHT',
+		'OFFSET_TOP'
+	],
 	#category : #'OS-Windows-UI-Graphics-Support'
 }
 

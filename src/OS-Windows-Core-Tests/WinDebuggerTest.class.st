@@ -4,7 +4,7 @@ SUnit tests for WinDebugger
 Class {
 	#name : #WinDebuggerTest,
 	#superclass : #WindowsSpecificTest,
-	#category : #'OS-Windows-Tests-Core-Debugging'
+	#category : #'OS-Windows-Core-Tests-Debugging'
 }
 
 { #category : #tests }

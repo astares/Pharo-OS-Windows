@@ -4,6 +4,16 @@ Represents the SYSTEMTIME structure defined in Windows.h
 Class {
 	#name : #WinSystemTime,
 	#superclass : #FFIExternalStructure,
+	#classVars : [
+		'OFFSET_WDAY',
+		'OFFSET_WDAYOFWEEK',
+		'OFFSET_WHOUR',
+		'OFFSET_WMILLISECONDS',
+		'OFFSET_WMINUTE',
+		'OFFSET_WMONTH',
+		'OFFSET_WSECOND',
+		'OFFSET_WYEAR'
+	],
 	#pools : [
 		'WinTypes'
 	],

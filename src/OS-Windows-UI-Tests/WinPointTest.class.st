@@ -4,7 +4,7 @@ SUnit tests for WinPoint
 Class {
 	#name : #WinPointTest,
 	#superclass : #WindowsSpecificTest,
-	#category : #'OS-Windows-Tests-UI-Graphics-Support'
+	#category : #'OS-Windows-UI-Tests-Graphics-Support'
 }
 
 { #category : #accessing }

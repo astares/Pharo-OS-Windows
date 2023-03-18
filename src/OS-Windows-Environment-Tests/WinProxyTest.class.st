@@ -4,7 +4,7 @@ Test for WinProxy
 Class {
 	#name : #WinProxyTest,
 	#superclass : #WindowsSpecificTest,
-	#category : #'OS-Windows-Tests-Environment-Network'
+	#category : #'OS-Windows-Environment-Tests-Network'
 }
 
 { #category : #tests }

@@ -4,7 +4,7 @@ SUnit tests for WinCaret
 Class {
 	#name : #WinCaretTest,
 	#superclass : #WindowsSpecificTest,
-	#category : #'OS-Windows-Tests-Environment-Caret'
+	#category : #'OS-Windows-Environment-Tests-Caret'
 }
 
 { #category : #tests }

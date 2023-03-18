@@ -8,7 +8,7 @@ Class {
 		'WinErrorConstants',
 		'WinRegistryConstants'
 	],
-	#category : #'OS-Windows-Tests-Core-Registry'
+	#category : #'OS-Windows-Core-Tests-Registry'
 }
 
 { #category : #'tests - queries' }

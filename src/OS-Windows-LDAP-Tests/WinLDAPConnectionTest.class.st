@@ -4,7 +4,7 @@ Test for WinLDAPConnection
 Class {
 	#name : #WinLDAPConnectionTest,
 	#superclass : #WindowsSpecificTest,
-	#category : #'OS-Windows-Tests-LDAP-Base'
+	#category : #'OS-Windows-LDAP-Tests-Base'
 }
 
 { #category : #accessing }

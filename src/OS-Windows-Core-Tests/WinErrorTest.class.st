@@ -4,7 +4,7 @@ A test for WinError
 Class {
 	#name : #WinErrorTest,
 	#superclass : #WindowsSpecificTest,
-	#category : #'OS-Windows-Tests-Core-Exceptions'
+	#category : #'OS-Windows-Core-Tests-Exceptions'
 }
 
 { #category : #tests }

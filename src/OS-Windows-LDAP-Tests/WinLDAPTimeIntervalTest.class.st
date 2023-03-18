@@ -4,7 +4,7 @@ Unit tests for WinLDAPTimeInterval
 Class {
 	#name : #WinLDAPTimeIntervalTest,
 	#superclass : #WindowsSpecificTest,
-	#category : #'OS-Windows-Tests-LDAP-Utilities'
+	#category : #'OS-Windows-LDAP-Tests-Utilities'
 }
 
 { #category : #tests }

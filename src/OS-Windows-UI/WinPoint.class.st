@@ -4,6 +4,10 @@ Represents a POINTstructure
 Class {
 	#name : #WinPoint,
 	#superclass : #FFIExternalStructure,
+	#classVars : [
+		'OFFSET_X',
+		'OFFSET_Y'
+	],
 	#category : #'OS-Windows-UI-Graphics-Support'
 }
 

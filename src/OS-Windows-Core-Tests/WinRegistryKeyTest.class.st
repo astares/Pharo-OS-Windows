@@ -7,37 +7,38 @@ Class {
 	#pools : [
 		'WinRegistryConstants'
 	],
-	#category : #'OS-Windows-Tests-Core-Registry'
+	#category : #'OS-Windows-Core-Tests-Registry'
 }
 
 { #category : #'tests - defaults' }
 WinRegistryKeyTest >> testAllUsers [
 
-	self assert: WinRegistryKey allUsers handle = HKEY_USERS 
+	self assert: WinRegistryKey allUsers getHandle = HKEY_USERS
 ]
 
 { #category : #'tests - defaults' }
 WinRegistryKeyTest >> testClassesRoot [
 
-	self assert: WinRegistryKey classesRoot handle = HKEY_CLASSES_ROOT
+	self assert: WinRegistryKey classesRoot getHandle = HKEY_CLASSES_ROOT
 ]
 
 { #category : #'tests - defaults' }
 WinRegistryKeyTest >> testCurrentConfig [
 
-	self assert: WinRegistryKey currentConfig handle = HKEY_CURRENT_CONFIG
+	self assert:
+		WinRegistryKey currentConfig getHandle = HKEY_CURRENT_CONFIG
 ]
 
 { #category : #'tests - defaults' }
 WinRegistryKeyTest >> testCurrentUser [
 
-	self assert: WinRegistryKey currentUser handle = HKEY_CURRENT_USER
+	self assert: WinRegistryKey currentUser getHandle = HKEY_CURRENT_USER
 ]
 
 { #category : #'tests - defaults' }
 WinRegistryKeyTest >> testDynamicData [
 
-	self assert: WinRegistryKey dynamicData handle = HKEY_DYN_DATA 
+	self assert: WinRegistryKey dynamicData getHandle = HKEY_DYN_DATA
 ]
 
 { #category : #tests }
@@ -56,13 +57,15 @@ WinRegistryKeyTest >> testKeyNames [
 { #category : #'tests - defaults' }
 WinRegistryKeyTest >> testLocalMachine [
 
-	self assert: WinRegistryKey localMachine handle = HKEY_LOCAL_MACHINE
+	self assert:
+		WinRegistryKey localMachine getHandle = HKEY_LOCAL_MACHINE
 ]
 
 { #category : #'tests - defaults' }
 WinRegistryKeyTest >> testPerformanceData [
 
-	self assert: WinRegistryKey performanceData handle = HKEY_PERFORMANCE_DATA  
+	self assert:
+		WinRegistryKey performanceData getHandle = HKEY_PERFORMANCE_DATA
 ]
 
 { #category : #tests }

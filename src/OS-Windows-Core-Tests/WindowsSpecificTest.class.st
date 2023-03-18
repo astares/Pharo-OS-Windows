@@ -4,7 +4,7 @@ Subclasses represent tests that only run on Windows operating systems
 Class {
 	#name : #WindowsSpecificTest,
 	#superclass : #TestCase,
-	#category : #'OS-Windows-Tests-Core-Common'
+	#category : #'OS-Windows-Core-Tests-Common'
 }
 
 { #category : #testing }

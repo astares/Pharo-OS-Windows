@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'localTime'
 	],
-	#category : #'OS-Windows-Tests-Core-Base'
+	#category : #'OS-Windows-Core-Tests-Base'
 }
 
 { #category : #running }

@@ -6,6 +6,10 @@ Contains information for a console font.
 Class {
 	#name : #WinConsoleFont,
 	#superclass : #FFIExternalStructure,
+	#classVars : [
+		'OFFSET_DWFONTSIZE',
+		'OFFSET_NFONT'
+	],
 	#pools : [
 		'WinConsoleConstants',
 		'WinTypes'

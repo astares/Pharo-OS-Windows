@@ -10,7 +10,7 @@ Class {
 	#pools : [
 		'WinBaseConstants'
 	],
-	#category : #'OS-Windows-Tests-Environment-Console'
+	#category : #'OS-Windows-Environment-Tests-Console'
 }
 
 { #category : #accessing }

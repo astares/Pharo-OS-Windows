@@ -7,7 +7,7 @@ Class {
 	#instVars : [
 		'window'
 	],
-	#category : #'OS-Windows-Tests-UI-Desktop'
+	#category : #'OS-Windows-UI-Tests-Desktop'
 }
 
 { #category : #'private - utilities' }

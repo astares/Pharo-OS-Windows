@@ -7,7 +7,7 @@ Class {
 	#pools : [
 		'WinErrorConstants'
 	],
-	#category : #'OS-Windows-Tests-Core-Support'
+	#category : #'OS-Windows-Core-Tests-Support'
 }
 
 { #category : #tests }

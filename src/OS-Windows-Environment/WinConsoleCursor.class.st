@@ -6,6 +6,10 @@ Contains information about the console cursor.
 Class {
 	#name : #WinConsoleCursor,
 	#superclass : #FFIExternalStructure,
+	#classVars : [
+		'OFFSET_BVISIBLE',
+		'OFFSET_DWSIZE'
+	],
 	#pools : [
 		'WinConsoleConstants',
 		'WinTypes'

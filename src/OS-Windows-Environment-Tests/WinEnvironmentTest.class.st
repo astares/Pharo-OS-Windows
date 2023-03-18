@@ -4,7 +4,7 @@ SUnit tests for WinEnvironment
 Class {
 	#name : #WinEnvironmentTest,
 	#superclass : #WindowsSpecificTest,
-	#category : #'OS-Windows-Tests-Environment-Environment'
+	#category : #'OS-Windows-Environment-Tests-Environment'
 }
 
 { #category : #tests }

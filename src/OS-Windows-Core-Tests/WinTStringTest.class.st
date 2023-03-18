@@ -4,7 +4,7 @@ SUnit tests for WinTString
 Class {
 	#name : #WinTStringTest,
 	#superclass : #WindowsSpecificTest,
-	#category : #'OS-Windows-Tests-Core-Base'
+	#category : #'OS-Windows-Core-Tests-Base'
 }
 
 { #category : #tests }
