@@ -15,6 +15,8 @@ Class {
 		'SC_MANAGER_QUERY_LOCK_STATUS',
 		'SERVICES_ACTIVE_DATABASEA',
 		'SERVICES_ACTIVE_DATABASEW',
+		'SERVICES_FAILED_DATABASEA',
+		'SERVICES_FAILED_DATABASEW',
 		'SERVICE_ACCEPT_HARDWAREPROFILECHANGE',
 		'SERVICE_ACCEPT_NETBINDCHANGE',
 		'SERVICE_ACCEPT_PARAMCHANGE',
@@ -117,7 +119,7 @@ WinServicesConstants class >> initServiceTypes [
 	SC_HANDLE := #WinServiceHandle
 ]
 
-{ #category : #initialization }
+{ #category : #'class initialization' }
 WinServicesConstants class >> initialize [
 	"Initialize the receiver class"
 
