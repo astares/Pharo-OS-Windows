@@ -13,9 +13,10 @@ Class {
 	#category : #'OS-Windows-UI-Graphics-Support'
 }
 
-{ #category : #'private - accessing' }
+{ #category : #'field definition' }
 WinRectangle class >> fieldsDesc [
-	"self rebuildFieldAccessors"
+	<script: 'self rebuildFieldAccessors'>
+
 	^ #(
 		long left;
 		long top;

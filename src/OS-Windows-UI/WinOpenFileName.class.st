@@ -4,15 +4,41 @@ Wrapper for the OPENFILENAME structure
 Class {
 	#name : #WinOpenFileName,
 	#superclass : #FFIExternalStructure,
+	#classVars : [
+		'OFFSET_DWRESERVED',
+		'OFFSET_FLAGS',
+		'OFFSET_FLAGSEX',
+		'OFFSET_HINSTANCE',
+		'OFFSET_HWNDOWNER',
+		'OFFSET_LCUSTDATA',
+		'OFFSET_LPFNHOOK',
+		'OFFSET_LPSTRCUSTOMFILTER',
+		'OFFSET_LPSTRDEFEXT',
+		'OFFSET_LPSTRFILE',
+		'OFFSET_LPSTRFILETITLE',
+		'OFFSET_LPSTRFILTER',
+		'OFFSET_LPSTRINITIALDIR',
+		'OFFSET_LPSTRTITLE',
+		'OFFSET_LPTEMPLATENAME',
+		'OFFSET_LSTRUCTSIZE',
+		'OFFSET_NFILEEXTENSION',
+		'OFFSET_NFILEOFFSET',
+		'OFFSET_NFILTERINDEX',
+		'OFFSET_NMAXCUSTFILTER',
+		'OFFSET_NMAXFILE',
+		'OFFSET_NMAXFILETITLE',
+		'OFFSET_PVRESERVED'
+	],
 	#pools : [
 		'WinTypes'
 	],
 	#category : #'OS-Windows-UI-Dialogs-Support'
 }
 
-{ #category : #'private - accessing' }
+{ #category : #'field definition' }
 WinOpenFileName class >> fieldsDesc [
-	"self rebuildFieldAccessors"
+	<script: 'self rebuildFieldAccessors'>
+
 	^ #(
 		 DWORD         lStructSize;
 	 	 HWND          hwndOwner;

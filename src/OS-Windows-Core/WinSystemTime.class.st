@@ -20,9 +20,9 @@ Class {
 	#category : #'OS-Windows-Core-Base'
 }
 
-{ #category : #'private - accessing' }
+{ #category : #'field definition' }
 WinSystemTime class >> fieldsDesc [
-	"self rebuildFieldAccessors"
+	<script: 'self rebuildFieldAccessors'>
 
 	^ #(
 		WORD wYear;

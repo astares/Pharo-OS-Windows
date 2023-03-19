@@ -6,15 +6,30 @@ WNDCLASSEX structure defined in WinUser.h
 Class {
 	#name : #WinWndClassEx,
 	#superclass : #FFIExternalStructure,
+	#classVars : [
+		'OFFSET_CBCLSEXTRA',
+		'OFFSET_CBSIZE',
+		'OFFSET_CBWNDEXTRA',
+		'OFFSET_HBRBACKGROUND',
+		'OFFSET_HCURSOR',
+		'OFFSET_HICON',
+		'OFFSET_HICONSM',
+		'OFFSET_HINSTANCE',
+		'OFFSET_LPFNWNDPROC',
+		'OFFSET_LPSZCLASSNAME',
+		'OFFSET_LPSZMENUNAME',
+		'OFFSET_STYLE'
+	],
 	#pools : [
 		'WinTypes'
 	],
 	#category : #'OS-Windows-UI-Desktop-Support'
 }
 
-{ #category : #'private - accessing' }
+{ #category : #'field definition' }
 WinWndClassEx class >> fieldsDesc [
-	"self rebuildFieldAccessors"
+	<script: 'self rebuildFieldAccessors'>
+
 	^ #(
 		UINT cbSize;
 		UINT style;

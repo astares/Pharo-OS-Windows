@@ -17,9 +17,9 @@ Class {
 	#category : #'OS-Windows-Environment-Console-Support'
 }
 
-{ #category : #'private accessing' }
+{ #category : #'field definition' }
 WinConsoleFont class >> fieldsDesc [
-	"self rebuildFieldAccessors"
+	<script: 'self rebuildFieldAccessors'>
 
 	^ #(
 		DWORD nFont;

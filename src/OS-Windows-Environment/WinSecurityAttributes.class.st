@@ -6,15 +6,20 @@ The SECURITY_ATTRIBUTES structure contains the security descriptor for an object
 Class {
 	#name : #WinSecurityAttributes,
 	#superclass : #FFIExternalStructure,
+	#classVars : [
+		'OFFSET_BINHERITHANDLE',
+		'OFFSET_LPSECURITYDESCRIPTOR',
+		'OFFSET_NLENGTH'
+	],
 	#pools : [
 		'WinTypes'
 	],
 	#category : #'OS-Windows-Environment-Processing-Support'
 }
 
-{ #category : #'private - accessing' }
+{ #category : #'field definition' }
 WinSecurityAttributes class >> fieldsDesc [
-	" self rebuildFieldAccessors "
+	<script: 'self rebuildFieldAccessors'>
 
 	^ #(
 		DWORD  nLength;

@@ -33,9 +33,9 @@ Class {
 	#category : #'OS-Windows-Environment-Processing-Support'
 }
 
-{ #category : #'private - accessing' }
+{ #category : #'field definition' }
 WinStartupInfo class >> fieldsDesc [
-	"self rebuildFieldAccessors"
+	<script: 'self rebuildFieldAccessors'>
 
 	^ #(
 		DWORD cb;

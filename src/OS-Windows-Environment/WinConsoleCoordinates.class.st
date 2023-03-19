@@ -16,9 +16,9 @@ Class {
 	#category : #'OS-Windows-Environment-Console-Support'
 }
 
-{ #category : #'private accessing' }
+{ #category : #'field definition' }
 WinConsoleCoordinates class >> fieldsDesc [
-	"self rebuildFieldAccessors"
+	<script: 'self rebuildFieldAccessors'>
 
 	^ #(
 		SHORT x;

@@ -19,9 +19,9 @@ Class {
 	#category : #'OS-Windows-Environment-Console-Support'
 }
 
-{ #category : #'private - accessing' }
+{ #category : #'field definition' }
 WinConsoleSmallRectangle class >> fieldsDesc [
-	"self rebuildFieldAccessors"
+	<script: 'self rebuildFieldAccessors'>
 
 	^ #(
 		SHORT left;

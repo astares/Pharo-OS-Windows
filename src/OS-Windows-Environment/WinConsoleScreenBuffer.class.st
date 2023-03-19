@@ -20,9 +20,9 @@ Class {
 	#category : #'OS-Windows-Environment-Console-Support'
 }
 
-{ #category : #'private - accessing' }
+{ #category : #'field definition' }
 WinConsoleScreenBuffer class >> fieldsDesc [
-	"self rebuildFieldAccessors"
+	<script: 'self rebuildFieldAccessors'>
 
 	^ #(
 		COORD      dwSize;
