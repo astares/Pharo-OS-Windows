@@ -523,11 +523,8 @@ Class {
 
 { #category : #'private - initialization' }
 WinBaseConstants class >> initCommunicationConstants [
-	"
-	Initializes the communication constants as defined in winbase.h
-
-		self initCommunicationConstants
-	"
+	"Initializes the communication constants as defined in winbase.h"
+	<script>
 
 	SP_SERIALCOMM := 1.				"specified for communications providers, including modem providers"
 
