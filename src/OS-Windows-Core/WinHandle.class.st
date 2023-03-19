@@ -51,7 +51,7 @@ WinHandle >> isInvalid [
 	^self value = 0
 ]
 
-{ #category : #finalization }
+{ #category : #'external resource management' }
 WinHandle >> resourceData [
 	"Return the resource data used for managing the external resource"
 
