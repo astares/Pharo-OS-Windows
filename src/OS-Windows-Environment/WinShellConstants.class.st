@@ -44,12 +44,9 @@ WinShellConstants class >> initOSConstants [
 WinShellConstants class >> initShellConstants [
 ]
 
-{ #category : #initialization }
+{ #category : #'class initialization' }
 WinShellConstants class >> initialize [
-	"Initializes the receiver class
-
-		self initialize
-	"
+	"Initializes the receiver class"
 
 	self
 		initShellConstants;

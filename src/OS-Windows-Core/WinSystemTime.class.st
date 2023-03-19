@@ -178,100 +178,100 @@ WinSystemTime >> setAsNewSystemTime [
 	^self class setSystemTime: self
 ]
 
-{ #category : #'private - accessing structure variables' }
+{ #category : #'accessing - structure variables' }
 WinSystemTime >> wDay [
 	"This method was automatically generated"
-	^handle unsignedShortAt: 7
+	^handle unsignedShortAt: OFFSET_WDAY
 ]
 
-{ #category : #'private - accessing structure variables' }
+{ #category : #'accessing - structure variables' }
 WinSystemTime >> wDay: anObject [
 	"This method was automatically generated"
-	handle unsignedShortAt: 7 put: anObject
+	handle unsignedShortAt: OFFSET_WDAY put: anObject
 ]
 
-{ #category : #'private - accessing structure variables' }
+{ #category : #'accessing - structure variables' }
 WinSystemTime >> wDayOfWeek [
 	"This method was automatically generated"
-	^handle unsignedShortAt: 5
+	^handle unsignedShortAt: OFFSET_WDAYOFWEEK
 ]
 
-{ #category : #'private - accessing structure variables' }
+{ #category : #'accessing - structure variables' }
 WinSystemTime >> wDayOfWeek: anObject [
 	"This method was automatically generated"
-	handle unsignedShortAt: 5 put: anObject
+	handle unsignedShortAt: OFFSET_WDAYOFWEEK put: anObject
 ]
 
-{ #category : #'private - accessing structure variables' }
+{ #category : #'accessing - structure variables' }
 WinSystemTime >> wHour [
 	"This method was automatically generated"
-	^handle unsignedShortAt: 9
+	^handle unsignedShortAt: OFFSET_WHOUR
 ]
 
-{ #category : #'private - accessing structure variables' }
+{ #category : #'accessing - structure variables' }
 WinSystemTime >> wHour: anObject [
 	"This method was automatically generated"
-	handle unsignedShortAt: 9 put: anObject
+	handle unsignedShortAt: OFFSET_WHOUR put: anObject
 ]
 
-{ #category : #'private - accessing structure variables' }
+{ #category : #'accessing - structure variables' }
 WinSystemTime >> wMilliseconds [
 	"This method was automatically generated"
-	^handle unsignedShortAt: 15
+	^handle unsignedShortAt: OFFSET_WMILLISECONDS
 ]
 
-{ #category : #'private - accessing structure variables' }
+{ #category : #'accessing - structure variables' }
 WinSystemTime >> wMilliseconds: anObject [
 	"This method was automatically generated"
-	handle unsignedShortAt: 15 put: anObject
+	handle unsignedShortAt: OFFSET_WMILLISECONDS put: anObject
 ]
 
-{ #category : #'private - accessing structure variables' }
+{ #category : #'accessing - structure variables' }
 WinSystemTime >> wMinute [
 	"This method was automatically generated"
-	^handle unsignedShortAt: 11
+	^handle unsignedShortAt: OFFSET_WMINUTE
 ]
 
-{ #category : #'private - accessing structure variables' }
+{ #category : #'accessing - structure variables' }
 WinSystemTime >> wMinute: anObject [
 	"This method was automatically generated"
-	handle unsignedShortAt: 11 put: anObject
+	handle unsignedShortAt: OFFSET_WMINUTE put: anObject
 ]
 
-{ #category : #'private - accessing structure variables' }
+{ #category : #'accessing - structure variables' }
 WinSystemTime >> wMonth [
 	"This method was automatically generated"
-	^handle unsignedShortAt: 3
+	^handle unsignedShortAt: OFFSET_WMONTH
 ]
 
-{ #category : #'private - accessing structure variables' }
+{ #category : #'accessing - structure variables' }
 WinSystemTime >> wMonth: anObject [
 	"This method was automatically generated"
-	handle unsignedShortAt: 3 put: anObject
+	handle unsignedShortAt: OFFSET_WMONTH put: anObject
 ]
 
-{ #category : #'private - accessing structure variables' }
+{ #category : #'accessing - structure variables' }
 WinSystemTime >> wSecond [
 	"This method was automatically generated"
-	^handle unsignedShortAt: 13
+	^handle unsignedShortAt: OFFSET_WSECOND
 ]
 
-{ #category : #'private - accessing structure variables' }
+{ #category : #'accessing - structure variables' }
 WinSystemTime >> wSecond: anObject [
 	"This method was automatically generated"
-	handle unsignedShortAt: 13 put: anObject
+	handle unsignedShortAt: OFFSET_WSECOND put: anObject
 ]
 
-{ #category : #'private - accessing structure variables' }
+{ #category : #'accessing - structure variables' }
 WinSystemTime >> wYear [
 	"This method was automatically generated"
-	^handle unsignedShortAt: 1
+	^handle unsignedShortAt: OFFSET_WYEAR
 ]
 
-{ #category : #'private - accessing structure variables' }
+{ #category : #'accessing - structure variables' }
 WinSystemTime >> wYear: anObject [
 	"This method was automatically generated"
-	handle unsignedShortAt: 1 put: anObject
+	handle unsignedShortAt: OFFSET_WYEAR put: anObject
 ]
 
 { #category : #accessing }

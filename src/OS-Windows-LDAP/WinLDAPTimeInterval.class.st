@@ -44,25 +44,25 @@ WinLDAPTimeInterval >> seconds: numberOfSeconds [
 	self tv_sec: numberOfSeconds
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : #'accessing - structure variables' }
 WinLDAPTimeInterval >> tv_sec [
 	"This method was automatically generated"
 	^handle platformLongAt: OFFSET_TV_SEC
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : #'accessing - structure variables' }
 WinLDAPTimeInterval >> tv_sec: anObject [
 	"This method was automatically generated"
 	^handle platformLongAt: OFFSET_TV_SEC put: anObject
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : #'accessing - structure variables' }
 WinLDAPTimeInterval >> tv_usec [
 	"This method was automatically generated"
 	^handle platformLongAt: OFFSET_TV_USEC
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : #'accessing - structure variables' }
 WinLDAPTimeInterval >> tv_usec: anObject [
 	"This method was automatically generated"
 	^handle platformLongAt: OFFSET_TV_USEC put: anObject

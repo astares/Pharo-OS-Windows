@@ -59,208 +59,208 @@ WinStartupInfo class >> fieldsDesc [
 		)
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : #'accessing - structure variables' }
 WinStartupInfo >> cb [
 	"This method was automatically generated"
-	^handle unsignedLongAt: 1
+	^handle platformUnsignedLongAt: OFFSET_CB
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : #'accessing - structure variables' }
 WinStartupInfo >> cb: anObject [
 	"This method was automatically generated"
-	handle unsignedLongAt: 1 put: anObject
+	^handle platformUnsignedLongAt: OFFSET_CB put: anObject
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : #'accessing - structure variables' }
 WinStartupInfo >> cbReserved2 [
 	"This method was automatically generated"
-	^handle unsignedShortAt: 51
+	^handle unsignedShortAt: OFFSET_CBRESERVED2
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : #'accessing - structure variables' }
 WinStartupInfo >> cbReserved2: anObject [
 	"This method was automatically generated"
-	handle unsignedShortAt: 51 put: anObject
+	handle unsignedShortAt: OFFSET_CBRESERVED2 put: anObject
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : #'accessing - structure variables' }
 WinStartupInfo >> dwFillAttribute [
 	"This method was automatically generated"
-	^handle unsignedLongAt: 41
+	^handle platformUnsignedLongAt: OFFSET_DWFILLATTRIBUTE
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : #'accessing - structure variables' }
 WinStartupInfo >> dwFillAttribute: anObject [
 	"This method was automatically generated"
-	handle unsignedLongAt: 41 put: anObject
+	^handle platformUnsignedLongAt: OFFSET_DWFILLATTRIBUTE put: anObject
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : #'accessing - structure variables' }
 WinStartupInfo >> dwFlags [
 	"This method was automatically generated"
-	^handle unsignedLongAt: 45
+	^handle platformUnsignedLongAt: OFFSET_DWFLAGS
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : #'accessing - structure variables' }
 WinStartupInfo >> dwFlags: anObject [
 	"This method was automatically generated"
-	handle unsignedLongAt: 45 put: anObject
+	^handle platformUnsignedLongAt: OFFSET_DWFLAGS put: anObject
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : #'accessing - structure variables' }
 WinStartupInfo >> dwX [
 	"This method was automatically generated"
-	^handle unsignedLongAt: 17
+	^handle platformUnsignedLongAt: OFFSET_DWX
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : #'accessing - structure variables' }
 WinStartupInfo >> dwX: anObject [
 	"This method was automatically generated"
-	handle unsignedLongAt: 17 put: anObject
+	^handle platformUnsignedLongAt: OFFSET_DWX put: anObject
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : #'accessing - structure variables' }
 WinStartupInfo >> dwXCountChars [
 	"This method was automatically generated"
-	^handle unsignedLongAt: 33
+	^handle platformUnsignedLongAt: OFFSET_DWXCOUNTCHARS
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : #'accessing - structure variables' }
 WinStartupInfo >> dwXCountChars: anObject [
 	"This method was automatically generated"
-	handle unsignedLongAt: 33 put: anObject
+	^handle platformUnsignedLongAt: OFFSET_DWXCOUNTCHARS put: anObject
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : #'accessing - structure variables' }
 WinStartupInfo >> dwXSize [
 	"This method was automatically generated"
-	^handle unsignedLongAt: 25
+	^handle platformUnsignedLongAt: OFFSET_DWXSIZE
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : #'accessing - structure variables' }
 WinStartupInfo >> dwXSize: anObject [
 	"This method was automatically generated"
-	handle unsignedLongAt: 25 put: anObject
+	^handle platformUnsignedLongAt: OFFSET_DWXSIZE put: anObject
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : #'accessing - structure variables' }
 WinStartupInfo >> dwY [
 	"This method was automatically generated"
-	^handle unsignedLongAt: 21
+	^handle platformUnsignedLongAt: OFFSET_DWY
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : #'accessing - structure variables' }
 WinStartupInfo >> dwY: anObject [
 	"This method was automatically generated"
-	handle unsignedLongAt: 21 put: anObject
+	^handle platformUnsignedLongAt: OFFSET_DWY put: anObject
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : #'accessing - structure variables' }
 WinStartupInfo >> dwYCountChars [
 	"This method was automatically generated"
-	^handle unsignedLongAt: 37
+	^handle platformUnsignedLongAt: OFFSET_DWYCOUNTCHARS
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : #'accessing - structure variables' }
 WinStartupInfo >> dwYCountChars: anObject [
 	"This method was automatically generated"
-	handle unsignedLongAt: 37 put: anObject
+	^handle platformUnsignedLongAt: OFFSET_DWYCOUNTCHARS put: anObject
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : #'accessing - structure variables' }
 WinStartupInfo >> dwYSize [
 	"This method was automatically generated"
-	^handle unsignedLongAt: 29
+	^handle platformUnsignedLongAt: OFFSET_DWYSIZE
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : #'accessing - structure variables' }
 WinStartupInfo >> dwYSize: anObject [
 	"This method was automatically generated"
-	handle unsignedLongAt: 29 put: anObject
+	^handle platformUnsignedLongAt: OFFSET_DWYSIZE put: anObject
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : #'accessing - structure variables' }
 WinStartupInfo >> hStdError [
 	"This method was automatically generated"
-	^WinHandle fromInteger: (handle unsignedLongAt: 65)
+	^WinHandle fromInteger: (handle unsignedLongAt: OFFSET_HSTDERROR)
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : #'accessing - structure variables' }
 WinStartupInfo >> hStdError: anObject [
 	"This method was automatically generated"
-	handle unsignedLongAt: 65 put: anObject value
+	handle unsignedLongAt: OFFSET_HSTDERROR put: anObject value
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : #'accessing - structure variables' }
 WinStartupInfo >> hStdInput [
 	"This method was automatically generated"
-	^WinHandle fromInteger: (handle unsignedLongAt: 57)
+	^WinHandle fromInteger: (handle unsignedLongAt: OFFSET_HSTDINPUT)
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : #'accessing - structure variables' }
 WinStartupInfo >> hStdInput: anObject [
 	"This method was automatically generated"
-	handle unsignedLongAt: 57 put: anObject value
+	handle unsignedLongAt: OFFSET_HSTDINPUT put: anObject value
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : #'accessing - structure variables' }
 WinStartupInfo >> hStdOutput [
 	"This method was automatically generated"
-	^WinHandle fromInteger: (handle unsignedLongAt: 61)
+	^WinHandle fromInteger: (handle unsignedLongAt: OFFSET_HSTDOUTPUT)
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : #'accessing - structure variables' }
 WinStartupInfo >> hStdOutput: anObject [
 	"This method was automatically generated"
-	handle unsignedLongAt: 61 put: anObject value
+	handle unsignedLongAt: OFFSET_HSTDOUTPUT put: anObject value
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : #'accessing - structure variables' }
 WinStartupInfo >> lpDesktop [
 	"This method was automatically generated"
-	^ExternalData fromHandle: (handle pointerAt: 9) type: ExternalType char asPointerType
+	^ExternalData fromHandle: (handle pointerAt: OFFSET_LPDESKTOP) type: ExternalType char asPointerType
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : #'accessing - structure variables' }
 WinStartupInfo >> lpDesktop: anObject [
 	"This method was automatically generated"
-	handle pointerAt: 9 put: anObject getHandle
+	handle pointerAt: OFFSET_LPDESKTOP put: anObject getHandle.
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : #'accessing - structure variables' }
 WinStartupInfo >> lpReserved [
 	"This method was automatically generated"
-	^ExternalData fromHandle: (handle pointerAt: 5) type: ExternalType char asPointerType
+	^ExternalData fromHandle: (handle pointerAt: OFFSET_LPRESERVED) type: ExternalType char asPointerType
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : #'accessing - structure variables' }
 WinStartupInfo >> lpReserved2 [
 	"This method was automatically generated"
-	^ExternalData fromHandle: (handle pointerAt: 53) type: ExternalType sbyte asPointerType
+	^ExternalData fromHandle: (handle pointerAt: OFFSET_LPRESERVED2) type: ExternalType byte asPointerType
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : #'accessing - structure variables' }
 WinStartupInfo >> lpReserved2: anObject [
 	"This method was automatically generated"
-	handle pointerAt: 53 put: anObject getHandle
+	handle pointerAt: OFFSET_LPRESERVED2 put: anObject getHandle.
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : #'accessing - structure variables' }
 WinStartupInfo >> lpReserved: anObject [
 	"This method was automatically generated"
-	handle pointerAt: 5 put: anObject getHandle
+	handle pointerAt: OFFSET_LPRESERVED put: anObject getHandle.
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : #'accessing - structure variables' }
 WinStartupInfo >> lpTitle [
 	"This method was automatically generated"
-	^ExternalData fromHandle: (handle pointerAt: 13) type: ExternalType char asPointerType
+	^ExternalData fromHandle: (handle pointerAt: OFFSET_LPTITLE) type: ExternalType char asPointerType
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : #'accessing - structure variables' }
 WinStartupInfo >> lpTitle: anObject [
 	"This method was automatically generated"
-	handle pointerAt: 13 put: anObject getHandle
+	handle pointerAt: OFFSET_LPTITLE put: anObject getHandle.
 ]
 
 { #category : #testing }
@@ -269,16 +269,16 @@ WinStartupInfo >> title [
 	^self lpTitle
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : #'accessing - structure variables' }
 WinStartupInfo >> wShowWindow [
 	"This method was automatically generated"
-	^handle unsignedShortAt: 49
+	^handle unsignedShortAt: OFFSET_WSHOWWINDOW
 ]
 
-{ #category : #'accessing structure variables' }
+{ #category : #'accessing - structure variables' }
 WinStartupInfo >> wShowWindow: anObject [
 	"This method was automatically generated"
-	handle unsignedShortAt: 49 put: anObject
+	handle unsignedShortAt: OFFSET_WSHOWWINDOW put: anObject
 ]
 
 { #category : #testing }
