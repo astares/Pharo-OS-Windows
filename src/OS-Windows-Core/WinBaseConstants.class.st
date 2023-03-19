@@ -624,11 +624,8 @@ WinBaseConstants class >> initCommunicationConstants [
 
 { #category : #'private - initialization' }
 WinBaseConstants class >> initDebugConstants [
-	"
-	Initializes the debug constants as defined in winbase.h
-
-		self initDebugConstants
-	"
+	"Initializes the debug constants as defined in winbase.h"
+	<script>
 
 	"Debugging event codes that identify the type of debugging event"
 	EXCEPTION_DEBUG_EVENT := 1.			"Reports an exception debugging event."
@@ -644,11 +641,8 @@ WinBaseConstants class >> initDebugConstants [
 
 { #category : #'private - initialization' }
 WinBaseConstants class >> initEventLogConstants [
-	"
-	Initializes the constants as defined in winbase.h
-
-		self initEventLogConstants
-	"
+	"Initializes the constants as defined in winbase.h"
+	<script>
 
 	EVENTLOG_FORWARDS_READ := 4.
 	EVENTLOG_BACKWARDS_READ := 8.
@@ -792,11 +786,8 @@ WinBaseConstants class >> initEventLogConstants [
 
 { #category : #'private - initialization' }
 WinBaseConstants class >> initExceptionHandlingConstants [
-	"
-	Initializes the memory constants as defined in winbase.h
-
-		self initExceptionHandlingConstants
-	"
+	"Initializes the memory constants as defined in winbase."
+	<script>
 
 	STATUS_WAIT_0 := 0.
 	STATUS_ABANDONED_WAIT_0 := 16r80.
@@ -858,11 +849,8 @@ WinBaseConstants class >> initExceptionHandlingConstants [
 
 { #category : #'private - initialization' }
 WinBaseConstants class >> initFileConstants [
-	"
-	Initializes the file constants as defined in winbase.h
-
-		self initFileConstants
-	"
+	"Initializes the file constants as defined in winbase.h"
+	<script>
 
 	HFILE_ERROR := -1.
 
@@ -995,11 +983,8 @@ WinBaseConstants class >> initFileConstants [
 
 { #category : #'private - initialization' }
 WinBaseConstants class >> initFileSystemConstants [
-	"
-	Initializes the file system constants as defined in winbase.h
-
-		self initFileSystemConstants
-	"
+	"Initializes the file system constants as defined in winbase.h"
+	<script>
 
 	GET_TAPE_MEDIA_INFORMATION := 0.
 	GET_TAPE_DRIVE_INFORMATION := 1.
@@ -1016,11 +1001,8 @@ WinBaseConstants class >> initFileSystemConstants [
 
 { #category : #'private - initialization' }
 WinBaseConstants class >> initMemoryConstants [
-	"
-	Initializes the memory constants as defined in winbase.h
-
-		self initMemoryConstants
-	"
+	"Initializes the memory constants as defined in winbase.h"
+	<script>
 
 	GMEM_FIXED := 0.
 	GMEM_MOVEABLE := 2.
@@ -1044,11 +1026,8 @@ WinBaseConstants class >> initMemoryConstants [
 
 { #category : #'private - initialization' }
 WinBaseConstants class >> initMemoryManagementConstants [
-	"
-	Initializes the memory constants as defined in winbase.h
-
-		self initMemoryManagementConstants
-	"
+	"Initializes the memory constants as defined in winbase.h"
+	<script>
 
 	PROCESS_HEAP_REGION := 1.
 	PROCESS_HEAP_UNCOMMITTED_RANGE := 2.
@@ -1116,11 +1095,8 @@ WinBaseConstants class >> initMemoryManagementConstants [
 
 { #category : #'private - initialization' }
 WinBaseConstants class >> initNamedObjectConstants [
-	"
-	Initializes the file constants as defined in winbase.h
-
-		self initNamedObjectConstants
-	"
+	"Initializes the file constants as defined in winbase.h"
+	<script>
 
 	"Mutex"
 	MUTEX_ALL_ACCESS := 16r1f0001.				"Specifies all possible access rights for a mutex object."
@@ -1137,11 +1113,8 @@ WinBaseConstants class >> initNamedObjectConstants [
 
 { #category : #'private - initialization' }
 WinBaseConstants class >> initPipeConstants [
-	"
-	Initializes the pipe constants as defined in winbase.h
-
-		self initPipeConstants
-	"
+	"Initializes the pipe constants as defined in winbase.h"
+	<script>
 
 	"Pipe access mode"
 	PIPE_ACCESS_DUPLEX := 3.				"The pipe is bidirectional; both server and client processes can read from and write to the pipe."
@@ -1165,11 +1138,8 @@ WinBaseConstants class >> initPipeConstants [
 
 { #category : #'private - initialization' }
 WinBaseConstants class >> initProcessConstants [
-	"
-	Initializes the debug constants as defined in winbase.h
-
-		self initProcessConstants
-	"
+	"Initializes the debug constants as defined in winbase.h"
+	<script>
 
 	DEBUG_PROCESS := 16r00000001.						"The calling process is treated as a debugger, and the new process is a process being debugged."
 	DEBUG_ONLY_THIS_PROCESS := 16r00000002.		"The calling thread starts and debugs the new process."
@@ -1222,11 +1192,8 @@ WinBaseConstants class >> initProcessConstants [
 
 { #category : #'private - initialization' }
 WinBaseConstants class >> initTimeZoneConstants [
-	"
-	Initializes the file system constants as defined in winbase.h
-
-		self initTimeZoneConstants
-	"
+	"Initializes the file system constants as defined in winbase.h"
+	<script>
 
 	TIME_ZONE_ID_UNKNOWN := 0.
 	TIME_ZONE_ID_STANDARD := 1.
@@ -1259,13 +1226,10 @@ WinBaseConstants class >> initialize [
 
 { #category : #'private - initialization' }
 WinBaseConstants class >> initializeUndocumented [
-	"
-	Initializes undocumented constants
-
-		self initializeUndocumented
-	"
+	"Initializes undocumented constants"
+	<script>
 
 	STARTF_TITLESHORTCUT := 16r800.
-	STARTF_MONITOR := 16r400.				"used to specify a handle to a monitor, on which to start the new process."
-	STARTF_SCREENSAVER := 16r80000000.	"seems vaguely useful for a screen-saver"
+	STARTF_MONITOR := 16r400. "used to specify a handle to a monitor, on which to start the new process."
+	STARTF_SCREENSAVER := 16r80000000 "seems vaguely useful for a screen-saver"
 ]
