@@ -84,7 +84,7 @@ WinLDAPMessage >> Request [
 { #category : #'accessing - structure variables' }
 WinLDAPMessage >> Request: anObject [
 	"This method was automatically generated"
-	handle pointerAt: OFFSET_REQUEST put: anObject getHandle.
+	handle pointerAt: OFFSET_REQUEST put: anObject getHandle
 ]
 
 { #category : #'accessing - structure variables' }
@@ -96,7 +96,7 @@ WinLDAPMessage >> lm_ber [
 { #category : #'accessing - structure variables' }
 WinLDAPMessage >> lm_ber: anObject [
 	"This method was automatically generated"
-	handle pointerAt: OFFSET_LM_BER put: anObject getHandle.
+	handle pointerAt: OFFSET_LM_BER put: anObject getHandle
 ]
 
 { #category : #'accessing - structure variables' }
@@ -108,7 +108,7 @@ WinLDAPMessage >> lm_chain [
 { #category : #'accessing - structure variables' }
 WinLDAPMessage >> lm_chain: anObject [
 	"This method was automatically generated"
-	handle pointerAt: OFFSET_LM_CHAIN put: anObject getHandle.
+	handle pointerAt: OFFSET_LM_CHAIN put: anObject getHandle
 ]
 
 { #category : #'accessing - structure variables' }
@@ -168,7 +168,7 @@ WinLDAPMessage >> lm_next [
 { #category : #'accessing - structure variables' }
 WinLDAPMessage >> lm_next: anObject [
 	"This method was automatically generated"
-	handle pointerAt: OFFSET_LM_NEXT put: anObject getHandle.
+	handle pointerAt: OFFSET_LM_NEXT put: anObject getHandle
 ]
 
 { #category : #'accessing - structure variables' }

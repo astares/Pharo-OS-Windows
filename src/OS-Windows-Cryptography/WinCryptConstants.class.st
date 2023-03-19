@@ -341,7 +341,7 @@ WinCryptConstants class >> initDSSSubID [
 
 	ALG_SID_DSS_ANY := 0.
 	ALG_SID_DSS_PKCS := 1.
-	ALG_SID_DSS_DMS := 2.
+	ALG_SID_DSS_DMS := 2
 ]
 
 { #category : #'private - initialization flags' }
@@ -449,7 +449,7 @@ WinCryptConstants class >> initOtherConstants [
  	CRYPT_IMPL_HARDWARE := 1.
  	CRYPT_IMPL_SOFTWARE := 2.
  	CRYPT_IMPL_MIXED := 3.
-	CRYPT_IMPL_UNKNOWN := 4.
+	CRYPT_IMPL_UNKNOWN := 4
 ]
 
 { #category : #'private - initialization flags' }

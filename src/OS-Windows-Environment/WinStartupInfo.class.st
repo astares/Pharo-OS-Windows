@@ -224,7 +224,7 @@ WinStartupInfo >> lpDesktop [
 { #category : #'accessing - structure variables' }
 WinStartupInfo >> lpDesktop: anObject [
 	"This method was automatically generated"
-	handle pointerAt: OFFSET_LPDESKTOP put: anObject getHandle.
+	handle pointerAt: OFFSET_LPDESKTOP put: anObject getHandle
 ]
 
 { #category : #'accessing - structure variables' }
@@ -242,13 +242,13 @@ WinStartupInfo >> lpReserved2 [
 { #category : #'accessing - structure variables' }
 WinStartupInfo >> lpReserved2: anObject [
 	"This method was automatically generated"
-	handle pointerAt: OFFSET_LPRESERVED2 put: anObject getHandle.
+	handle pointerAt: OFFSET_LPRESERVED2 put: anObject getHandle
 ]
 
 { #category : #'accessing - structure variables' }
 WinStartupInfo >> lpReserved: anObject [
 	"This method was automatically generated"
-	handle pointerAt: OFFSET_LPRESERVED put: anObject getHandle.
+	handle pointerAt: OFFSET_LPRESERVED put: anObject getHandle
 ]
 
 { #category : #'accessing - structure variables' }
@@ -260,7 +260,7 @@ WinStartupInfo >> lpTitle [
 { #category : #'accessing - structure variables' }
 WinStartupInfo >> lpTitle: anObject [
 	"This method was automatically generated"
-	handle pointerAt: OFFSET_LPTITLE put: anObject getHandle.
+	handle pointerAt: OFFSET_LPTITLE put: anObject getHandle
 ]
 
 { #category : #testing }

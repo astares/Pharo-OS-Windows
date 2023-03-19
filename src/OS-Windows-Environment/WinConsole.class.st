@@ -167,7 +167,7 @@ WinConsole class >> getStdHandle: nStdHandle [
 	^ self ffiCall: #(WinConsole GetStdHandle(DWORD nStdHandle)) module: #kernel32
 ]
 
-{ #category : #'initialization-release' }
+{ #category : #'class initialization' }
 WinConsole class >> reset [
 	<script>
 	self freeConsole.

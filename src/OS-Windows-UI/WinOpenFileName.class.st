@@ -159,7 +159,7 @@ WinOpenFileName >> lpTemplateName [
 { #category : #'accessing - structure variables' }
 WinOpenFileName >> lpTemplateName: anObject [
 	"This method was automatically generated"
-	handle pointerAt: OFFSET_LPTEMPLATENAME put: anObject getHandle.
+	handle pointerAt: OFFSET_LPTEMPLATENAME put: anObject getHandle
 ]
 
 { #category : #'accessing - structure variables' }
@@ -183,7 +183,7 @@ WinOpenFileName >> lpstrCustomFilter [
 { #category : #'accessing - structure variables' }
 WinOpenFileName >> lpstrCustomFilter: anObject [
 	"This method was automatically generated"
-	handle pointerAt: OFFSET_LPSTRCUSTOMFILTER put: anObject getHandle.
+	handle pointerAt: OFFSET_LPSTRCUSTOMFILTER put: anObject getHandle
 ]
 
 { #category : #'accessing - structure variables' }
@@ -195,7 +195,7 @@ WinOpenFileName >> lpstrDefExt [
 { #category : #'accessing - structure variables' }
 WinOpenFileName >> lpstrDefExt: anObject [
 	"This method was automatically generated"
-	handle pointerAt: OFFSET_LPSTRDEFEXT put: anObject getHandle.
+	handle pointerAt: OFFSET_LPSTRDEFEXT put: anObject getHandle
 ]
 
 { #category : #'accessing - structure variables' }
@@ -207,7 +207,7 @@ WinOpenFileName >> lpstrFile [
 { #category : #'accessing - structure variables' }
 WinOpenFileName >> lpstrFile: anObject [
 	"This method was automatically generated"
-	handle pointerAt: OFFSET_LPSTRFILE put: anObject getHandle.
+	handle pointerAt: OFFSET_LPSTRFILE put: anObject getHandle
 ]
 
 { #category : #'accessing - structure variables' }
@@ -219,7 +219,7 @@ WinOpenFileName >> lpstrFileTitle [
 { #category : #'accessing - structure variables' }
 WinOpenFileName >> lpstrFileTitle: anObject [
 	"This method was automatically generated"
-	handle pointerAt: OFFSET_LPSTRFILETITLE put: anObject getHandle.
+	handle pointerAt: OFFSET_LPSTRFILETITLE put: anObject getHandle
 ]
 
 { #category : #'accessing - structure variables' }
@@ -231,7 +231,7 @@ WinOpenFileName >> lpstrFilter [
 { #category : #'accessing - structure variables' }
 WinOpenFileName >> lpstrFilter: anObject [
 	"This method was automatically generated"
-	handle pointerAt: OFFSET_LPSTRFILTER put: anObject getHandle.
+	handle pointerAt: OFFSET_LPSTRFILTER put: anObject getHandle
 ]
 
 { #category : #'accessing - structure variables' }
@@ -243,7 +243,7 @@ WinOpenFileName >> lpstrInitialDir [
 { #category : #'accessing - structure variables' }
 WinOpenFileName >> lpstrInitialDir: anObject [
 	"This method was automatically generated"
-	handle pointerAt: OFFSET_LPSTRINITIALDIR put: anObject getHandle.
+	handle pointerAt: OFFSET_LPSTRINITIALDIR put: anObject getHandle
 ]
 
 { #category : #'accessing - structure variables' }
@@ -255,7 +255,7 @@ WinOpenFileName >> lpstrTitle [
 { #category : #'accessing - structure variables' }
 WinOpenFileName >> lpstrTitle: anObject [
 	"This method was automatically generated"
-	handle pointerAt: OFFSET_LPSTRTITLE put: anObject getHandle.
+	handle pointerAt: OFFSET_LPSTRTITLE put: anObject getHandle
 ]
 
 { #category : #'accessing - structure variables' }
@@ -339,5 +339,5 @@ WinOpenFileName >> pvReserved [
 { #category : #'accessing - structure variables' }
 WinOpenFileName >> pvReserved: anObject [
 	"This method was automatically generated"
-	handle pointerAt: OFFSET_PVRESERVED put: anObject getHandle.
+	handle pointerAt: OFFSET_PVRESERVED put: anObject getHandle
 ]

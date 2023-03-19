@@ -75,7 +75,7 @@ WinToolIcons class >> odbcIcon [
 	offset: (0@0))
 ]
 
-{ #category : #initialization }
+{ #category : #'class initialization' }
 WinToolIcons class >> reset [
 	<script>
 

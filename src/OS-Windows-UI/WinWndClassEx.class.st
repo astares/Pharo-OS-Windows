@@ -157,7 +157,7 @@ WinWndClassEx >> lpfnWndProc [
 { #category : #'accessing - structure variables' }
 WinWndClassEx >> lpfnWndProc: anObject [
 	"This method was automatically generated"
-	handle pointerAt: OFFSET_LPFNWNDPROC put: anObject getHandle.
+	handle pointerAt: OFFSET_LPFNWNDPROC put: anObject getHandle
 ]
 
 { #category : #'accessing - structure variables' }
@@ -169,7 +169,7 @@ WinWndClassEx >> lpszClassName [
 { #category : #'accessing - structure variables' }
 WinWndClassEx >> lpszClassName: anObject [
 	"This method was automatically generated"
-	handle pointerAt: OFFSET_LPSZCLASSNAME put: anObject getHandle.
+	handle pointerAt: OFFSET_LPSZCLASSNAME put: anObject getHandle
 ]
 
 { #category : #'accessing - structure variables' }
@@ -181,7 +181,7 @@ WinWndClassEx >> lpszMenuName [
 { #category : #'accessing - structure variables' }
 WinWndClassEx >> lpszMenuName: anObject [
 	"This method was automatically generated"
-	handle pointerAt: OFFSET_LPSZMENUNAME put: anObject getHandle.
+	handle pointerAt: OFFSET_LPSZMENUNAME put: anObject getHandle
 ]
 
 { #category : #registration }

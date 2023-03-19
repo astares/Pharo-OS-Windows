@@ -1200,10 +1200,7 @@ WinBaseConstants class >> initTimeZoneConstants [
 
 { #category : #'class initialization' }
 WinBaseConstants class >> initialize [
-	"Initializes the receiver class
-
-		self initialize
-	"
+	"Initializes the receiver class"
 
 	self
 		initCommunicationConstants;
