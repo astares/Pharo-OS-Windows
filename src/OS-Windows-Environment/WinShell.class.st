@@ -16,8 +16,8 @@ Class {
 WinShell class >> shellAbout: hWnd application: szApp other: szOtherStuff icon: hIcon [
 	"
 		self shellAbout: Win32Window getFocus application: 'Pharo' other: 'More' icon: (WinHandle new)
-	"	
-	
+	"
+
 	^self ffiCall: #(int ShellAboutA(
      			HWND hWnd,
          		LPCTSTR szApp,
@@ -35,8 +35,8 @@ WinShell class >> shellBrowse: url [
 
 { #category : #primitives }
 WinShell class >> shellExecute: lpOperation file: lpFile parameters: lpParameters directory: lpDirectory show: nShowCmd [
-	
-	^self ffiCall: #( 
+
+	^self ffiCall: #(
 			HINSTANCE ShellExecuteA(
      				0,
      				LPCTSTR lpOperation,
@@ -44,14 +44,12 @@ WinShell class >> shellExecute: lpOperation file: lpFile parameters: lpParameter
      				LPCTSTR lpParameters,
      				LPCTSTR lpDirectory,
         			INT nShowCmd)) module: #shell32
-	
-
 ]
 
 { #category : #primitives }
 WinShell class >> shellExecute: hwnd operation: lpOperation file: lpFile parameters: lpParameters directory: lpDirectory show: nShowCmd [
-	
-	^self ffiCall: #( 
+
+	^self ffiCall: #(
 			HINSTANCE ShellExecuteA(
      				HWND hwnd,
      				LPCTSTR lpOperation,
@@ -59,8 +57,6 @@ WinShell class >> shellExecute: hwnd operation: lpOperation file: lpFile paramet
      				LPCTSTR lpParameters,
      				LPCTSTR lpDirectory,
         			INT nShowCmd)) module: #shell32
-	
-
 ]
 
 { #category : #operations }
@@ -95,6 +91,6 @@ WinShell class >> shellRunDLL: cmd [
 	"
 	self shellRunDLL: 'shell32.dll,Control_RunDLL odbccp32.cpl'
 	"
-	
+
 	^self shellExecute: 'open' file: 'rundll32.exe' parameters: cmd directory: '' show: SW_SHOW
 ]

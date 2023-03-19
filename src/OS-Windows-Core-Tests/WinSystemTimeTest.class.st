@@ -20,15 +20,13 @@ WinSystemTimeTest >> setUp [
 { #category : #running }
 WinSystemTimeTest >> tearDown [
 	localTime := nil.
-	super tearDown 
-
+	super tearDown
 ]
 
 { #category : #'tests - fields' }
 WinSystemTimeTest >> testDay [
 
 	self assert: localTime day < 32
-	
 ]
 
 { #category : #'tests - fields' }
@@ -83,5 +81,4 @@ WinSystemTimeTest >> testSystemTime [
 WinSystemTimeTest >> testYear [
 
 	self assert: localTime year > 2014
-	
 ]

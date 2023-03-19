@@ -525,12 +525,12 @@ Class {
 WinBaseConstants class >> initCommunicationConstants [
 	"
 	Initializes the communication constants as defined in winbase.h
-	
+
 		self initCommunicationConstants
 	"
 
 	SP_SERIALCOMM := 1.				"specified for communications providers, including modem providers"
-	
+
 	"Communication provider type"
 	PST_UNSPECIFIED := 0.				"Unspecified"
 	PST_RS232 := 1.					"RS-232 serial port"
@@ -545,7 +545,7 @@ WinBaseConstants class >> initCommunicationConstants [
 	PST_LAT := 16r101.				"LAT protocol"
 	PST_TCPIP_TELNET := 16r102.		"TCP/IP Telnet® protocol"
 	PST_X25 := 16r103.				"X.25 standards"
-	
+
 	"maximum allowable baud rate, in bits per second (bps)."
 	BAUD_075 := 1.					"75 bps"
 	BAUD_110 := 2.					"110 bps"
@@ -567,10 +567,10 @@ WinBaseConstants class >> initCommunicationConstants [
 	BAUD_115200 := 131072.			"115200 bps"
 	BAUD_57600 := 262144.			"57600 bps"
 	BAUD_USER := 16r10000000.		"Programmable baud rates available"
-			
-	"Capabilities offered by the provider"		
+
+	"Capabilities offered by the provider"
 	PCF_DTRDSR := 1.					"DTR (data-terminal-ready)/DSR (data-set-ready) supported"
-	PCF_RTSCTS := 2.					"RTS (request-to-send)/CTS (clear-to-send) supported"	
+	PCF_RTSCTS := 2.					"RTS (request-to-send)/CTS (clear-to-send) supported"
 	PCF_RLSD := 4.						"RLSD (receive-line-signal-detect) supported"
 	PCF_PARITY_CHECK := 8.			"Parity checking supported"
 	PCF_XONXOFF := 16.				"XON/XOFF flow control supported"
@@ -579,8 +579,8 @@ WinBaseConstants class >> initCommunicationConstants [
 	PCF_INTTIMEOUTS := 128.			"Interval time-outs supported"
 	PCF_SPECIALCHARS := 256.		"Special character support provided"
 	PCF_16BITMODE := 512.			"Special 16-bit mode supported"
-	
-	"Setable parameters -  communications parameter that can be changed"	
+
+	"Setable parameters -  communications parameter that can be changed"
 	SP_PARITY := 1.					"Parity "
 	SP_BAUD := 2.						"Baud rate"
 	SP_DATABITS := 4.					"Data bits"
@@ -588,26 +588,26 @@ WinBaseConstants class >> initCommunicationConstants [
 	SP_HANDSHAKING := 16.			"Handshaking (flow control)"
 	SP_PARITY_CHECK := 32.			"Parity checking"
 	SP_RLSD := 64.						"RLSD (receive-line-signal-detect)"
-							
-	"The number of data bits that can be set"	
+
+	"The number of data bits that can be set"
 	DATABITS_5 := 1.					"5 data bits"
 	DATABITS_6 := 2.					"6 data bits"
 	DATABITS_7 := 4.					"7 data bits"
 	DATABITS_8 := 8.					"8 data bits"
 	DATABITS_16 := 16.				"16 data bits"
-	DATABITS_16X := 32.				"Special wide path through serial hardware lines"	
-						
-	"The stop bit and parity settings that can be selected"						
+	DATABITS_16X := 32.				"Special wide path through serial hardware lines"
+
+	"The stop bit and parity settings that can be selected"
 	STOPBITS_10 := 1.					"1 stop bit"
 	STOPBITS_15 := 2.					"1.5 stop bits"
 	STOPBITS_20 := 4.					"2 stop bits"
-	
+
 	PARITY_NONE := 256.				"No parity"
 	PARITY_ODD := 256.				"Odd parity"
 	PARITY_EVEN := 1024.				"Even parity"
 	PARITY_MARK := 2048.				"Mark parity"
 	PARITY_SPACE := 4096.			"Space parity"
-	
+
 	CE_BREAK := 16.				 	"The hardware detected a break condition."
 	CE_DNS := 2048.					"Windows 95 only: A parallel device is not selected"
 	CE_FRAME := 8.						"The hardware detected a framing error."
@@ -616,42 +616,37 @@ WinBaseConstants class >> initCommunicationConstants [
 	CE_OOP := 4096.					"Windows 95 only: A parallel device signaled that it is out of paper."
 	CE_OVERRUN := 2.					"A character-buffer overrun has occurred. The next character is lost."
 	CE_PTO := 512.					"Windows 95 only: A time-out occurred on a parallel device."
-	CE_RXOVER := 1.					"An input buffer overflow has occurred. There is either no room in the input buffer, or a character was 
+	CE_RXOVER := 1.					"An input buffer overflow has occurred. There is either no room in the input buffer, or a character was
 						                          received after the end-of-file (EOF) character."
 	CE_RXPARITY := 4.					"The hardware detected a parity error."
-	CE_TXFULL := 256.					"The application tried to transmit a character, but the output buffer was full."		
-	
-	
+	CE_TXFULL := 256.					"The application tried to transmit a character, but the output buffer was full."
 ]
 
 { #category : #'private - initialization' }
 WinBaseConstants class >> initDebugConstants [
 	"
 	Initializes the debug constants as defined in winbase.h
-	
+
 		self initDebugConstants
 	"
 
 	"Debugging event codes that identify the type of debugging event"
 	EXCEPTION_DEBUG_EVENT := 1.			"Reports an exception debugging event."
 	CREATE_THREAD_DEBUG_EVENT := 2.		"Reports a create-thread debugging event."
-	CREATE_PROCESS_DEBUG_EVENT := 3.		"Reports a create-process debugging event."	
+	CREATE_PROCESS_DEBUG_EVENT := 3.		"Reports a create-process debugging event."
 	EXIT_THREAD_DEBUG_EVENT := 4.			"Reports an exit-thread debugging event."
 	EXIT_PROCESS_DEBUG_EVENT := 5.		"Reports an exit-process debugging event."
-	LOAD_DLL_DEBUG_EVENT := 6.				"Reports a load-dynamic-link-library (DLL) debugging event."		
+	LOAD_DLL_DEBUG_EVENT := 6.				"Reports a load-dynamic-link-library (DLL) debugging event."
 	UNLOAD_DLL_DEBUG_EVENT := 7.			"Reports an unload-DLL debugging event."
 	OUTPUT_DEBUG_STRING_EVENT := 8.		"Reports an output-debugging-string debugging event."
-	RIP_EVENT := 9.								"Reports a RIP-debugging event (system debugging error)."	
-										
-
-										
+	RIP_EVENT := 9.								"Reports a RIP-debugging event (system debugging error)."
 ]
 
 { #category : #'private - initialization' }
 WinBaseConstants class >> initEventLogConstants [
 	"
 	Initializes the constants as defined in winbase.h
-	
+
 		self initEventLogConstants
 	"
 
@@ -671,7 +666,7 @@ WinBaseConstants class >> initEventLogConstants [
 	FORMAT_MESSAGE_FROM_SYSTEM := 4096.
 	FORMAT_MESSAGE_ARGUMENT_ARRAY := 8192.
 	FORMAT_MESSAGE_MAX_WIDTH_MASK := 255.
-	
+
 	EV_BREAK := 64.
 	EV_CTS := 8.
 	EV_DSR := 16.
@@ -685,35 +680,35 @@ WinBaseConstants class >> initEventLogConstants [
 	EV_RXCHAR := 1.
 	EV_RXFLAG := 2.
 	EV_TXEMPTY := 4.
-	
+
 	SEM_FAILCRITICALERRORS := 16r0001.
 	SEM_NOGPFAULTERRORBOX := 16r0002.
 	SEM_NOALIGNMENTFAULTEXCEPT := 16r0004.
 	SEM_NOOPENFILEERRORBOX := 16r8000.
-	
+
 	SLE_ERROR := 1.
 	SLE_MINORERROR := 2.
 	SLE_WARNING := 3.
-	
+
 	SHUTDOWN_NORETRY := 1.
 	EXCEPTION_EXECUTE_HANDLER := 1.
 	EXCEPTION_CONTINUE_EXECUTION := -1.
 	EXCEPTION_CONTINUE_SEARCH := 0.
-	
+
 	MAXINTATOM := 16rC000.
 	INVALID_ATOM := "(ATOM)"0.
 	IGNORE := 0.
-	
+
 	NOPARITY := 0.
 	ODDPARITY := 1.
 	EVENPARITY := 2.
 	MARKPARITY := 3.
 	SPACEPARITY := 4.
-	
+
 	ONESTOPBIT := 0.
 	ONE5STOPBITS := 1.
 	ONE5STOPBITS := 2.
-	
+
 	CBR_110 := 110.
 	CBR_300 := 300.
 	CBR_600 := 600.
@@ -729,7 +724,7 @@ WinBaseConstants class >> initEventLogConstants [
 	CBR_115200 := 115200.
 	CBR_128000 := 128000.
 	CBR_256000 := 256000.
-	
+
 	BACKUP_INVALID := 0.
 	BACKUP_DATA := 1.
 	BACKUP_EA_DATA := 2.
@@ -740,12 +735,12 @@ WinBaseConstants class >> initEventLogConstants [
 	BACKUP_OBJECT_ID := 7.
 	BACKUP_REPARSE_DATA := 8.
 	BACKUP_SPARSE_BLOCK := 9.
-	
+
 	STREAM_NORMAL_ATTRIBUTE := 0.
 	STREAM_MODIFIED_WHEN_READ := 1.
 	STREAM_CONTAINS_SECURITY := 2.
 	STREAM_CONTAINS_PROPERTIES := 4.
-	
+
 	STARTF_USESHOWWINDOW := 1.
 	STARTF_USESIZE := 2.
 	STARTF_USEPOSITION := 4.
@@ -756,17 +751,17 @@ WinBaseConstants class >> initEventLogConstants [
 	STARTF_FORCEOFFFEEDBACK := 128.
 	STARTF_USESTDHANDLES := 256.
 	STARTF_USEHOTKEY := 512.
-	
+
  	TC_NORMAL := 0.
 	TC_HARDERR := 1.
 	TC_GP_TRAP := 2.
 	TC_SIGNAL := 3.
-	
+
  	AC_LINE_OFFLINE := 0.
 	AC_LINE_ONLINE := 1.
 	AC_LINE_BACKUP_POWER := 2.
 	AC_LINE_UNKNOWN := 255.
-	
+
     	BATTERY_FLAG_HIGH := 1.
 	BATTERY_FLAG_LOW := 2.
 	BATTERY_FLAG_CRITICAL := 4.
@@ -775,17 +770,17 @@ WinBaseConstants class >> initEventLogConstants [
 	BATTERY_FLAG_UNKNOWN := 255.
 	BATTERY_PERCENTAGE_UNKNOWN := 255.
 	BATTERY_LIFE_UNKNOWN := 16rFFFFFFFF.
-	
+
 	DDD_RAW_TARGET_PATH := 1.
 	DDD_REMOVE_DEFINITION := 2.
 	DDD_EXACT_MATCH_ON_REMOVE := 4.
-	
+
 	HINSTANCE_ERROR := 32.
 	MS_CTS_ON := 16.
 	MS_DSR_ON := 32.
 	MS_RING_ON := 64.
 	MS_RLSD_ON := 128.
-	
+
 	DTR_CONTROL_DISABLE := 0.
 	DTR_CONTROL_ENABLE := 1.
 	DTR_CONTROL_HANDSHAKE := 2.
@@ -793,14 +788,13 @@ WinBaseConstants class >> initEventLogConstants [
 	RTS_CONTROL_ENABLE := 1.
 	RTS_CONTROL_HANDSHAKE := 2.
 	RTS_CONTROL_TOGGLE := 3
-	 
 ]
 
 { #category : #'private - initialization' }
 WinBaseConstants class >> initExceptionHandlingConstants [
 	"
 	Initializes the memory constants as defined in winbase.h
-	
+
 		self initExceptionHandlingConstants
 	"
 
@@ -836,7 +830,7 @@ WinBaseConstants class >> initExceptionHandlingConstants [
 	STATUS_CONTROL_C_EXIT := 16rC000013A.
 	STATUS_DLL_INIT_FAILED := 16rC0000142.
 	STATUS_DLL_INIT_FAILED_LOGOFF := 16rC000026B.
-	
+
 	EXCEPTION_ACCESS_VIOLATION := STATUS_ACCESS_VIOLATION.
 	EXCEPTION_DATATYPE_MISALIGNMENT := STATUS_DATATYPE_MISALIGNMENT.
 	EXCEPTION_BREAKPOINT := STATUS_BREAKPOINT.
@@ -866,22 +860,22 @@ WinBaseConstants class >> initExceptionHandlingConstants [
 WinBaseConstants class >> initFileConstants [
 	"
 	Initializes the file constants as defined in winbase.h
-	
+
 		self initFileConstants
 	"
 
 	HFILE_ERROR := -1.
 
 	INVALID_HANDLE_VALUE := "(HANDLE)" -1.
-	INVALID_FILE_SIZE := -1.	
+	INVALID_FILE_SIZE := -1.
 	INVALID_SET_FILE_POINTER := -1.
 	INVALID_FILE_ATTRIBUTES := -1.
-	
+
 	"Starting point for file pointer move"
 	FILE_BEGIN := 0.							"The starting point is zero or the beginning of the file"
 	FILE_CURRENT := 1.							"The current value of the file pointer is the starting point."
 	FILE_END := 2.								"The current end-of-file position is the starting point."
-										
+
 	"Open file actions"
 	OF_READ := 0.								"Opens the file for reading only."
 	OF_READWRITE := 2.						"Opens the file for reading and writing."
@@ -904,31 +898,31 @@ WinBaseConstants class >> initFileConstants [
 	NMPWAIT_NOWAIT := 1.					"Does not wait for the named pipe."
 	NMPWAIT_WAIT_FOREVER := -1.				"Waits indefinitely."
 	NMPWAIT_USE_DEFAULT_WAIT := 0.		"Uses the default time-out specified in a call to the CreateNamedPipe function."
-			
+
 	"copy progress"
 	PROGRESS_CONTINUE := 0.					"Continue the copy operation."
 	PROGRESS_CANCEL := 1.					"Cancel the copy operation and delete the destination file."
 	PROGRESS_STOP := 2.						"Stop the copy operation. It can be restarted at a later time."
 	PROGRESS_QUIET := 3.						"Continue the copy operation, but stop invoking CopyProgressRoutine to report progress."
-				 											
+
 	"Reason that CopyProgressRoutine was called"
 	CALLBACK_CHUNK_FINISHED := 0.			"Another part of the data file was copied."
 	CALLBACK_STREAM_SWITCH := 1.			"Another stream was created and is about to be copied."
-				
-	"Flags specifying how a file is to be copied"			
+
+	"Flags specifying how a file is to be copied"
 	COPY_FILE_FAIL_IF_EXISTS := 16r0001.							"The copy operation fails immediately if the target file already exists."
 	COPY_FILE_RESTARTABLE := 16r0002.							"Progress of the copy is tracked in the target file in case the copy fails. "
 	COPY_FILE_OPEN_SOURCE_FOR_WRITE := 16r0004.
 	COPY_FILE_ALLOW_DECRYPTED_DESTINATION := 16r0008.
 	COPY_FILE_COPY_SYMLINK := 16r0800.
-	COPY_FILE_NO_BUFFERING := 16r1000.		
-			
+	COPY_FILE_NO_BUFFERING := 16r1000.
+
 	OFS_MAXPATHNAME := 128.									"Max pathname length for open file structure OFSTRUCT"
 	FILE_MAP_ALL_ACCESS := 16rf001f.							"Same as FILE_MAP_WRITE"
 	FILE_MAP_READ := 4.											"Read-only access. "
 	FILE_MAP_WRITE := 2.											"Read-write access."
 	FILE_MAP_COPY := 1.											"Copy on write access."
-	
+
 	FILE_FLAG_WRITE_THROUGH := 16r80000000.
 	FILE_FLAG_OVERLAPPED := 1073741824.
 	FILE_FLAG_NO_BUFFERING := 536870912.
@@ -941,7 +935,7 @@ WinBaseConstants class >> initFileConstants [
 	FILE_FLAG_OPEN_NO_RECALL := 1048576.
 	FILE_FLAG_FIRST_PIPE_INSTANCE := 524288.
 	SYMBOLIC_LINK_FLAG_DIRECTORY := 16r1.
-	 
+
 	CLRDTR := 6.
 	CLRRTS := 4.
 	SETDTR := 5.
@@ -952,7 +946,7 @@ WinBaseConstants class >> initFileConstants [
 	CLRBREAK := 9.
 	STILL_ACTIVE := 16r103.
 	FIND_FIRST_EX_CASE_SENSITIVE := 1.
-	
+
 	SCS_32BIT_BINARY := 0.
 	SCS_64BIT_BINARY := 6.
 	SCS_DOS_BINARY := 1.
@@ -968,7 +962,7 @@ WinBaseConstants class >> initFileConstants [
 	DOCKINFO_USER_SUPPLIED := 4.
 	DOCKINFO_USER_UNDOCKED := (DOCKINFO_USER_SUPPLIED|DOCKINFO_UNDOCKED).
 	DOCKINFO_USER_DOCKED := (DOCKINFO_USER_SUPPLIED|DOCKINFO_DOCKED).
-	
+
 	DRIVE_REMOVABLE := 2.
 	DRIVE_FIXED := 3.
 	DRIVE_REMOTE := 4.
@@ -990,10 +984,10 @@ WinBaseConstants class >> initFileConstants [
 	FILE_SYSTEM_NOT_SUPPORT := 6.
 	FILE_UNKNOWN := 5.
 	FILE_USER_DISALLOWED := 7.
-	
+
 	HANDLE_FLAG_INHERIT := 16r01.
 	HANDLE_FLAG_PROTECT_FROM_CLOSE := 16r02.
-	
+
 	STD_INPUT_HANDLE := "(DWORD)" 16rfffffff6.
 	STD_OUTPUT_HANDLE := "(DWORD)" 16rfffffff5.
 	STD_ERROR_HANDLE := "(DWORD)" 16rfffffff4
@@ -1003,7 +997,7 @@ WinBaseConstants class >> initFileConstants [
 WinBaseConstants class >> initFileSystemConstants [
 	"
 	Initializes the file system constants as defined in winbase.h
-	
+
 		self initFileSystemConstants
 	"
 
@@ -1011,7 +1005,7 @@ WinBaseConstants class >> initFileSystemConstants [
 	GET_TAPE_DRIVE_INFORMATION := 1.
 	SET_TAPE_MEDIA_INFORMATION := 0.
 	SET_TAPE_DRIVE_INFORMATION := 1.
-	
+
 	FS_CASE_IS_PRESERVED := 2.
 	FS_CASE_SENSITIVE  := 1.
 	FS_UNICODE_STORED_ON_DISK := 4.
@@ -1024,7 +1018,7 @@ WinBaseConstants class >> initFileSystemConstants [
 WinBaseConstants class >> initMemoryConstants [
 	"
 	Initializes the memory constants as defined in winbase.h
-	
+
 		self initMemoryConstants
 	"
 
@@ -1046,18 +1040,13 @@ WinBaseConstants class >> initMemoryConstants [
 	GMEM_INVALID_HANDLE := 32768.
 	GMEM_LOCKCOUNT := 255.
 	GMEM_VALID_FLAGS := 32626
-	
-	
-	
-	
-	
 ]
 
 { #category : #'private - initialization' }
 WinBaseConstants class >> initMemoryManagementConstants [
 	"
 	Initializes the memory constants as defined in winbase.h
-	
+
 		self initMemoryManagementConstants
 	"
 
@@ -1070,7 +1059,7 @@ WinBaseConstants class >> initMemoryManagementConstants [
 	DONT_RESOLVE_DLL_REFERENCES := 1.
 	LOAD_LIBRARY_AS_DATAFILE := 2.
 	LOAD_WITH_ALTERED_SEARCH_PATH := 8.
-	
+
 	LMEM_FIXED := 0.
 	LMEM_MOVEABLE := 2.
 	LMEM_NONZEROLHND := 2.
@@ -1083,20 +1072,20 @@ WinBaseConstants class >> initMemoryManagementConstants [
 	LMEM_MODIFY := 128.
 	LMEM_INVALID_HANDLE := 32768.
 	LMEM_LOCKCOUNT := 255.
-	
+
 	LPTR := 64.
 	LHND := 66.
 	NONZEROLHND := 2.
 	NONZEROLPTR := 0.
-	
+
 	LOCKFILE_FAIL_IMMEDIATELY := 1.
 	LOCKFILE_EXCLUSIVE_LOCK := 2.
-	
+
 	LOGON32_PROVIDER_DEFAULT := 0.
 	LOGON32_PROVIDER_WINNT35 := 1.
 	LOGON32_PROVIDER_WINNT40 := 2.
 	LOGON32_PROVIDER_WINNT50 := 3.
-	
+
 	LOGON32_LOGON_INTERACTIVE := 2.
 	LOGON32_LOGON_NETWORK := 3.
 	LOGON32_LOGON_BATCH := 4.
@@ -1104,7 +1093,7 @@ WinBaseConstants class >> initMemoryManagementConstants [
 	LOGON32_LOGON_UNLOCK := 7.
 	LOGON32_LOGON_NETWORK_CLEARTEXT := 8.
 	LOGON32_LOGON_NEW_CREDENTIALS := 9.
-	
+
 	MOVEFILE_REPLACE_EXISTING := 1.
 	MOVEFILE_COPY_ALLOWED := 2.
 	MOVEFILE_DELAY_UNTIL_REBOOT := 4.
@@ -1114,11 +1103,11 @@ WinBaseConstants class >> initMemoryManagementConstants [
 	WAIT_OBJECT_0 := 0.
 	WAIT_ABANDONED_0 := 128.
 	WAIT_TIMEOUT := 256.
-	
+
 	WAIT_IO_COMPLETION := 16rC0.
 	WAIT_ABANDONED := 128.
 	WAIT_FAILED := "(DWORD)" 16rFFFFFFFF.
-	
+
 	PURGE_TXABORT := 1.
 	PURGE_RXABORT := 2.
 	PURGE_TXCLEAR := 4.
@@ -1129,32 +1118,28 @@ WinBaseConstants class >> initMemoryManagementConstants [
 WinBaseConstants class >> initNamedObjectConstants [
 	"
 	Initializes the file constants as defined in winbase.h
-	
+
 		self initNamedObjectConstants
 	"
 
 	"Mutex"
 	MUTEX_ALL_ACCESS := 16r1f0001.				"Specifies all possible access rights for a mutex object."
 	MUTEX_MODIFY_STATE := 1.						"Specifies modify state (release) access."
-	
+
 	"Semaphore"
 	SEMAPHORE_ALL_ACCESS := 16r1f0003.			"Specifies all possible access rights for a semaphore object."
 	SEMAPHORE_MODIFY_STATE := 2.					"Specifies modify state (release) access."
-	
+
 	"Events"
 	EVENT_ALL_ACCESS := 16r1f0003.					"Specifies all possible access rights for an event object."
 	EVENT_MODIFY_STATE := 2.						"Specifies modify state (release) access."
-	
-	 
-	
-	
 ]
 
 { #category : #'private - initialization' }
 WinBaseConstants class >> initPipeConstants [
 	"
 	Initializes the pipe constants as defined in winbase.h
-	
+
 		self initPipeConstants
 	"
 
@@ -1162,38 +1147,33 @@ WinBaseConstants class >> initPipeConstants [
 	PIPE_ACCESS_DUPLEX := 3.				"The pipe is bidirectional; both server and client processes can read from and write to the pipe."
 	PIPE_ACCESS_INBOUND := 1.			"The flow of data in the pipe goes from client to server only."
 	PIPE_ACCESS_OUTBOUND := 2.			"The flow of data in the pipe goes from server to client only. "
-	
+
 	"Pipe types"
 	PIPE_TYPE_BYTE := 0.					"Data is written to the pipe as a stream of bytes. "
 	PIPE_TYPE_MESSAGE := 4.				"Data is written to the pipe as a stream of messages."
-					
+
 	PIPE_READMODE_BYTE := 0.			"Data is read from the pipe as a stream of bytes."
 	PIPE_READMODE_MESSAGE := 2.		"Data is read from the pipe as a stream of messages."
-			
+
 	PIPE_WAIT := 0.							"Blocking mode is enabled."
 	PIPE_NOWAIT := 1.						"Nonblocking mode is enabled."
-							
+
 	PIPE_CLIENT_END := 0.					"The handle refers to the client end of a named pipe instance."
 	PIPE_SERVER_END := 1.					"The handle refers to the server end of a named pipe instance. "
 	PIPE_UNLIMITED_INSTANCES := 255.	"The number of pipe instances that can be created is limited only by the availability of system resources."
-	
-	
-	
-			
-																
 ]
 
 { #category : #'private - initialization' }
 WinBaseConstants class >> initProcessConstants [
 	"
 	Initializes the debug constants as defined in winbase.h
-	
+
 		self initProcessConstants
 	"
 
 	DEBUG_PROCESS := 16r00000001.						"The calling process is treated as a debugger, and the new process is a process being debugged."
 	DEBUG_ONLY_THIS_PROCESS := 16r00000002.		"The calling thread starts and debugs the new process."
-		
+
 	CREATE_SUSPENDED := 16r00000004.
 	DETACHED_PROCESS := 16r00000008.
 	CREATE_NEW_CONSOLE := 16r00000010.
@@ -1206,26 +1186,26 @@ WinBaseConstants class >> initProcessConstants [
 	CREATE_SEPARATE_WOW_VDM := 16r00000800.
 	CREATE_SHARED_WOW_VDM := 16r00001000.
 	CREATE_FORCEDOS := 16r00002000.
-	
+
 	BELOW_NORMAL_PRIORITY_CLASS := 16r00004000.
 	ABOVE_NORMAL_PRIORITY_CLASS := 16r00008000.
 	CREATE_BREAKAWAY_FROM_JOB := 16r01000000.
 	CREATE_WITH_USERPROFILE := 16r02000000.
 	CREATE_DEFAULT_ERROR_MODE := 16r04000000.
 	CREATE_NO_WINDOW := 16r08000000.
-	
+
 	PROFILE_USER := 16r10000000.
 	PROFILE_KERNEL := 16r20000000.
 	PROFILE_SERVER := 16r40000000.
-	
+
 	CONSOLE_TEXTMODE_BUFFER := 1.
-	
+
 	CREATE_NEW := 1.
 	CREATE_ALWAYS := 2.
 	OPEN_EXISTING := 3.
 	OPEN_ALWAYS := 4.
 	TRUNCATE_EXISTING := 5.
-	
+
 	THREAD_MODE_BACKGROUND_BEGIN := 16r00010000.
 	THREAD_MODE_BACKGROUND_END := 16r00020000.
 	THREAD_PRIORITY_ABOVE_NORMAL := 1.
@@ -1236,7 +1216,7 @@ WinBaseConstants class >> initProcessConstants [
 	THREAD_PRIORITY_NORMAL := 0.
 	THREAD_PRIORITY_TIME_CRITICAL := 15.
 	THREAD_PRIORITY_ERROR_RETURN := 2147483647.
-		
+
 	INFINITE := 16rFFFFFFFF
 ]
 
@@ -1244,7 +1224,7 @@ WinBaseConstants class >> initProcessConstants [
 WinBaseConstants class >> initTimeZoneConstants [
 	"
 	Initializes the file system constants as defined in winbase.h
-	
+
 		self initTimeZoneConstants
 	"
 
@@ -1252,19 +1232,16 @@ WinBaseConstants class >> initTimeZoneConstants [
 	TIME_ZONE_ID_STANDARD := 1.
 	TIME_ZONE_ID_DAYLIGHT := 2.
 	TIME_ZONE_ID_INVALID := 16rFFFFFFFF
-	
-	
-	
 ]
 
 { #category : #'class initialization' }
-WinBaseConstants class >> initialize [ 
+WinBaseConstants class >> initialize [
 	"Initializes the receiver class
-	
+
 		self initialize
 	"
-	
-	self 
+
+	self
 		initCommunicationConstants;
 		initDebugConstants;
 		initFileConstants;
@@ -1283,13 +1260,12 @@ WinBaseConstants class >> initialize [
 { #category : #'private - initialization' }
 WinBaseConstants class >> initializeUndocumented [
 	"
-	Initializes undocumented constants  
-	
+	Initializes undocumented constants
+
 		self initializeUndocumented
 	"
 
 	STARTF_TITLESHORTCUT := 16r800.
 	STARTF_MONITOR := 16r400.				"used to specify a handle to a monitor, on which to start the new process."
 	STARTF_SCREENSAVER := 16r80000000.	"seems vaguely useful for a screen-saver"
-	
 ]

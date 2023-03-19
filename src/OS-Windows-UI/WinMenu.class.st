@@ -14,7 +14,6 @@ Class {
 { #category : #accessing }
 WinMenu >> getMenuItemCount [
 	"Determines the number of items in the specified menu"
- 	
-	^self ffiCall: #(int GetMenuItemCount(HMENU self)) module: #user32
 
+	^self ffiCall: #(int GetMenuItemCount(HMENU self)) module: #user32
 ]

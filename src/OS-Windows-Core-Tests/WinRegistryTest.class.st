@@ -18,8 +18,8 @@ WinRegistryTest >> testQueryBinaryValue [
 	hKey := (WinRegistryKey localMachine queryOpenSubkey: 'HARDWARE\\DESCRIPTION\\System\\CentralProcessor\\0').
 	value := WinRegistry queryValue: 'Component Information' fromKey: hKey.
 	hKey close.
-	
-	self 
+
+	self
 		assert: value notEmpty;
 		assert: (value isKindOf: ByteArray)
 ]
@@ -31,8 +31,8 @@ WinRegistryTest >> testQueryDWord [
 	hKey := (WinRegistryKey localMachine queryOpenSubkey: 'HARDWARE\\DESCRIPTION\\System\\CentralProcessor\\0').
 	value := WinRegistry queryValue: '~MHz' fromKey: hKey.
 	hKey close.
-	
-	self 
+
+	self
 		assert: value isInteger;
 		assert: value > 0
 ]
@@ -44,7 +44,7 @@ WinRegistryTest >> testQueryStringValue [
 	hKey := (WinRegistryKey localMachine queryOpenSubkey: 'HARDWARE\\DESCRIPTION\\System\\CentralProcessor\\0').
 	value := WinRegistry queryValue: 'VendorIdentifier' fromKey: hKey.
 	hKey close.
-	
+
 	self assert: value notEmpty
 ]
 

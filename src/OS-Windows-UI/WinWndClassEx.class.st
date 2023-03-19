@@ -171,8 +171,8 @@ WinWndClassEx >> lpszMenuName: anObject [
 
 { #category : #registration }
 WinWndClassEx >> register [
-	 
-	^ self ffiCall: #( ATOM RegisterClassExA (WNDCLASSEX * self) ) 
+
+	^ self ffiCall: #( ATOM RegisterClassExA (WNDCLASSEX * self) )
 			  module: #user32
 ]
 

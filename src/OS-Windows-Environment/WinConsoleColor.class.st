@@ -24,98 +24,98 @@ Class {
 { #category : #'accessing colors' }
 WinConsoleColor class >> aqua [
 
-	^self subclassResponsibility 
+	^self subclassResponsibility
 ]
 
 { #category : #'accessing colors' }
 WinConsoleColor class >> black [
 
-	^self subclassResponsibility 
+	^self subclassResponsibility
 ]
 
 { #category : #'accessing colors' }
 WinConsoleColor class >> blue [
 
-	^self subclassResponsibility 
+	^self subclassResponsibility
 ]
 
 { #category : #'accessing colors' }
 WinConsoleColor class >> fuchsia [
 
-	^self subclassResponsibility 
+	^self subclassResponsibility
 ]
 
 { #category : #'accessing colors' }
 WinConsoleColor class >> gray [
 
-	^self subclassResponsibility 
+	^self subclassResponsibility
 ]
 
 { #category : #'accessing colors' }
 WinConsoleColor class >> green [
 
-	^self subclassResponsibility 
+	^self subclassResponsibility
 ]
 
 { #category : #'private - testing' }
 WinConsoleColor class >> isValidValue: aValue [
 
-	^self subclassResponsibility 
+	^self subclassResponsibility
 ]
 
 { #category : #'accessing colors' }
 WinConsoleColor class >> lime [
 
-	^self subclassResponsibility 
+	^self subclassResponsibility
 ]
 
 { #category : #'accessing colors' }
 WinConsoleColor class >> maroon [
 
-	^self subclassResponsibility 
+	^self subclassResponsibility
 ]
 
 { #category : #'accessing colors' }
 WinConsoleColor class >> navy [
 
-	^self subclassResponsibility 
+	^self subclassResponsibility
 ]
 
 { #category : #'accessing colors' }
 WinConsoleColor class >> olive [
 
-	^self subclassResponsibility 
+	^self subclassResponsibility
 ]
 
 { #category : #'accessing colors' }
 WinConsoleColor class >> purple [
 
-	^self subclassResponsibility 
+	^self subclassResponsibility
 ]
 
 { #category : #'accessing colors' }
 WinConsoleColor class >> red [
 
-	^self subclassResponsibility 
+	^self subclassResponsibility
 ]
 
 { #category : #'accessing colors' }
 WinConsoleColor class >> silver [
 
-	^self subclassResponsibility 
+	^self subclassResponsibility
 ]
 
 { #category : #'accessing colors' }
 WinConsoleColor class >> teal [
 
-	^self subclassResponsibility 
+	^self subclassResponsibility
 ]
 
 { #category : #'instance creation' }
 WinConsoleColor class >> value: anInteger [
 
-	(self isValidValue: anInteger) ifFalse: [ self error: 'Invalid value' ].	
-	^(self new) 
+	(self isValidValue: anInteger) ifFalse: [ self error: 'Invalid value' ].
+	^(self new)
 		value: anInteger;
 		yourself
 ]
@@ -123,13 +123,13 @@ WinConsoleColor class >> value: anInteger [
 { #category : #'accessing colors' }
 WinConsoleColor class >> white [
 
-	^self subclassResponsibility 
+	^self subclassResponsibility
 ]
 
 { #category : #'accessing colors' }
 WinConsoleColor class >> yellow [
 
-	^self subclassResponsibility 
+	^self subclassResponsibility
 ]
 
 { #category : #printing }

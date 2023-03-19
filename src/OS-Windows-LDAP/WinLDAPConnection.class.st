@@ -28,21 +28,21 @@ WinLDAPConnection class >> fromHandle: aHandle [
 ]
 
 { #category : #'instance creation' }
-WinLDAPConnection class >> hostname: aHostname [ 
+WinLDAPConnection class >> hostname: aHostname [
 	"Return a new instance of the receiver using the given hostname and standard port"
-	
+
 	^self hostname: aHostname port: self defaultPort
 ]
 
 { #category : #'instance creation' }
 WinLDAPConnection class >> hostname: aHostname port: aPort [
 	"Return a new instance of the receiver using the given hostname and port"
-	
+
 	^self fromHandle: (WinLDAP openHost: aHostname port: aPort)
 ]
 
 { #category : #authentication }
-WinLDAPConnection >> authenticate: username passwd: password [ 
+WinLDAPConnection >> authenticate: username passwd: password [
 	self isValid ifFalse: [ ^false ].
 	^WinLDAP ldapSimpleBind: self handle username: username password: password
 ]
@@ -63,12 +63,11 @@ WinLDAPConnection >> handle [
 { #category : #'private - initialization' }
 WinLDAPConnection >> initHandle: aHandle [
 
-	handle := aHandle 
+	handle := aHandle
 ]
 
 { #category : #testing }
 WinLDAPConnection >> isValid [
 
 	^handle notNil
-	
 ]

@@ -23,7 +23,7 @@ Class {
 { #category : #'private - accessing' }
 WinSystemTime class >> fieldsDesc [
 	"self rebuildFieldAccessors"
-	
+
 	^ #(
 		WORD wYear;
   		WORD wMonth;
@@ -37,55 +37,47 @@ WinSystemTime class >> fieldsDesc [
 ]
 
 { #category : #'private - primitives' }
-WinSystemTime class >> getLocalTime: lpSystemTime [	
+WinSystemTime class >> getLocalTime: lpSystemTime [
 
 	^ self ffiCall: #(void GetLocalTime(LPSYSTEMTIME lpSystemTime)) module: #kernel32
-
-
 ]
 
 { #category : #'private - primitives' }
 WinSystemTime class >> getSystemTime: lpSystemTime [
-	 
+
 	^ self ffiCall: #(void GetSystemTime(LPSYSTEMTIME lpSystemTime)) module: #kernel32
-
-
 ]
 
 { #category : #accessing }
-WinSystemTime class >> localTime [	
+WinSystemTime class >> localTime [
 	"Retrieves the current local date and time."
-	
+
 	| time |
 	time := self new.
 	self getLocalTime: time.
-	^time  
+	^time
 ]
 
 { #category : #'private - primitives' }
 WinSystemTime class >> setLocalTime: lpSystemTime [
-	
+
 	^ self ffiCall: #(BOOL SetLocalTime(SYSTEMTIME* lpSystemTime)) module: #kernel32
-
-
 ]
 
 { #category : #'private - primitives' }
 WinSystemTime class >> setSystemTime: lpSystemTime [
-	
+
 	^ self ffiCall: #(BOOL SetSystemTime(SYSTEMTIME* lpSystemTime)) module: #kernel32
-
-
 ]
 
 { #category : #accessing }
-WinSystemTime class >> systemTime [	
+WinSystemTime class >> systemTime [
 	"Retrieves the current system date and time. The system time is expressed in Coordinated Universal Time (UTC)."
-	
+
 	| time |
 	time := self new.
 	self getSystemTime: time.
-	^time  
+	^time
 ]
 
 { #category : #accessing }
@@ -115,7 +107,7 @@ WinSystemTime >> dayOfWeek: dayOfWeek [
 { #category : #accessing }
 WinSystemTime >> hour [
 
-	^self wHour 
+	^self wHour
 ]
 
 { #category : #accessing }
@@ -127,19 +119,19 @@ WinSystemTime >> hour: hour [
 { #category : #accessing }
 WinSystemTime >> milliseconds [
 
-	^self wMilliseconds 
+	^self wMilliseconds
 ]
 
 { #category : #accessing }
 WinSystemTime >> milliseconds: milliseconds [
 
-	self wMilliseconds: milliseconds 
+	self wMilliseconds: milliseconds
 ]
 
 { #category : #accessing }
 WinSystemTime >> minute [
 
-	^self wMinute 
+	^self wMinute
 ]
 
 { #category : #accessing }
@@ -151,19 +143,19 @@ WinSystemTime >> minute: minutes [
 { #category : #accessing }
 WinSystemTime >> month [
 
-	^self wMonth 
+	^self wMonth
 ]
 
 { #category : #accessing }
 WinSystemTime >> month: aMonth [
 
-	self wMonth: aMonth 
+	self wMonth: aMonth
 ]
 
 { #category : #accessing }
 WinSystemTime >> second [
 
-	^self wSecond 
+	^self wSecond
 ]
 
 { #category : #accessing }
@@ -175,14 +167,14 @@ WinSystemTime >> second: seconds [
 { #category : #operating }
 WinSystemTime >> setAsNewLocalTime [
 	"Set the time as new local time. The calling process must have the SE_SYSTEMTIME_NAME privilege."
-	
+
 	^self class setLocalTime: self
 ]
 
 { #category : #operating }
 WinSystemTime >> setAsNewSystemTime [
 	"Set the time as new system time.  The system time is expressed in Coordinated Universal Time (UTC). The calling process must have the SE_SYSTEMTIME_NAME privilege."
-	
+
 	^self class setSystemTime: self
 ]
 

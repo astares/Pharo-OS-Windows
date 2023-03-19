@@ -12,8 +12,7 @@ Class {
 { #category : #converting }
 WinTCHAR class >> asExternalTypeOn: generator [
 
-	^(generator optionAt: #WinUnicode) 
+	^(generator optionAt: #WinUnicode)
 		ifTrue: [ 'wchar_t' asExternalTypeOn: generator ]
 		ifFalse: [ #uchar asExternalTypeOn: generator ]
-
 ]

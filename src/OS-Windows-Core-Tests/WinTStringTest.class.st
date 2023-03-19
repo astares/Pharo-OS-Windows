@@ -11,6 +11,4 @@ Class {
 WinTStringTest >> testLengthOfASCIIString [
 
 	self assert: (WinTString primLstrlenA: 'Pharo') = 5
-
-	
 ]

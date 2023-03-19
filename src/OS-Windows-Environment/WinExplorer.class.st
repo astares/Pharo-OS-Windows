@@ -23,7 +23,7 @@ WinExplorer class >> explore: aString [
 { #category : #'instance creation' }
 WinExplorer class >> open [
 	"Open the windows explorer"
-	
+
 	^WinProcess createProcess: 'explorer.exe'
 ]
 
@@ -234,7 +234,7 @@ WinExplorer class >> openDocumentsLibrary [
 { #category : #'defaults - Windows 7 and Vista' }
 WinExplorer class >> openDownloads [
 	"see also openLocalDownloads"
-	
+
 	self explore: 'shell:Downloads'
 ]
 
@@ -319,7 +319,7 @@ WinExplorer class >> openLocalAppDataLow [
 { #category : #'defaults - Windows 10' }
 WinExplorer class >> openLocalDownloads [
 	"see also openDownloads"
-	
+
 	self explore: 'shell:Local Downloads'
 ]
 

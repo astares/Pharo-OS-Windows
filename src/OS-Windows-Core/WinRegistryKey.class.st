@@ -29,10 +29,9 @@ WinRegistryKey class >> classesRoot [
 
 { #category : #'private - finalization' }
 WinRegistryKey class >> closeHandle: aHandle [
-	"Closes the given handle"	
+	"Closes the given handle"
 
-	^self ffiCall: #(BOOL CloseHandle(HKEY aHandle)) module: #kernel32	
-
+	^self ffiCall: #(BOOL CloseHandle(HKEY aHandle)) module: #kernel32
 ]
 
 { #category : #defaults }
@@ -62,8 +61,8 @@ WinRegistryKey class >> example1 [
 { #category : #examples }
 WinRegistryKey class >> example2 [
 	"Query a value from the registry"
-	
-	(WinRegistryKey localMachine 
+
+	(WinRegistryKey localMachine
 		queryValue: 'CommonFilesDir' fromSubkey: 'SOFTWARE\Microsoft\Windows\CurrentVersion') inspect
 ]
 
@@ -80,7 +79,7 @@ WinRegistryKey class >> performanceData [
 ]
 
 { #category : #lifetime }
-WinRegistryKey >> close [ 
+WinRegistryKey >> close [
 
 	WinRegistry regCloseKey: self
 ]
@@ -93,9 +92,9 @@ WinRegistryKey >> createDefaultHandle [
 { #category : #accessing }
 WinRegistryKey >> keyName [
 	"Returns the key name"
-	
+
 	(handle value allMask: 16r80000000) ifFalse: [ ^nil ].
-	^WinRegistryConstants classVarNames 
+	^WinRegistryConstants classVarNames
 		detect: [:each | (each printString beginsWith: '#HKEY_') and: [ handle = (WinRegistryConstants classVarNamed: each) ]]
 		ifNone: [ 'NOT FOUND' ]
 ]
@@ -103,8 +102,8 @@ WinRegistryKey >> keyName [
 { #category : #printing }
 WinRegistryKey >> printOn: aStream [
 	super printOn: aStream.
-	self getHandle 
-		ifNotNil: [ 
+	self getHandle
+		ifNotNil: [
 			aStream
 				nextPutAll: ' - ';
 				nextPutAll: self keyName asString ]
@@ -112,9 +111,9 @@ WinRegistryKey >> printOn: aStream [
 
 { #category : #accessing }
 WinRegistryKey >> queryOpenSubkey: subKeyString [
-	"Creates and returns a new key for the given subkeyString. Do not forget to close the resulting key after usage. 
-		
-	   WinRegistryKey localMachine 
+	"Creates and returns a new key for the given subkeyString. Do not forget to close the resulting key after usage.
+
+	   WinRegistryKey localMachine
 			queryOpenSubkey: 'HARDWARE\\DESCRIPTION\\System\\CentralProcessor\\0'
 	"
 
@@ -123,13 +122,13 @@ WinRegistryKey >> queryOpenSubkey: subKeyString [
 	WinRegistry regOpenKeyExA: self
 		 with: subKeyString
 		 with: 0
-		 with: KEY_QUERY_VALUE | KEY_WOW64_64KEY    
+		 with: KEY_QUERY_VALUE | KEY_WOW64_64KEY
 		 with: result.
 	^result
 ]
 
 { #category : #accessing }
-WinRegistryKey >> queryValue: value fromSubkey: subkey [ 
+WinRegistryKey >> queryValue: value fromSubkey: subkey [
 	|hKey result|
 	hKey := self queryOpenSubkey: subkey.
 	result := WinRegistry queryValue: value fromKey: hKey.

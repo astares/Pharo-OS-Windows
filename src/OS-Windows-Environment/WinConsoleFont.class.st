@@ -20,7 +20,7 @@ Class {
 { #category : #'private accessing' }
 WinConsoleFont class >> fieldsDesc [
 	"self rebuildFieldAccessors"
-	
+
 	^ #(
 		DWORD nFont;
 		COORD dwFontSize;
@@ -42,7 +42,7 @@ WinConsoleFont >> dwFontSize: anObject [
 { #category : #accessing }
 WinConsoleFont >> fontIndex [
 	"Return the index of the font in the system's console font table."
-	
+
 	^self nFont
 ]
 

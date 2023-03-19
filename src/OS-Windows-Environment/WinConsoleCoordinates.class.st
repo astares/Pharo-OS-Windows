@@ -19,7 +19,7 @@ Class {
 { #category : #'private accessing' }
 WinConsoleCoordinates class >> fieldsDesc [
 	"self rebuildFieldAccessors"
-	
+
 	^ #(
 		SHORT x;
 		SHORT y;
@@ -27,7 +27,7 @@ WinConsoleCoordinates class >> fieldsDesc [
 ]
 
 { #category : #'instance creation' }
-WinConsoleCoordinates class >> fromPoint: aPoint [ 
+WinConsoleCoordinates class >> fromPoint: aPoint [
 
 	^(self new)
 		x: aPoint x;

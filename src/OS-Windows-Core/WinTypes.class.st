@@ -87,16 +87,16 @@ WinTypes class >> initBasicTypes [
 
 	BOOL := #bool.
 	DWORD := #ulong.
-	
+
 	VOID := #void.
 
 	POINT := #WinPoint.
-	RECT := #WinRectangle.	
-		
+	RECT := #WinRectangle.
+
 	HDC := #WinDeviceContext.
 	HWND := #WinWindow.
 	HMENU := #WinMenu.
-	
+
 	SYSTEMTIME := #WinSystemTime.
 	LPSYSTEMTIME := #'SYSTEMTIME*'
 ]
@@ -113,7 +113,7 @@ WinTypes class >> initKnownTypes [
 	UINT := #ulong.
 	USHORT := #ushort.
 	SHORT := 'short'.
-	
+
 	ATOM := #WORD.
 	BOOLEAN := #BYTE.
 	BYTE := #unsignedByte.
@@ -136,7 +136,7 @@ WinTypes class >> initKnownTypes [
 	LCID := #DWORD.
 	LCTYPE := #DWORD.
 	LGRPID := #DWORD.
-	
+
 	ULONG := #ulong.
 	LONG := #long.
 	LONGLONG := #longlong.
@@ -147,15 +147,15 @@ WinTypes class >> initKnownTypes [
 	LPBOOL := #'BOOL*'.
 	LPBYTE := #'BYTE*'.
 	LPCOLORREF := #'DWORD*'.
-	
+
 	PVOID := 'void*'.
 	LPVOID := 'void*'.
 	LPCVOID := #'void*'.
 	LPDWORD := #'DWORD*'.
-	
+
 	PBOOL := 'BOOL*'.
 	PBOOLEAN := 'BOOLEAN*'.
-	
+
 	WNDPROC := #'void*'.
 	HANDLE := #WinHandle.
 	LPHANDLE := #'HANDLE*'.
@@ -178,17 +178,17 @@ WinTypes class >> initStringTypes [
 	LPTSTR := #WinTString.
 	LPWSTR := #WinWideString.
 	LPCSTR := #FFIExternalString.
-	
+
 	LPTSTR := #WinTString.
 	LPWSTR := #WinWideString.
-	
+
 	LPCTSTR := #LPTSTR
 ]
 
 { #category : #'class initialization' }
 WinTypes class >> initialize [
 
-	self 
+	self
 		initBasicTypes;
 		initKnownTypes;
 		initStringTypes;

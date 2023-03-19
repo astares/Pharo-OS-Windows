@@ -13,18 +13,16 @@ Class {
 
 { #category : #accessing }
 WinThread class >> currentThread [
-	"Return an instance with a pseudohandle for the current thread."	
+	"Return an instance with a pseudohandle for the current thread."
 
-	^ self ffiCall: #(WinThread GetCurrentThread()) module: #kernel32	
-
+	^ self ffiCall: #(WinThread GetCurrentThread()) module: #kernel32
 ]
 
 { #category : #accessing }
 WinThread class >> currentThreadId [
-	"Returns the thread identifier of the calling thread. Until the thread terminates, the thread identifier uniquely identifies the thread throughout the system."	
+	"Returns the thread identifier of the calling thread. Until the thread terminates, the thread identifier uniquely identifies the thread throughout the system."
 
-	^ self ffiCall: #(DWORD GetCurrentThreadId()) module: #kernel32	
-
+	^ self ffiCall: #(DWORD GetCurrentThreadId()) module: #kernel32
 ]
 
 { #category : #testing }

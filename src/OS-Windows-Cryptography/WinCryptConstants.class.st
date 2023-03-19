@@ -232,8 +232,7 @@ WinCryptConstants class >> initAlgID [
 	CALG_AES_128 := ALG_CLASS_DATA_ENCRYPT | ALG_TYPE_BLOCK | ALG_SID_AES_128.
 	CALG_AES_192 := ALG_CLASS_DATA_ENCRYPT | ALG_TYPE_BLOCK | ALG_SID_AES_192.
 	CALG_AES_256 := ALG_CLASS_DATA_ENCRYPT | ALG_TYPE_BLOCK | ALG_SID_AES_256.
-	CALG_AES := ALG_CLASS_DATA_ENCRYPT | ALG_TYPE_BLOCK | ALG_SID_AES.
-	
+	CALG_AES := ALG_CLASS_DATA_ENCRYPT | ALG_TYPE_BLOCK | ALG_SID_AES
 ]
 
 { #category : #'private - initialization flags' }
@@ -245,9 +244,7 @@ WinCryptConstants class >> initAlgorithmClasses [
 	ALG_CLASS_DATA_ENCRYPT := 3 << 13.
 	ALG_CLASS_HASH := 4 << 13.
 	ALG_CLASS_KEY_EXCHANGE := 5 << 13.
-	ALG_CLASS_ALL := 7 << 13.
-
-  
+	ALG_CLASS_ALL := 7 << 13
 ]
 
 { #category : #'private - initialization flags' }
@@ -259,9 +256,7 @@ WinCryptConstants class >> initAlgorithmTypes [
    ALG_TYPE_BLOCK := 3 << 9.
    ALG_TYPE_STREAM := 4 << 9.
    ALG_TYPE_DH := 5 << 9.
-   ALG_TYPE_SECURECHANNEL := 6 << 9.
-
-  
+   ALG_TYPE_SECURECHANNEL := 6 << 9
 ]
 
 { #category : #'private - initialization flags' }
@@ -274,7 +269,6 @@ WinCryptConstants class >> initBLOBFlags [
 	OPAQUEKEYBLOB := 9.
 	PUBLICKEYBLOBEX := 10.
 	SYMMETRICWRAPKEYBLOB := 11
-	
 ]
 
 { #category : #'private - initialization flags' }
@@ -296,13 +290,13 @@ WinCryptConstants class >> initBlockCipherSubID [
 	ALG_SID_AES_128 := 14.
 	ALG_SID_AES_192 := 15.
 	ALG_SID_AES_256 := 16.
-	ALG_SID_AES := 17.
+	ALG_SID_AES := 17
 ]
 
 { #category : #'private - initialization' }
 WinCryptConstants class >> initConstants [
 
-	self 
+	self
 		initAlgorithmClasses;
 		initAlgorithmTypes;
 		initGenericSubID;
@@ -321,7 +315,6 @@ WinCryptConstants class >> initConstants [
 		initKeySpecifiers;
 		initOtherConstants;
 		initProviders
-	
 ]
 
 { #category : #'private - initialization flags' }
@@ -331,7 +324,7 @@ WinCryptConstants class >> initContexts [
 	CRYPT_NEWKEYSET := 16r00000008.
  	CRYPT_DELETEKEYSET := 16r00000010.
   	CRYPT_MACHINE_KEYSET := 16r00000020.
-   	CRYPT_SILENT := 16r00000040.
+   	CRYPT_SILENT := 16r00000040
 ]
 
 { #category : #'private - initialization flags' }
@@ -340,7 +333,7 @@ WinCryptConstants class >> initDHSubID [
 	ALG_SID_DH_SANDF := 1.
 	ALG_SID_DH_EPHEM := 2.
 	ALG_SID_AGREED_KEY_ANY := 3.
-	ALG_SID_KEA := 4.
+	ALG_SID_KEA := 4
 ]
 
 { #category : #'private - initialization flags' }
@@ -348,15 +341,13 @@ WinCryptConstants class >> initDSSSubID [
 
 	ALG_SID_DSS_ANY := 0.
 	ALG_SID_DSS_PKCS := 1.
-	ALG_SID_DSS_DMS := 2.      
+	ALG_SID_DSS_DMS := 2.
 ]
 
 { #category : #'private - initialization flags' }
 WinCryptConstants class >> initGenericSubID [
 
-	ALG_SID_ANY := 0.
-
-  
+	ALG_SID_ANY := 0
 ]
 
 { #category : #'private - initialization flags' }
@@ -376,8 +367,7 @@ WinCryptConstants class >> initHashSubID [
 	ALG_SID_HASH_REPLACE_OWF := 11.
 	ALG_SID_SHA_256 := 12.
 	ALG_SID_SHA_384 := 13.
-	ALG_SID_SHA_512 := 14.
-	
+	ALG_SID_SHA_512 := 14
 ]
 
 { #category : #'private - initialization flags' }
@@ -386,22 +376,22 @@ WinCryptConstants class >> initKeyGenerateFlags [
 	CRYPT_EXPORTABLE := 1.
 	CRYPT_USER_PROTECTED := 2.
 	CRYPT_CREATE_SALT := 4.
-	CRYPT_UPDATE_KEY := 8.
+	CRYPT_UPDATE_KEY := 8
 ]
 
 { #category : #'private - initialization flags' }
 WinCryptConstants class >> initKeySpecifiers [
 
 	AT_KEYEXCHANGE := 1.
-	AT_SIGNATURE := 2.
+	AT_SIGNATURE := 2
 ]
 
 { #category : #'private - initialization flags' }
 WinCryptConstants class >> initOtherConstants [
 
 	CRYPT_USERDATA := 1.
-	PKCS5_PADDING := 1.	
-	
+	PKCS5_PADDING := 1.
+
 	CRYPT_MODE_CBC := 1.
 	CRYPT_MODE_ECB := 2.
 	CRYPT_MODE_OFB := 3.
@@ -459,7 +449,7 @@ WinCryptConstants class >> initOtherConstants [
  	CRYPT_IMPL_HARDWARE := 1.
  	CRYPT_IMPL_SOFTWARE := 2.
  	CRYPT_IMPL_MIXED := 3.
-	CRYPT_IMPL_UNKNOWN := 4.	
+	CRYPT_IMPL_UNKNOWN := 4.
 ]
 
 { #category : #'private - initialization flags' }
@@ -486,7 +476,7 @@ WinCryptConstants class >> initProviders [
 	PROV_SPYRUS_LYNKS := 20.
 	PROV_RNG := 21.
 	PROV_INTEL_SEC := 22.
-	PROV_RSA_AES := 24.
+	PROV_RSA_AES := 24
 ]
 
 { #category : #'private - initialization flags' }
@@ -496,7 +486,7 @@ WinCryptConstants class >> initRSASubID [
 	ALG_SID_RSA_PKCS := 1.
 	ALG_SID_RSA_MSATWORK := 2.
    ALG_SID_RSA_ENTRUST := 3.
-   ALG_SID_RSA_PGP := 4.
+   ALG_SID_RSA_PGP := 4
 ]
 
 { #category : #'private - initialization flags' }
@@ -508,21 +498,20 @@ WinCryptConstants class >> initSChannelSubID [
 	ALG_SID_PCT1_MASTER := 4.
 	ALG_SID_SSL2_MASTER := 5.
 	ALG_SID_TLS1_MASTER := 6.
-	ALG_SID_SCHANNEL_ENC_KEY := 7.
+	ALG_SID_SCHANNEL_ENC_KEY := 7
 ]
 
 { #category : #'private - initialization flags' }
 WinCryptConstants class >> initStreamCipherSubID [
 
 	ALG_SID_RC4 := 1.
-	ALG_SID_SEAL := 2.
- 
+	ALG_SID_SEAL := 2
 ]
 
 { #category : #'private - initialization' }
-WinCryptConstants class >> initTypes [ 
+WinCryptConstants class >> initTypes [
 
-	HCRYPTPROV := #WinCryptoProvider 
+	HCRYPTPROV := #WinCryptoProvider
 ]
 
 { #category : #initialization }
@@ -530,7 +519,7 @@ WinCryptConstants class >> initialize [
 	"
 		self initialize
 	"
-	self 
+	self
 		initConstants;
-		initTypes 
+		initTypes
 ]

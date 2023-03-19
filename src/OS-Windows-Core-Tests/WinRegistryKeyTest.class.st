@@ -71,7 +71,7 @@ WinRegistryKeyTest >> testPerformanceData [
 { #category : #tests }
 WinRegistryKeyTest >> testPrinting [
 
-	self 
+	self
 		assert: (WinRegistryKey classesRoot printString endsWith: ' - HKEY_CLASSES_ROOT');
 		assert: (WinRegistryKey currentUser printString endsWith: ' - HKEY_CURRENT_USER');
 		assert: (WinRegistryKey localMachine printString endsWith: ' - HKEY_LOCAL_MACHINE');
@@ -84,10 +84,10 @@ WinRegistryKeyTest >> testPrinting [
 WinRegistryKeyTest >> testQueryBinaryValue [
 
 	| value |
-	value:= WinRegistryKey localMachine 
+	value:= WinRegistryKey localMachine
 					queryValue: 'Component Information' fromSubkey: 'HARDWARE\\DESCRIPTION\\System\\CentralProcessor\\0'.
-	
-	self 
+
+	self
 		assert: value notEmpty;
 		assert: (value isKindOf: ByteArray)
 ]
@@ -96,10 +96,10 @@ WinRegistryKeyTest >> testQueryBinaryValue [
 WinRegistryKeyTest >> testQueryDWord [
 
 	| value |
-	value := WinRegistryKey localMachine 
+	value := WinRegistryKey localMachine
 					queryValue: '~MHz' fromSubkey: 'HARDWARE\\DESCRIPTION\\System\\CentralProcessor\\0'.
-	
-	self 
+
+	self
 		assert: value isInteger;
 		assert: value > 0
 ]
@@ -108,8 +108,8 @@ WinRegistryKeyTest >> testQueryDWord [
 WinRegistryKeyTest >> testQueryStringValue [
 
 	| value |
-	value := WinRegistryKey localMachine 
+	value := WinRegistryKey localMachine
 					queryValue: 'VendorIdentifier' fromSubkey: 'HARDWARE\\DESCRIPTION\\System\\CentralProcessor\\0'.
-	
+
 	self assert: value notEmpty
 ]

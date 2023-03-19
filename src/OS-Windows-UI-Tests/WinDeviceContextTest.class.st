@@ -17,7 +17,7 @@ WinDeviceContextTest >> checkValidDeviceContext: aDeviceContext [
 { #category : #accessing }
 WinDeviceContextTest >> defaultTestClass [
 
-	^WinDeviceContext 
+	^WinDeviceContext
 ]
 
 { #category : #tests }
@@ -47,5 +47,5 @@ WinDeviceContextTest >> testAccessingDeviceContextOfPharoWindow [
 { #category : #tests }
 WinDeviceContextTest >> testAccessingPharoWindowDeviceContext [
 
-	self checkValidDeviceContext: self defaultTestClass pharoWindowDeviceContext 
+	self checkValidDeviceContext: self defaultTestClass pharoWindowDeviceContext
 ]

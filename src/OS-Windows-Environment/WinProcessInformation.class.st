@@ -19,7 +19,7 @@ Class {
 { #category : #'private - accessing' }
 WinProcessInformation class >> fieldsDesc [
 	" self rebuildFieldAccessors "
-	
+
 	^ #(
 		HANDLE hProcess;
   		HANDLE hThread;
@@ -79,12 +79,12 @@ WinProcessInformation >> hThread: anObject [
 { #category : #accessing }
 WinProcessInformation >> process [
 
-	^WinProcess new setHandle: self hProcess getHandle 
+	^WinProcess new setHandle: self hProcess getHandle
 ]
 
 { #category : #accessing }
 WinProcessInformation >> processId [
 	"Return the process ID (the one you see in Task manager)"
-	
+
 	^WinProcess getProcessId: self hProcess
 ]

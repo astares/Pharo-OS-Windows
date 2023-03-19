@@ -20,7 +20,7 @@ Class {
 { #category : #'private accessing' }
 WinConsoleCursor class >> fieldsDesc [
 	"self rebuildFieldAccessors"
-	
+
 	^ #(
 		DWORD dwSize;
 		BOOL  bVisible;

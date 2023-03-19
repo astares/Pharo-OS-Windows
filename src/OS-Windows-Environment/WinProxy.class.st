@@ -17,7 +17,7 @@ WinProxy class >> address [
 { #category : #testing }
 WinProxy class >> isEnabled [
 	"Return true if a proxy is enabled"
-	
+
 	^self proxyEnabledRegistryValue = 1
 ]
 
@@ -31,13 +31,13 @@ WinProxy class >> port [
 { #category : #'private - accessing' }
 WinProxy class >> proxyEnabledRegistryValue [
 
-	^WinRegistryKey currentUser 
+	^WinRegistryKey currentUser
 	queryValue: 'ProxyEnable' fromSubkey: 'Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings'
 ]
 
 { #category : #'private - accessing' }
 WinProxy class >> proxyServerRegistryValue [
 
-	^WinRegistryKey currentUser 
+	^WinRegistryKey currentUser
 	queryValue: 'ProxyServer' fromSubkey: 'Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings'
 ]

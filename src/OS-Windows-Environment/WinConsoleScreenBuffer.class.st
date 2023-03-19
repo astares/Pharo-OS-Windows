@@ -23,7 +23,7 @@ Class {
 { #category : #'private - accessing' }
 WinConsoleScreenBuffer class >> fieldsDesc [
 	"self rebuildFieldAccessors"
-	
+
 	^ #(
 		COORD      dwSize;
   		COORD      dwCursorPosition;

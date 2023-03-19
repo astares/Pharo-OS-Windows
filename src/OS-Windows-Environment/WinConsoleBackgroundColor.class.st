@@ -46,7 +46,7 @@ WinConsoleBackgroundColor class >> green [
 { #category : #'private testing' }
 WinConsoleBackgroundColor class >> isValidValue: anInteger [
 
-	^anInteger = 0 or: [ 
+	^anInteger = 0 or: [
 		anInteger > 15 and: [ anInteger < 256 ]]
 ]
 

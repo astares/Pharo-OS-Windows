@@ -28,20 +28,19 @@ WinWindowTest >> setUp [
 
 	super setUp.
 	window := WinWindow activeWindow
-	
 ]
 
 { #category : #running }
 WinWindowTest >> tearDown [
 
 	window := nil.
-	super tearDown 
+	super tearDown
 ]
 
 { #category : #'tests - default instances' }
 WinWindowTest >> testActiveWindow [
 
-	self checkValidWindow: self defaultTestClass activeWindow 
+	self checkValidWindow: self defaultTestClass activeWindow
 ]
 
 { #category : #'tests - other' }
@@ -93,36 +92,36 @@ WinWindowTest >> testComparisionDesktopWindow [
 
 { #category : #'tests - other' }
 WinWindowTest >> testCorrectHash [
-	
-	self assert: WinWindow desktopWindow hash == WinWindow desktopWindow hash 
+
+	self assert: WinWindow desktopWindow hash == WinWindow desktopWindow hash
 ]
 
 { #category : #'tests - default instances' }
 WinWindowTest >> testDesktopWindow [
-	
-	self checkValidWindow: self defaultTestClass desktopWindow 
+
+	self checkValidWindow: self defaultTestClass desktopWindow
 ]
 
 { #category : #'tests - default instances' }
 WinWindowTest >> testFocusWindow [
 
-	self checkValidWindow: self defaultTestClass focusWindow 
+	self checkValidWindow: self defaultTestClass focusWindow
 ]
 
 { #category : #'tests - default instances' }
 WinWindowTest >> testForegroundWindow [
 
-	self checkValidWindow: self defaultTestClass focusWindow 
+	self checkValidWindow: self defaultTestClass focusWindow
 ]
 
 { #category : #'tests - default instances' }
 WinWindowTest >> testPharoWindow [
 
-	self assert: self defaultTestClass pharoWindow isVisible 
+	self assert: self defaultTestClass pharoWindow isVisible
 ]
 
 { #category : #'tests - default instances' }
-WinWindowTest >> testWindowFromPoint [ 
+WinWindowTest >> testWindowFromPoint [
 
-	self checkValidWindow: (self defaultTestClass windowFromPoint: (WinPoint x: 0 y: 0)) 
+	self checkValidWindow: (self defaultTestClass windowFromPoint: (WinPoint x: 0 y: 0))
 ]

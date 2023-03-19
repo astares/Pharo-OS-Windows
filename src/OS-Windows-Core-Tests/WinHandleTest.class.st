@@ -10,5 +10,5 @@ Class {
 { #category : #tests }
 WinHandleTest >> testIsInvalid [
 
-	self assert: WinHandle new isInvalid 
+	self assert: WinHandle new isInvalid
 ]

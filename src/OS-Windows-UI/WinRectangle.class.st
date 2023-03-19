@@ -31,15 +31,14 @@ WinRectangle class >> fromRectangle: aRectangle [
 ]
 
 { #category : #'instance creation' }
-WinRectangle class >> left: leftNumber right: rightNumber top: topNumber bottom: bottomNumber [ 
+WinRectangle class >> left: leftNumber right: rightNumber top: topNumber bottom: bottomNumber [
 
 	^(self new)
-		left: leftNumber;		
-		right: rightNumber;		
+		left: leftNumber;
+		right: rightNumber;
 		top: topNumber;
 		bottom: bottomNumber;
 		yourself
-	
 ]
 
 { #category : #conversion }

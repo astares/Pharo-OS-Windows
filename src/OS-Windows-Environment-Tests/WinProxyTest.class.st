@@ -17,7 +17,7 @@ WinProxyTest >> testIsEnabled [
 WinProxyTest >> testServerAddressWhenEnabled [
 
 	WinProxy isEnabled ifFalse: [ ^self ].
-	
+
 	self assert: (WinProxy address substrings: '.') size = 4  "Regular IP address"
 ]
 
@@ -25,6 +25,6 @@ WinProxyTest >> testServerAddressWhenEnabled [
 WinProxyTest >> testServerPortWhenEnabled [
 
 	WinProxy isEnabled ifFalse: [ ^self ].
-	
-	self assert: WinProxy port asNumber > 0   
+
+	self assert: WinProxy port asNumber > 0
 ]

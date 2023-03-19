@@ -20,7 +20,7 @@ WinConsoleTest >> defaultTestClass [
 ]
 
 { #category : #running }
-WinConsoleTest >> setUp [ 
+WinConsoleTest >> setUp [
 
 	super setUp.
 	stdoutConsole := self defaultTestClass createOutputConsoleForCurrentProcess
@@ -31,7 +31,7 @@ WinConsoleTest >> tearDown [
 
 	stdoutConsole := nil.
 	self defaultTestClass reset.
-	super tearDown. 
+	super tearDown.
 	"Give windows enough time to close the window - otherwise it will affect other tests (like WinWindowsTest)"
 	(Delay forMilliseconds: 10) wait
 ]

@@ -19,5 +19,5 @@ WinDebuggerTest >> testIsAbleToOutputDebugString [
 WinDebuggerTest >> testIsDebuggerPresent [
 	"Usually there is no debugger attached to the Pharo VM process"
 
-	self deny: WinDebugger isDebuggerPresent 
+	self deny: WinDebugger isDebuggerPresent
 ]

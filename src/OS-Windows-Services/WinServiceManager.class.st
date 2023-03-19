@@ -25,16 +25,17 @@ WinServiceManager class >> open [
 WinServiceManager >> open [
 
 	serviceHandle := self openSCManager.
-	serviceHandle isInvalid 
-		ifTrue: [ self processLastError ] 
+	serviceHandle isInvalid
+		ifTrue: [ self processLastError ]
 ]
 
 { #category : #private }
 WinServiceManager >> openSCManager [
-	"Establishes a connection to the service control manager."
 
-	^ self ffiCall: #(SC_HANDLE OpenSCManagerA(0, 0, SC_MANAGER_ALL_ACCESS)) module: #advapi32 
-
+	^ self
+		  ffiCall:
+		  #( #SC_HANDLE #OpenSCManagerA #( 0 #, 0 #, #SC_MANAGER_ALL_ACCESS ) )
+		  module: #advapi32
 ]
 
 { #category : #operating }
@@ -43,5 +44,5 @@ WinServiceManager >> processLastError [
 	(WinError lastErrorCode = ERROR_ACCESS_DENIED)
 					ifTrue: [  WinAccessDenied signal: 'The requested access was denied. Maybe you need to run as admin.' ].
 	(WinError lastErrorCode = ERROR_ACCESS_DENIED)
-					ifTrue: [  WinAccessDenied signal: 'The requested access was denied. Maybe you need to run as admin.' ].
+					ifTrue: [  WinAccessDenied signal: 'The requested access was denied. Maybe you need to run as admin.' ]
 ]

@@ -13,18 +13,16 @@ Class {
 
 { #category : #accessing }
 WinUserSession class >> exitWindows [
-	"Return an instance with a pseudohandle for the current thread."	
-	 
-	^ self ffiCall: #(BOOL ExitWindowsEx(0, 0)) module: #user32	
+	"Return an instance with a pseudohandle for the current thread."
 
+	^ self ffiCall: #(BOOL ExitWindowsEx(0, 0)) module: #user32
 ]
 
 { #category : #'private - primitives' }
-WinUserSession class >> exitWindowsEx: uFlags [  
-	"Either logs off, shuts down, or shuts down and restarts the system. "	
-	 
-	^ self ffiCall: #(BOOL ExitWindowsEx(DWORD uFlags, 0)) module: #user32	
+WinUserSession class >> exitWindowsEx: uFlags [
+	"Either logs off, shuts down, or shuts down and restarts the system. "
 
+	^ self ffiCall: #(BOOL ExitWindowsEx(DWORD uFlags, 0)) module: #user32
 ]
 
 { #category : #accessing }
@@ -37,7 +35,7 @@ WinUserSession class >> exitWindowsForceProcessToTerminate [
 WinUserSession class >> lockWorkstation [
 	"Locks the workstation."
 	<script>
-	
+
 	^ self ffiCall: #(BOOL LockWorkStation(void)) module: #user32
 ]
 

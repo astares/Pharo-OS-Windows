@@ -16,10 +16,10 @@ Class {
 WinInternetExplorer class >> deleteAllBrowserInfos [
 	"
 	Delete all browser infos
-		
-		WinInternetExplorer deleteAllBrowserInfos   
+
+		WinInternetExplorer deleteAllBrowserInfos
 	"
-	
+
 	WinShell shellRunDLL: 'InetCpl.cpl,ClearMyTracksByProcess 255'
 ]
 
@@ -27,10 +27,10 @@ WinInternetExplorer class >> deleteAllBrowserInfos [
 WinInternetExplorer class >> deleteAllBrowserInfosAndSettingsStoredByAddOns [
 	"
 	Delete all browser infos and settings stored by Add-Ons
-		
-		WinInternetExplorer deleteAllBrowserInfosAndSettingsStoredByAddOns   
+
+		WinInternetExplorer deleteAllBrowserInfosAndSettingsStoredByAddOns
 	"
-	
+
 	WinShell shellRunDLL: 'InetCpl.cpl,ClearMyTracksByProcess 4351'
 ]
 
@@ -38,10 +38,10 @@ WinInternetExplorer class >> deleteAllBrowserInfosAndSettingsStoredByAddOns [
 WinInternetExplorer class >> deleteAllInfos [
 	"
 	Delete all browser infos
-		
-		WinInternetExplorer deleteAllInfos   
+
+		WinInternetExplorer deleteAllInfos
 	"
-	
+
 	WinShell shellRunDLL: 'InetCpl.cpl,ClearMyTracksByProcess 255'
 ]
 
@@ -49,11 +49,11 @@ WinInternetExplorer class >> deleteAllInfos [
 WinInternetExplorer class >> deleteCookies [
 	"
 	Delete browser cookies
-		
+
 		WinExplorer openCookies.
-		WinInternetExplorer deleteCookies 
+		WinInternetExplorer deleteCookies
 	"
-	
+
 	WinShell shellRunDLL: 'InetCpl.cpl,ClearMyTracksByProcess 2'
 ]
 
@@ -61,10 +61,10 @@ WinInternetExplorer class >> deleteCookies [
 WinInternetExplorer class >> deleteFormData [
 	"
 	Delete browser form data
-		
+
 		WinInternetExplorer deleteFormData
 	"
-	
+
 	WinShell shellRunDLL: 'InetCpl.cpl,ClearMyTracksByProcess 16'
 ]
 
@@ -72,11 +72,11 @@ WinInternetExplorer class >> deleteFormData [
 WinInternetExplorer class >> deleteHistory [
 	"
 	Delete browser history
-		
+
 		WinExplorer openHistory.
 		WinInternetExplorer deleteHistory
 	"
-	
+
 	WinShell shellRunDLL: 'InetCpl.cpl,ClearMyTracksByProcess 1'
 ]
 
@@ -84,10 +84,10 @@ WinInternetExplorer class >> deleteHistory [
 WinInternetExplorer class >> deletePasswords [
 	"
 	Delete browser passwords
-		
+
 		WinInternetExplorer deletePasswords
 	"
-	
+
 	WinShell shellRunDLL: 'InetCpl.cpl,ClearMyTracksByProcess 32'
 ]
 
@@ -131,7 +131,7 @@ WinInternetExplorer class >> openKioskMode: aUrl [
 WinInternetExplorer class >> openWithArguments: arg [
 
 	|dir cmd|
-	dir := WinEnvironment is64BitWindows 
+	dir := WinEnvironment is64BitWindows
 			ifTrue: [ WinEnvironment getProgramFilesX86  ]
 			ifFalse: [ WinEnvironment getProgramFilesDirectory ].
 	cmd := dir, '\Internet Explorer\iexplore.exe ', arg.
@@ -141,7 +141,7 @@ WinInternetExplorer class >> openWithArguments: arg [
 { #category : #accessing }
 WinInternetExplorer class >> updateVersion [
 
-	^ (WinRegistryKey localMachine  
+	^ (WinRegistryKey localMachine
 		queryValue: 'svcUpdateVersion'
 	   fromSubkey: self internetExplorerRegistryKey)
 ]
@@ -149,7 +149,7 @@ WinInternetExplorer class >> updateVersion [
 { #category : #accessing }
 WinInternetExplorer class >> version [
 
-	^ (WinRegistryKey localMachine  
+	^ (WinRegistryKey localMachine
 		queryValue: 'svcVersion'
 	   fromSubkey: self internetExplorerRegistryKey)
 ]

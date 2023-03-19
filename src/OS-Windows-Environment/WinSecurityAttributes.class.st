@@ -15,10 +15,10 @@ Class {
 { #category : #'private - accessing' }
 WinSecurityAttributes class >> fieldsDesc [
 	" self rebuildFieldAccessors "
-	
+
 	^ #(
-		DWORD  nLength; 
-    	LPVOID lpSecurityDescriptor; 
+		DWORD  nLength;
+    	LPVOID lpSecurityDescriptor;
     	BOOL   bInheritHandle;
 		)
 ]

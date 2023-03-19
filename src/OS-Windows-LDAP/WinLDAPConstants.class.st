@@ -45,8 +45,7 @@ WinLDAPConstants class >> initLDAPReturnCodes [
 	LDAP_UNAVAILABLE_CRIT_EXTENSION := 16r0c.
 	LDAP_CONFIDENTIALITY_REQUIRED := 16r0d.
 	LDAP_SASL_BIND_IN_PROGRESS := 16r0e.
-	LDAP_NO_SUCH_ATTRIBUTE := 16r10.
-	
+	LDAP_NO_SUCH_ATTRIBUTE := 16r10
 ]
 
 { #category : #'class initialization' }

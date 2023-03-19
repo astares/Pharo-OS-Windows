@@ -8,13 +8,13 @@ Class {
 }
 
 { #category : #'world menu' }
-DBMon class >> menuCommandOn: aBuilder [ 
-	<worldMenu> 
+DBMon class >> menuCommandOn: aBuilder [
+	<worldMenu>
 	(aBuilder item: #'DBMON')
-		parent: #'OS-Windows Tools';	 
+		parent: #'OS-Windows Tools';
 		help: 'Debug Monitor';
 		order: 0.50;
-		action: [self start ]; 
+		action: [self start ];
 		icon: (WinToolIcons iconNamed: #dbmonIcon)
 ]
 

@@ -23,7 +23,7 @@ WinToolIcons class >> cmdIcon [
 { #category : #icons }
 WinToolIcons class >> dbmonIcon [
 
-	^ 
+	^
 (Form
 	extent: (16@16)
 	depth: 32
@@ -34,7 +34,7 @@ WinToolIcons class >> dbmonIcon [
 { #category : #icons }
 WinToolIcons class >> folderIcon [
 
-	^ 
+	^
 (Form
 	extent: (16@16)
 	depth: 32
@@ -54,10 +54,10 @@ WinToolIcons class >> icons [
 ]
 
 { #category : #icons }
-WinToolIcons class >> menuCommandOn: aBuilder [ 
-	<worldMenu> 
-	
-	(aBuilder item: #'OS-Windows Tools')	 
+WinToolIcons class >> menuCommandOn: aBuilder [
+	<worldMenu>
+
+	(aBuilder item: #'OS-Windows Tools')
 		parent: #'Tools';
 		order: 12;
 		help: 'Windows Tools';
@@ -78,7 +78,7 @@ WinToolIcons class >> odbcIcon [
 { #category : #initialization }
 WinToolIcons class >> reset [
 	<script>
-	
+
 	Icons := nil
 ]
 

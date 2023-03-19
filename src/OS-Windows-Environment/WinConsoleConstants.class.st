@@ -68,12 +68,12 @@ Class {
 WinConsoleConstants class >> initConsoleConstants [
 	"
 	Initializes the console constants as defined in winconenvironment .h
-	
+
 		self initConsoleConstants
 	"
 
 	"Colors"
-	FOREGROUND_BLUE := 1.	
+	FOREGROUND_BLUE := 1.
 	FOREGROUND_GREEN := 2.
 	FOREGROUND_RED := 4.
 	FOREGROUND_INTENSITY := 8.
@@ -81,10 +81,10 @@ WinConsoleConstants class >> initConsoleConstants [
 	BACKGROUND_GREEN := 32.
 	BACKGROUND_RED := 64.
 	BACKGROUND_INTENSITY := 128.
-	
+
 	CONSOLE_FULLSCREEN_MODE := 1.
 	CONSOLE_WINDOWED_MODE := 2.
-	
+
 	CTRL_C_EVENT := 0.
 	CTRL_BREAK_EVENT := 1.
 	CTRL_CLOSE_EVENT := 2.
@@ -99,10 +99,10 @@ WinConsoleConstants class >> initConsoleConstants [
 	ENABLE_QUICK_EDIT_MODE := 64.
 	ENABLE_EXTENDED_FLAGS := 128.
 	ENABLE_AUTO_POSITION := 256.
-	
+
 	ENABLE_PROCESSED_OUTPUT := 1.
 	ENABLE_WRAP_AT_EOL_OUTPUT := 2.
-	
+
 	"Events"
 	KEY_EVENT := 1.
 	MOUSE_EVENT := 2.
@@ -126,8 +126,6 @@ WinConsoleConstants class >> initConsoleConstants [
 	MOUSE_MOVED := 1.
 	DOUBLE_CLICK := 2.
 	MOUSE_WHEELED := 4
-	
-	
 ]
 
 { #category : #'private - initialization' }
@@ -136,26 +134,25 @@ WinConsoleConstants class >> initTypeConstants [
 	COORD := #WinConsoleCoordinates.
 	PCOORD := 'COORD*'.
 	SMALL_RECT := #WinConsoleSmallRectangle.
-	
+
 	CONSOLE_SCREEN_BUFFER_INFO := #WinConsoleScreenBuffer.
-	PCONSOLE_SCREEN_BUFFER_INFO  := 'CONSOLE_SCREEN_BUFFER_INFO*'. 
-	
+	PCONSOLE_SCREEN_BUFFER_INFO  := 'CONSOLE_SCREEN_BUFFER_INFO*'.
+
 	CONSOLE_CURSOR_INFO := #WinConsoleCursor.
-	PCONSOLE_CURSOR_INFO := 'CONSOLE_CURSOR_INFO*'.	
-		
+	PCONSOLE_CURSOR_INFO := 'CONSOLE_CURSOR_INFO*'.
+
 	CONSOLE_FONT_INFO := #WinConsoleFont.
-	PCONSOLE_FONT_INFO := 'CONSOLE_FONT_INFO*'		
+	PCONSOLE_FONT_INFO := 'CONSOLE_FONT_INFO*'
 ]
 
 { #category : #'class initialization' }
-WinConsoleConstants class >> initialize [ 
+WinConsoleConstants class >> initialize [
 	"Initializes the receiver class
-	
+
 		self initialize
 	"
-	
-	self 
+
+	self
 		initConsoleConstants;
 		initTypeConstants
-	 
 ]

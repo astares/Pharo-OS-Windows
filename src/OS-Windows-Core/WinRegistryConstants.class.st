@@ -59,17 +59,17 @@ WinRegistryConstants class >> initRegistryConstants [
 	HKEY_CURRENT_USER := 16r80000001 .
 	HKEY_LOCAL_MACHINE := 16r80000002.
 	HKEY_USERS := 16r80000003.
-	
+
 	HKEY_PERFORMANCE_DATA := 16r80000004.
 	HKEY_CURRENT_CONFIG := 16r80000005.
 	HKEY_DYN_DATA := 16r80000006.
-	
+
 	REG_OPTION_VOLATILE := 1.
 	REG_OPTION_NON_VOLATILE := 0.
-	
+
 	REG_CREATED_NEW_KEY := 1.
 	REG_OPENED_EXISTING_KEY := 2.
-	
+
 	REG_NONE := 0.
 	REG_SZ := 1.
 	REG_EXPAND_SZ := 2.
@@ -101,7 +101,6 @@ WinRegistryConstants class >> initRegistryConstants [
 	KEY_WOW64_32KEY := 16r0200.
 	KEY_WOW64_64KEY := 16r0100.
 	KEY_WRITE := 16r20006
-	
 ]
 
 { #category : #'private - initialization' }
@@ -112,13 +111,13 @@ WinRegistryConstants class >> initRegistryTypes [
 ]
 
 { #category : #'class initialization' }
-WinRegistryConstants class >> initialize [ 
+WinRegistryConstants class >> initialize [
 	"Initializes the receiver class
-	
+
 		self initialize
 	"
-	
-	self 
+
+	self
 		initRegistryConstants;
 		initRegistryTypes
 ]

@@ -16,7 +16,7 @@ WinControlPanel class >> shellRunDLL: cmd [
 { #category : #'applets - accessibility' }
 WinControlPanel class >> showAccessibilityCommonSettings [
 	"Show the common settings for accessibility
-	
+
 		self showAccessibilityCommonSettings
 	"
 
@@ -25,8 +25,8 @@ WinControlPanel class >> showAccessibilityCommonSettings [
 
 { #category : #'applets - accessibility' }
 WinControlPanel class >> showAccessibilityDisplaySettings [
-	"Show the keyboard settings 
-	
+	"Show the keyboard settings
+
 		self showAccessibilityDisplaySettings
 	"
 
@@ -36,7 +36,7 @@ WinControlPanel class >> showAccessibilityDisplaySettings [
 { #category : #'applets - accessibility' }
 WinControlPanel class >> showAccessibilityKeyboardSettings [
 	"Show the keyboard settings for Windows accessibility
-	
+
 		self showAccessibilityKeyboardSettings
 	"
 
@@ -45,8 +45,8 @@ WinControlPanel class >> showAccessibilityKeyboardSettings [
 
 { #category : #'applets - accessibility' }
 WinControlPanel class >> showAccessibilityMouseSettings [
-	"Show the mouse settings for accessibility 
-	
+	"Show the mouse settings for accessibility
+
 		self showAccessibilityMouseSettings
 	"
 
@@ -55,8 +55,8 @@ WinControlPanel class >> showAccessibilityMouseSettings [
 
 { #category : #'applets - accessibility' }
 WinControlPanel class >> showAccessibilitySoundSettings [
-	"Show the sound settings for accessibility 
-	
+	"Show the sound settings for accessibility
+
 		self showAccessibilitySoundSettings
 	"
 
@@ -69,12 +69,12 @@ WinControlPanel class >> showAddPrinterWizard [
 	self showAddPrinterWizard
 	"
 
-	^self shellRunDLL: 'shell32.dll,SHHelpShortcuts_RunDLL AddPrinter' 
+	^self shellRunDLL: 'shell32.dll,SHHelpShortcuts_RunDLL AddPrinter'
 ]
 
 { #category : #'applets - communication' }
 WinControlPanel class >> showBluetoothSettings [
-	"	
+	"
 		self showBluetoothSettings
 	"
 
@@ -87,13 +87,13 @@ WinControlPanel class >> showCOMPortsSettings [
 	self showCOMPortsSettings
 	"
 
-	^self shellRunDLL: 'shell32.dll,Control_RunDLL ports.cpl' 
+	^self shellRunDLL: 'shell32.dll,Control_RunDLL ports.cpl'
 ]
 
 { #category : #'applets - internet' }
 WinControlPanel class >> showContentAdvisor [
 	"Show the welcome center
-	
+
 		self showContentAdvisor
 	"
 
@@ -144,7 +144,7 @@ WinControlPanel class >> showDeviceManager [
 
 { #category : #'applets - display' }
 WinControlPanel class >> showDisplaySettingsAppearance [
-	"  	
+	"
 		self showDisplaySettingsAppearance
 	"
 
@@ -153,7 +153,7 @@ WinControlPanel class >> showDisplaySettingsAppearance [
 
 { #category : #'applets - display' }
 WinControlPanel class >> showDisplaySettingsBackground [
-	"  	
+	"
 		self showDisplaySettingsBackground
 	"
 
@@ -162,7 +162,7 @@ WinControlPanel class >> showDisplaySettingsBackground [
 
 { #category : #'applets - display' }
 WinControlPanel class >> showDisplaySettingsCommon [
-	"  	
+	"
 		self showDisplaySettingsCommon
 	"
 
@@ -171,7 +171,7 @@ WinControlPanel class >> showDisplaySettingsCommon [
 
 { #category : #'applets - display' }
 WinControlPanel class >> showDisplaySettingsScreenSaver [
-	"  	
+	"
 		self showDisplaySettingsScreenSaver
 	"
 
@@ -193,7 +193,7 @@ WinControlPanel class >> showFolderOptionsFileTypes [
 	self showFolderOptionsFileTypes
 	"
 
-	^self shellRunDLL: 'shell32.dll,Options_RunDLL 1' 
+	^self shellRunDLL: 'shell32.dll,Options_RunDLL 1'
 ]
 
 { #category : #'applets - system' }
@@ -211,7 +211,7 @@ WinControlPanel class >> showFolderOptionsSearch [
 	self showFolderOptionsSearch
 	"
 
-	^self shellRunDLL: 'shell32.dll,Options_RunDLL 2' 
+	^self shellRunDLL: 'shell32.dll,Options_RunDLL 2'
 ]
 
 { #category : #'applets - fonts' }
@@ -238,7 +238,7 @@ WinControlPanel class >> showForgottenPasswordWizard [
 	self showForgottenPasswordWizard
 	"
 
-	^self shellRunDLL: 'keymgr.dll,PRShowSaveWizardExW' 
+	^self shellRunDLL: 'keymgr.dll,PRShowSaveWizardExW'
 ]
 
 { #category : #'applets - system' }
@@ -261,7 +261,7 @@ WinControlPanel class >> showHotPlugRemoveDialog [
 
 { #category : #'applets - I18N' }
 WinControlPanel class >> showInternationalSettingsCurrency [
-	"	
+	"
 		self showInternationalSettingsCurrency
 	"
 
@@ -271,7 +271,7 @@ WinControlPanel class >> showInternationalSettingsCurrency [
 { #category : #'applets - I18N' }
 WinControlPanel class >> showInternationalSettingsDate [
 	"Show the internation settings for input locales.
-	
+
 		self showInternationalSettingsDate
 	"
 
@@ -281,7 +281,7 @@ WinControlPanel class >> showInternationalSettingsDate [
 { #category : #'applets - I18N' }
 WinControlPanel class >> showInternationalSettingsInputLocales [
 	"Show the internation settings for input locales.
-	
+
 		self showInternationalSettingsInputLocales
 	"
 
@@ -291,7 +291,7 @@ WinControlPanel class >> showInternationalSettingsInputLocales [
 { #category : #'applets - I18N' }
 WinControlPanel class >> showInternationalSettingsNumber [
 	"Show the internation settings dialog for number.
-	
+
 		self showInternationalSettingsNumber
 	"
 
@@ -300,8 +300,8 @@ WinControlPanel class >> showInternationalSettingsNumber [
 
 { #category : #'applets - I18N' }
 WinControlPanel class >> showInternationalSettingsRegionalSettings [
-	"Show the regional and language settings. 
-	
+	"Show the regional and language settings.
+
 		self showInternationalSettingsRegionalSettings
 	"
 
@@ -311,7 +311,7 @@ WinControlPanel class >> showInternationalSettingsRegionalSettings [
 { #category : #'applets - I18N' }
 WinControlPanel class >> showInternationalSettingsTime [
 	"Show the internation settings for input locales.
-	
+
 		self showInternationalSettingsTime
 	"
 
@@ -329,8 +329,8 @@ WinControlPanel class >> showInternetExplorerFavoriteManager [
 
 { #category : #'applets - internet' }
 WinControlPanel class >> showInternetExplorerSettings [
-	"Show the internet explorer settings 
-	
+	"Show the internet explorer settings
+
 		self showInternetExplorerSettings
 	"
 
@@ -339,7 +339,7 @@ WinControlPanel class >> showInternetExplorerSettings [
 
 { #category : #'applets - internet' }
 WinControlPanel class >> showInternetSettingsAdvanced [
-	"  	
+	"
 		self showInternetSettingsAdvanced
 	"
 
@@ -348,7 +348,7 @@ WinControlPanel class >> showInternetSettingsAdvanced [
 
 { #category : #'applets - internet' }
 WinControlPanel class >> showInternetSettingsConnections [
-	"  	
+	"
 		self showInternetSettingsConnections
 	"
 
@@ -357,7 +357,7 @@ WinControlPanel class >> showInternetSettingsConnections [
 
 { #category : #'applets - internet' }
 WinControlPanel class >> showInternetSettingsContent [
-	"  	
+	"
 		self showInternetSettingsContent
 	"
 
@@ -366,7 +366,7 @@ WinControlPanel class >> showInternetSettingsContent [
 
 { #category : #'applets - internet' }
 WinControlPanel class >> showInternetSettingsGeneral [
-	"  	
+	"
 		self showInternetSettingsGeneral
 	"
 
@@ -375,7 +375,7 @@ WinControlPanel class >> showInternetSettingsGeneral [
 
 { #category : #'applets - internet' }
 WinControlPanel class >> showInternetSettingsPrograms [
-	"  	
+	"
 		self showInternetSettingsPrograms
 	"
 
@@ -384,7 +384,7 @@ WinControlPanel class >> showInternetSettingsPrograms [
 
 { #category : #'applets - internet' }
 WinControlPanel class >> showInternetSettingsSecurity [
-	"  	
+	"
 		self showInternetSettingsSecurity
 	"
 
@@ -393,7 +393,7 @@ WinControlPanel class >> showInternetSettingsSecurity [
 
 { #category : #'applets - hardware' }
 WinControlPanel class >> showJoystickSettings [
-	"	
+	"
 		self showJoystickSettings
 	"
 
@@ -442,7 +442,7 @@ WinControlPanel class >> showModemSettings [
 	self showModemSettings
 	"
 
-	^self shellRunDLL: 'shell32.dll,Control_RunDLL modem.cpl' 
+	^self shellRunDLL: 'shell32.dll,Control_RunDLL modem.cpl'
 ]
 
 { #category : #'applets - hardware' }
@@ -505,7 +505,7 @@ WinControlPanel class >> showODBCSettings [
 	self showODBCSettings
 	"
 
-	^self shellRunDLL: 'shell32.dll,Control_RunDLL odbccp32.cpl' 
+	^self shellRunDLL: 'shell32.dll,Control_RunDLL odbccp32.cpl'
 ]
 
 { #category : #'applets - fonts' }
@@ -546,7 +546,7 @@ WinControlPanel class >> showPrinterProperties [
 
 { #category : #'applets - program' }
 WinControlPanel class >> showProgramPropertiesInstallUninstall [
-	"  	
+	"
 		self showProgramPropertiesInstallUninstall
 	"
 
@@ -555,7 +555,7 @@ WinControlPanel class >> showProgramPropertiesInstallUninstall [
 
 { #category : #'applets - program' }
 WinControlPanel class >> showProgramPropertiesStartupDisk [
-	"  	
+	"
 		self showProgramPropertiesStartupDisk
 	"
 
@@ -564,7 +564,7 @@ WinControlPanel class >> showProgramPropertiesStartupDisk [
 
 { #category : #'applets - program' }
 WinControlPanel class >> showProgramPropertiesWindowsSetup [
-	"  	
+	"
 		self showProgramPropertiesWindowsSetup
 	"
 
@@ -577,13 +577,13 @@ WinControlPanel class >> showServerProperties [
 		self showServerProperties
 	"
 
-	^self shellRunDLL: 'shell32.dll,Control_RunDLL srvmgr.cpl' 
+	^self shellRunDLL: 'shell32.dll,Control_RunDLL srvmgr.cpl'
 ]
 
 { #category : #'applets - multimedia' }
 WinControlPanel class >> showSoundSettings [
-	"Show the sound properties dialog box. 
-	
+	"Show the sound properties dialog box.
+
 		self showSoundSettings
 	"
 
@@ -601,8 +601,8 @@ WinControlPanel class >> showStoredUsernamesAndPasswords [
 
 { #category : #'applets - system' }
 WinControlPanel class >> showSystemSettings [
-	"Show the system settings. Note that the argument zero opens the first tab. 
-	
+	"Show the system settings. Note that the argument zero opens the first tab.
+
 		self showSystemSettings
 	"
 
@@ -624,7 +624,7 @@ WinControlPanel class >> showTelephonySettings [
 		self showTelephonySettings
 	"
 
-	^self shellRunDLL: 'shell32.dll,Control_RunDLL telephon.cpl' 
+	^self shellRunDLL: 'shell32.dll,Control_RunDLL telephon.cpl'
 ]
 
 { #category : #'applets - display' }
@@ -633,7 +633,7 @@ WinControlPanel class >> showThemesSettings [
 	self showThemesSettings
 	"
 
-	^self shellRunDLL: 'shell32.dll,Control_RunDLL themes.cpl' 
+	^self shellRunDLL: 'shell32.dll,Control_RunDLL themes.cpl'
 ]
 
 { #category : #'applets - security' }
@@ -648,7 +648,7 @@ WinControlPanel class >> showUserAccounts [
 { #category : #'applets - system' }
 WinControlPanel class >> showWelcomeCenter [
 	"Show the welcome center
-	
+
 		self showWelcomeCenter
 	"
 

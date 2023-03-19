@@ -31,39 +31,39 @@ Class {
 { #category : #'private - initialization' }
 WinNTConstants class >> initConstants [
 	"self initConstants"
-	
+
 	ACE_OBJECT_TYPE_PRESENT := 16r00000001.
 	ACE_INHERITED_OBJECT_TYPE_PRESENT := 16r00000002.
 	APPLICATION_ERROR_MASK := 16r20000000.
-	
+
 	ERROR_SEVERITY_SUCCESS := 16r00000000.
 	ERROR_SEVERITY_INFORMATIONAL := 16r40000000.
 	ERROR_SEVERITY_WARNING := 16r80000000.
 	ERROR_SEVERITY_ERROR := 16rC0000000.
-	
+
 	COMPRESSION_FORMAT_NONE := 16r0000.
 	COMPRESSION_FORMAT_DEFAULT := 16r0001.
 	COMPRESSION_FORMAT_LZNT1 := 16r0002.
 	COMPRESSION_ENGINE_STANDARD := 16r0000.
 	COMPRESSION_ENGINE_MAXIMUM := 16r0100.
 	COMPRESSION_ENGINE_HIBER := 16r0200.
-	
+
 	ACCESS_ALLOWED_ACE_TYPE := 16r0.
 	ACCESS_DENIED_ACE_TYPE := 16r1.
 	SYSTEM_AUDIT_ACE_TYPE := 16r2.
 	SYSTEM_ALARM_ACE_TYPE := 16r3.
-	
+
 	DUPLICATE_CLOSE_SOURCE := 16r1.
 	DUPLICATE_SAME_ACCESS := 16r2
 ]
 
 { #category : #'class initialization' }
-WinNTConstants class >> initialize [ 
+WinNTConstants class >> initialize [
 	"Initializes the receiver class
-	
+
 		self initialize
 	"
-	
-	self 
+
+	self
 		initConstants
 ]

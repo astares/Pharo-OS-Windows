@@ -36,7 +36,7 @@ Class {
 { #category : #'private - accessing' }
 WinStartupInfo class >> fieldsDesc [
 	"self rebuildFieldAccessors"
-	
+
 	^ #(
 		DWORD cb;
 		LPTSTR lpReserved;
@@ -284,6 +284,6 @@ WinStartupInfo >> wShowWindow: anObject [
 { #category : #testing }
 WinStartupInfo >> wasStartedFromAShortcut [
 	"Return true when an executable has been started via a short-cut."
-	
+
 	^STARTF_TITLESHORTCUT = (self dwFlags & STARTF_TITLESHORTCUT)
 ]

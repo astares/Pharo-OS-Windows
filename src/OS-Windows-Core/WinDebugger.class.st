@@ -16,20 +16,16 @@ Class {
 
 { #category : #testing }
 WinDebugger class >> isDebuggerPresent [
-	"Indicates whether the calling process is running under the context of a debugger."	
+	"Indicates whether the calling process is running under the context of a debugger."
 
 	^self ffiCall: #(BOOL IsDebuggerPresent()) module: #kernel32
-
 ]
 
 { #category : #testing }
 WinDebugger class >> outputDebugString: lpOutputString [
-	"Sends a string to the debugger for display.  Use free tools like 
-		- 'DebugView' from Sysinternals or 
+	"Sends a string to the debugger for display.  Use free tools like
+		- 'DebugView' from Sysinternals or
 		- 'dbmon.exe' from Miicrosoft SDK to display"
-	
+
 	^self ffiCall: #(void OutputDebugStringA(LPCSTR lpOutputString)) module: #Kernel32
-	
-
-
 ]

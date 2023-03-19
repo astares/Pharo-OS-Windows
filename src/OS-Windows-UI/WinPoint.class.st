@@ -14,7 +14,7 @@ Class {
 { #category : #'private - accessing' }
 WinPoint class >> fieldsDesc [
 	"self rebuildFieldAccessors"
-	
+
 	^ #(
 		long x;
 		long y;

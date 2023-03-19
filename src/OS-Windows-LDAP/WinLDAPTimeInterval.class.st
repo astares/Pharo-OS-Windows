@@ -25,7 +25,7 @@ WinLDAPTimeInterval class >> duration: aDuration [
 { #category : #'field definition' }
 WinLDAPTimeInterval class >> fieldsDesc [
 	<script: 'self rebuildFieldAccessors'>
-	
+
 	^ #(
 		LONG tv_sec;
 		LONG tv_usec
@@ -33,15 +33,15 @@ WinLDAPTimeInterval class >> fieldsDesc [
 ]
 
 { #category : #accessing }
-WinLDAPTimeInterval >> seconds [ 
+WinLDAPTimeInterval >> seconds [
 
-	^self tv_sec 
+	^self tv_sec
 ]
 
 { #category : #accessing }
 WinLDAPTimeInterval >> seconds: numberOfSeconds [
 
-	self tv_sec: numberOfSeconds 
+	self tv_sec: numberOfSeconds
 ]
 
 { #category : #'accessing structure variables' }

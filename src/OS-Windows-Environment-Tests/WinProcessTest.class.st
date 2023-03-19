@@ -43,7 +43,7 @@ WinProcessTest >> tearDown [
 { #category : #tests }
 WinProcessTest >> testAllProcessIdentifiers [
 
-	self 
+	self
 		assert: self defaultTestClass allProcessIdentifiers notEmpty;
 		assert: (self defaultTestClass allProcessIdentifiers includes: self defaultTestClass currentProcessId)
 ]
@@ -99,23 +99,21 @@ WinProcessTest >> testPriorityClasses [
 { #category : #tests }
 WinProcessTest >> testStartAndTerminateCommandShell [
 
-	|processInfo process | 
+	|processInfo process |
 	processInfo := self defaultTestClass createProcess: 'cmd.exe'.
 	process := processInfo process.
 	self assert: process notNil.
 	processInfo process terminateProcessWithExitCode: 0
- 
 ]
 
 { #category : #tests }
 WinProcessTest >> testStartedFromShortcut [
 
-	self assert: (self defaultTestClass startupInfo wasStartedFromAShortcut isKindOf: Boolean)	
+	self assert: (self defaultTestClass startupInfo wasStartedFromAShortcut isKindOf: Boolean)
 ]
 
 { #category : #tests }
 WinProcessTest >> testStartupInfo [
 
 	self assert: (self defaultTestClass startupInfo) notNil
-	
 ]

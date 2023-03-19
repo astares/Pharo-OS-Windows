@@ -20,11 +20,11 @@ WinLDAPConnectionTest >> testConnectToOnlineLDAPTestServer [
 	connection := WinLDAPConnection hostname: 'ldap.forumsys.com ' port: 389.
 	self assert: connection isValid.
 	connection close.
-	self deny: connection isValid.
+	self deny: connection isValid
 ]
 
 { #category : #tests }
 WinLDAPConnectionTest >> testInvalidConnection [
 
-	self deny: WinLDAPConnection new isValid 
+	self deny: WinLDAPConnection new isValid
 ]

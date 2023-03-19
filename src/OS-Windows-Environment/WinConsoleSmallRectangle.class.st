@@ -22,7 +22,7 @@ Class {
 { #category : #'private - accessing' }
 WinConsoleSmallRectangle class >> fieldsDesc [
 	"self rebuildFieldAccessors"
-	
+
 	^ #(
 		SHORT left;
   		SHORT top;

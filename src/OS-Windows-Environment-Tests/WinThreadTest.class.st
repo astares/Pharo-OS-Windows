@@ -46,5 +46,5 @@ WinThreadTest >> testCurrentThreadId [
 WinThreadTest >> testIsThreadAllAccess [
 	"by default the main thread of the VM is not all access"
 
-	self deny: vmThread isThreadAllAccess 
+	self deny: vmThread isThreadAllAccess
 ]

@@ -9,7 +9,7 @@ Class {
 
 { #category : #accessing }
 WinPointTest >> defaultTestClass [
-	
+
 	^WinPoint
 ]
 
@@ -24,7 +24,7 @@ WinPointTest >> testInstanceCreation [
 
 	|instance|
 	instance := self defaultTestClass x: 1 y: 2.
-	self 
+	self
 		assert: instance x equals: 1;
 		assert: instance y equals: 2
 ]
@@ -34,7 +34,7 @@ WinPointTest >> testInstanceCreationFromPoint [
 
 	|instance|
 	instance := self defaultTestClass fromPoint: 1@2.
-	self 
+	self
 		assert: instance x equals: 1;
 		assert: instance y equals: 2
 ]

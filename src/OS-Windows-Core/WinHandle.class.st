@@ -12,10 +12,9 @@ Class {
 
 { #category : #'private - finalization' }
 WinHandle class >> closeHandle: aHandle [
-	"Closes the given handle"	
+	"Closes the given handle"
 
-	^self ffiCall: #(BOOL CloseHandle(HANDLE aHandle)) module: #kernel32	
-
+	^self ffiCall: #(BOOL CloseHandle(HANDLE aHandle)) module: #kernel32
 ]
 
 { #category : #finalization }
@@ -41,9 +40,9 @@ WinHandle >> closeHandle [
 ]
 
 { #category : #initialization }
-WinHandle >> initialize [ 
+WinHandle >> initialize [
 	super initialize.
-	self autoRelease 
+	self autoRelease
 ]
 
 { #category : #testing }
@@ -55,6 +54,6 @@ WinHandle >> isInvalid [
 { #category : #finalization }
 WinHandle >> resourceData [
 	"Return the resource data used for managing the external resource"
-	
+
 	^ self
 ]

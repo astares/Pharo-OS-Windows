@@ -51,18 +51,17 @@ Class {
 
 { #category : #'private - initialization' }
 WinServicesConstants class >> initCommonServiceConstants [
-	
+
 	SERVICES_ACTIVE_DATABASEA := 'ServicesActive'.
 	SERVICES_ACTIVE_DATABASEW := WideString from: 'ServicesActive'.
-	
+
 	SERVICES_FAILED_DATABASEA := 'ServicesFailed'.
-	SERVICES_FAILED_DATABASEW := WideString from: 'ServicesFailed'.
-	
+	SERVICES_FAILED_DATABASEW := WideString from: 'ServicesFailed'
 ]
 
 { #category : #'private - initialization' }
 WinServicesConstants class >> initServiceConstants [
-	
+
 	SERVICE_NO_CHANGE := 16rffffffff.
 	SERVICE_STOPPED := 1.
 	SERVICE_START_PENDING := 2.
@@ -71,7 +70,7 @@ WinServicesConstants class >> initServiceConstants [
 	SERVICE_CONTINUE_PENDING := 5.
 	SERVICE_PAUSE_PENDING := 6.
 	SERVICE_PAUSED := 7.
-	
+
 	"Accept"
 	SERVICE_ACCEPT_STOP := 1.
 	SERVICE_ACCEPT_PAUSE_CONTINUE := 2.
@@ -81,7 +80,7 @@ WinServicesConstants class >> initServiceConstants [
 	SERVICE_ACCEPT_HARDWAREPROFILECHANGE := 32.
 	SERVICE_ACCEPT_POWEREVENT := 64.
 	SERVICE_ACCEPT_SESSIONCHANGE := 128.
-	
+
 	"Control"
 	SERVICE_CONTROL_STOP := 1.
 	SERVICE_CONTROL_PAUSE := 2.
@@ -96,15 +95,14 @@ WinServicesConstants class >> initServiceConstants [
 	SERVICE_CONTROL_DEVICEEVENT := 11.
 	SERVICE_CONTROL_HARDWAREPROFILECHANGE := 12.
 	SERVICE_CONTROL_POWEREVENT := 13.
-	SERVICE_CONTROL_SESSIONCHANGE := 14.
-	
+	SERVICE_CONTROL_SESSIONCHANGE := 14
 ]
 
 { #category : #'private - initialization' }
 WinServicesConstants class >> initServiceManagerConstants [
 
 	SC_MANAGER_ALL_ACCESS := 16rf003f.
-   SC_MANAGER_CONNECT := 1. 
+   SC_MANAGER_CONNECT := 1.
 
    SC_MANAGER_CREATE_SERVICE := 2.
    SC_MANAGER_ENUMERATE_SERVICE := 4.
@@ -116,14 +114,14 @@ WinServicesConstants class >> initServiceManagerConstants [
 { #category : #'private - initialization' }
 WinServicesConstants class >> initServiceTypes [
 
-	SC_HANDLE := #WinServiceHandle 
+	SC_HANDLE := #WinServiceHandle
 ]
 
 { #category : #initialization }
 WinServicesConstants class >> initialize [
 	"Initialize the receiver class"
-	
-	self 
+
+	self
 		initCommonServiceConstants;
 		initServiceManagerConstants;
 		initServiceConstants;

@@ -16,14 +16,14 @@ WinEnvironmentTest >> testComputerName [
 { #category : #tests }
 WinEnvironmentTest >> testGetHomeDrive [
 	"Usually the home drive is C:"
-	
+
 	self assert: WinEnvironment getHomeDrive = 'C:'
 ]
 
 { #category : #tests }
 WinEnvironmentTest >> testGetSystemDrive [
 	"Usually the system drive where Windows is installed is C:"
-	
+
 	self assert: WinEnvironment getSystemDrive = 'C:'
 ]
 
@@ -36,7 +36,7 @@ WinEnvironmentTest >> testNumberOfProcessors [
 { #category : #tests }
 WinEnvironmentTest >> testPathEntries [
 
-	self assert: WinEnvironment getPathEntries isCollection 
+	self assert: WinEnvironment getPathEntries isCollection
 ]
 
 { #category : #tests }

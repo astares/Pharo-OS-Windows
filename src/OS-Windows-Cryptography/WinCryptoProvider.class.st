@@ -15,13 +15,11 @@ Class {
 { #category : #accessing }
 WinCryptoProvider >> acquireContextExample1 [
 
-	^ self ffiCall: #(BOOL CryptAcquireContextA(HCRYPTPROV self, 0, 0, PROV_RSA_FULL, CRYPT_VERIFYCONTEXT | CRYPT_SILENT)) module: #advapi32	
-
+	^ self ffiCall: #(BOOL CryptAcquireContextA(HCRYPTPROV self, 0, 0, PROV_RSA_FULL, CRYPT_VERIFYCONTEXT | CRYPT_SILENT)) module: #advapi32
 ]
 
 { #category : #accessing }
 WinCryptoProvider >> acquireContextExample2 [
 
-	^self ffiCall: #(BOOL CryptAcquireContextA(HCRYPTPROV self, 0, 0, PROV_RSA_FULL, 4026531904)) module: #advapi32	
-
+	^self ffiCall: #(BOOL CryptAcquireContextA(HCRYPTPROV self, 0, 0, PROV_RSA_FULL, 4026531904)) module: #advapi32
 ]

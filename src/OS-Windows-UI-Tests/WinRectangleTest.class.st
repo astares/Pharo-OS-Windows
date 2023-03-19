@@ -9,13 +9,13 @@ Class {
 
 { #category : #accessing }
 WinRectangleTest >> defaultTestClass [
-	
+
 	^WinRectangle
 ]
 
 { #category : #tests }
 WinRectangleTest >> testConversionToPoint [
-	
+
 	|instance|
 	instance := self defaultTestClass left: 1 right: 2 top: 3 bottom: 4.
 	self assert: instance asRectangle equals: ((1@3) corner: (2@4))

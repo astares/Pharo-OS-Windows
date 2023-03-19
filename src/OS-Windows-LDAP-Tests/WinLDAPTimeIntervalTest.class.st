@@ -9,7 +9,7 @@ Class {
 
 { #category : #tests }
 WinLDAPTimeIntervalTest >> testConversion [
-	
+
 	|timeout|
 	timeout := 2 seconds asLDAPTimeOut.
 	self assert: timeout seconds equals: 2
