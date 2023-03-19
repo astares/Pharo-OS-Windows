@@ -93,7 +93,9 @@ WinWindowTest >> testComparisionDesktopWindow [
 { #category : #'tests - other' }
 WinWindowTest >> testCorrectHash [
 
-	self assert: WinWindow desktopWindow hash == WinWindow desktopWindow hash
+	self
+		assert: WinWindow desktopWindow hash
+		identicalTo: WinWindow desktopWindow hash
 ]
 
 { #category : #'tests - default instances' }
