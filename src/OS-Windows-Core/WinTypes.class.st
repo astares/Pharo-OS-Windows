@@ -124,6 +124,7 @@ WinTypes class >> initKnownTypes [
 	COLORREF := #DWORD.
 
 	WORD := #ushort.
+	DWORD := #ulong.
 	DWORDLONG := #ULONGLONG.
 
 	DWORD32 := #ulong.
@@ -152,18 +153,24 @@ WinTypes class >> initKnownTypes [
 	LPBYTE := #'BYTE*'.
 	LPCOLORREF := #'DWORD*'.
 
+	VOID := #void.
 	PVOID := 'void*'.
 	LPVOID := 'void*'.
 	LPCVOID := #'void*'.
 	LPDWORD := #'DWORD*'.
 
+	BOOL := #bool.
 	PBOOL := 'BOOL*'.
 	PBOOLEAN := 'BOOLEAN*'.
 
 	WNDPROC := #'void*'.
+	HWND := #'void*'.
 	HANDLE := #WinHandle.
 	LPHANDLE := #'HANDLE*'.
-	HINSTANCE := HMODULE := HICON := HCURSOR := HBRUSH := #HANDLE
+	HINSTANCE := HMODULE := HICON := HCURSOR := HBRUSH := #HANDLE.
+
+	LPARAM := 'void *'.
+	LPOFNHOOKPROC := LONG_PTR
 ]
 
 { #category : #'private - initialization' }
