@@ -181,10 +181,10 @@ WinTypes class >> initStringTypes [
 
 	LPTSTR := #WinTString.
 	LPWSTR := #WinWideString.
+
 	LPCSTR := #FFIExternalString.
 
-	LPTSTR := #WinTString.
-	LPWSTR := #WinWideString.
+	LPCWSTR := #FFIExternalString.
 
 	LPCTSTR := #LPTSTR
 ]
