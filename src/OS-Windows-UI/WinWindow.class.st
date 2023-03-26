@@ -120,6 +120,14 @@ WinWindow >> centerOnDesktop [
 	self moveTo: (self class desktopWindow windowRectangle extent // 2 - (self windowRectangle extent // 2))
 ]
 
+{ #category : #primitives }
+WinWindow >> closeWindow [
+	"close the window"
+
+	^ self
+		ffiCall: #( BOOL CloseWindow #( HWND self )) module: #user32
+]
+
 { #category : #visibility }
 WinWindow >> destroy [
 	"destroy the window - note this does not end the OS process"
