@@ -128,6 +128,15 @@ WinWindow >> closeWindow [
 		ffiCall: #( BOOL CloseWindow #( HWND self )) module: #user32
 ]
 
+{ #category : #primitives }
+WinWindow >> closeWindow: aHandle [
+	"close the specified window"
+
+	^ self
+		ffiCall: #( BOOL CloseWindow #( HWND aHandle ) )
+		module: #user32
+]
+
 { #category : #visibility }
 WinWindow >> destroy [
 	"destroy the window - note this does not end the OS process"
@@ -193,6 +202,24 @@ WinWindow >> hide [
 ]
 
 { #category : #testing }
+WinWindow >> isEnabled [
+	"Retrieves the enable state of the specified window"
+
+	^ self
+		  ffiCall: #( int IsWindowEnabled #( HWND self ) )
+		  module: #user32
+]
+
+{ #category : #testing }
+WinWindow >> isEnabled: hwnd [
+	"Retrieves the enable state of the specified window"
+
+	^ self
+		  ffiCall: #( int IsWindowEnabled #( HWND hwnd ) )
+		  module: #user32
+]
+
+{ #category : #testing }
 WinWindow >> isIconic [
 	"Determines whether the specified window is minimized (iconic). "
 
@@ -233,6 +260,14 @@ WinWindow >> moveWindowX: x y: y width: nWidth height: nHeight [
    				int nHeight,
  				false
 				))
+		module: #user32
+]
+
+{ #category : #primitives }
+WinWindow >> openIcon: hWnd [
+
+	^ self
+		ffiCall: #( BOOL OpenIcon #( HWND hWnd ) )
 		module: #user32
 ]
 
