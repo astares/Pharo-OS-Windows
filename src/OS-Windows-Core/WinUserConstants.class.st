@@ -5,6 +5,32 @@ Class {
 	#name : #WinUserConstants,
 	#superclass : #SharedPool,
 	#classVars : [
+		'CF_BITMAP',
+		'CF_DIB',
+		'CF_DIBV5',
+		'CF_DIF',
+		'CF_DSPBITMAP',
+		'CF_DSPENHMETAFILE',
+		'CF_DSPMETAFILEPICT',
+		'CF_DSPTEXT',
+		'CF_ENHMETAFILE',
+		'CF_GDIOBJFIRST',
+		'CF_GDIOBJLAST',
+		'CF_HDROP',
+		'CF_LOCALE',
+		'CF_METAFILEPICT',
+		'CF_OEMTEXT',
+		'CF_OWNERDISPLAY',
+		'CF_PALETTE',
+		'CF_PENDATA',
+		'CF_PRIVATEFIRST',
+		'CF_PRIVATELAST',
+		'CF_RIFF',
+		'CF_SYLK',
+		'CF_TEXT',
+		'CF_TIFF',
+		'CF_UNICODETEXT',
+		'CF_WAVE',
 		'GWL_EXSTYLE',
 		'GWL_HINSTANCE',
 		'GWL_HWNDPARENT',
@@ -95,6 +121,37 @@ Class {
 	],
 	#category : #'OS-Windows-Core-Support'
 }
+
+{ #category : #'private - initialization' }
+WinUserConstants class >> initClipboardConstants [
+
+	CF_BITMAP := 2.
+	CF_DIB := 8.
+	CF_DIBV5 := 17.
+	CF_DIF := 5.
+	CF_DSPBITMAP := 16r0082.
+	CF_DSPENHMETAFILE := 16r008E.
+	CF_DSPMETAFILEPICT := 16r0083.
+	CF_DSPTEXT := 16r0081.
+	CF_ENHMETAFILE := 14.
+	CF_GDIOBJFIRST := 16r0300.
+	CF_GDIOBJLAST := 16r03FF.
+	CF_HDROP := 15.
+	CF_LOCALE := 16.
+	CF_METAFILEPICT := 3.
+	CF_OEMTEXT := 7.
+	CF_OWNERDISPLAY := 16r0080.
+	CF_PALETTE := 9.
+	CF_PENDATA := 10.
+	CF_PRIVATEFIRST := 16r0200.
+	CF_PRIVATELAST := 16r02FF.
+	CF_RIFF := 11.
+	CF_SYLK := 4.
+	CF_TEXT := 1.
+	CF_TIFF := 6.
+	CF_UNICODETEXT := 13.
+	CF_WAVE := 12
+]
 
 { #category : #'private - initialization' }
 WinUserConstants class >> initMessageBoxConstants [
@@ -221,14 +278,12 @@ WinUserConstants class >> initWindowStyleConstants [
 
 { #category : #'class initialization' }
 WinUserConstants class >> initialize [
-	"Initializes the receiver class
-
-		self initialize
-	"
+	"Initializes the receiver class"
 
 	self
 		initShowWindowConstants;
 		initMessageBoxConstants;
 		initWindowStyleConstants;
-		initWindowLongConstants
+		initWindowLongConstants;
+		initClipboardConstants
 ]

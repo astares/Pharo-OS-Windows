@@ -11,5 +11,5 @@ Class {
 ManifestOSWindowsCore class >> ruleLongMethodsRuleV1FalsePositive [
 
 	<ignoreForCoverage>
-	^ #(#(#(#RGMetaclassDefinition #(#'WinBaseConstants class' #WinBaseConstants)) #'2023-03-19T01:52:03.459+01:00') )
+	^ #(#(#(#RGMetaclassDefinition #(#'WinBaseConstants class' #WinBaseConstants)) #'2023-03-19T01:52:03.459+01:00') #(#(#RGMetaclassDefinition #(#'WinUserConstants class' #WinUserConstants)) #'2023-03-27T07:01:13.548+02:00') )
 ]
