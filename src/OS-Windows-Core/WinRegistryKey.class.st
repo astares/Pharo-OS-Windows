@@ -90,6 +90,18 @@ WinRegistryKey >> createDefaultHandle [
 ]
 
 { #category : #accessing }
+WinRegistryKey >> enumerateSubKeys [
+
+	^ WinRegistry enumerateSubKeys: self
+]
+
+{ #category : #accessing }
+WinRegistryKey >> enumerateValuesIntoDict [
+
+	^ WinRegistry enumerateValuesIntoDict: self
+]
+
+{ #category : #accessing }
 WinRegistryKey >> keyName [
 	"Returns the key name"
 
@@ -125,6 +137,12 @@ WinRegistryKey >> queryOpenSubkey: subKeyString [
 		 with: KEY_QUERY_VALUE | KEY_WOW64_64KEY
 		 with: result.
 	^result
+]
+
+{ #category : #accessing }
+WinRegistryKey >> queryValue: value [
+
+	^ WinRegistry queryValue: value fromKey: self
 ]
 
 { #category : #accessing }

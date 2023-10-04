@@ -23,3 +23,9 @@ WinError class >> lastErrorCode:  dwErrCode [
 
 	^ self ffiCall: #( VOID SetLastError(DWORD dwErrCode)) module: #kernel32
 ]
+
+{ #category : #accessing }
+WinError class >> lastErrorCodeMessage [
+
+	^ 'Windows error code: ', self lastErrorCode asString
+]
