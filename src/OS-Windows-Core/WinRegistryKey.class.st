@@ -96,6 +96,12 @@ WinRegistryKey >> enumerateSubKeys [
 ]
 
 { #category : #accessing }
+WinRegistryKey >> enumerateValueNames [
+
+	^ WinRegistry enumerateValueNames: self
+]
+
+{ #category : #accessing }
 WinRegistryKey >> enumerateValuesIntoDict [
 
 	^ WinRegistry enumerateValuesIntoDict: self

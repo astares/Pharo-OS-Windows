@@ -67,6 +67,59 @@ WinRegistry class >> enumerateSubKeys: hKey [
 ]
 
 { #category : #'private - accessing' }
+WinRegistry class >> enumerateValueNames: hKey [
+
+	| count enumStatus nameBuffer nameMaxLen nameMaxLenBuffer countBuffer ret |
+	countBuffer := ByteArray newPinned:
+		               (FFIExternalArrayType sizeOf: DWORD).
+	nameMaxLenBuffer := ByteArray newPinned:
+		                    (FFIExternalArrayType sizeOf: DWORD).
+
+	enumStatus := self
+		              regQueryInfoKeyA: hKey
+		              with: nil
+		              with: nil
+		              with: nil
+		              with: nil
+		              with: nil
+		              with: countBuffer
+		              with: nameMaxLenBuffer
+		              with: nil
+		              with: nil
+		              with: nil.
+
+	enumStatus isZero ifFalse: [
+		self error: WinError lastErrorCodeMessage ].
+
+	nameMaxLen := (nameMaxLenBuffer unsignedLongAt: 1) + 1.
+	nameBuffer := ByteArray newPinned: nameMaxLen + 1.
+	count := countBuffer unsignedLongAt: 1.
+
+	ret := OrderedCollection new: count.
+
+	0 to: count - 1 do: [ :idx |
+		nameMaxLenBuffer unsignedLongAt: 1 put: nameMaxLen.
+
+		enumStatus := self
+			              regEnumValueA: hKey
+			              with: idx
+			              with: nameBuffer
+			              with: nameMaxLenBuffer
+			              with: nil
+			              with: nil
+			              with: nil.
+
+		enumStatus isZero ifFalse: [
+			self error: WinError lastErrorCodeMessage ].
+
+		"TODO: Avoid the copying"
+		ret add:
+			(nameBuffer copyFrom: 1 to: (nameMaxLenBuffer unsignedLongAt: 1))
+				utf8Decoded ].
+	^ ret
+]
+
+{ #category : #'private - accessing' }
 WinRegistry class >> enumerateValuesIntoDict: hKey [
 
 	| count enumStatus nameBuffer nameMaxLen nameMaxLenBuffer valueBuffer valueMaxLen valueMaxLenBuffer countBuffer ret lpTypeBuffer |
