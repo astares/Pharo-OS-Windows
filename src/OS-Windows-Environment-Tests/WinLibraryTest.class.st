@@ -28,6 +28,21 @@ WinLibraryTest >> testLoadLibrary [
 ]
 
 { #category : #running }
+WinLibraryTest >> testReloadLibrary [
+"reload the lib test "
+	| lib calls |
+	lib := WinLibrary fromLibraryClass:
+		       TFTestLibraryUsingSameThreadRunner.
+	self assert: lib getHandle isNull not.
+	lib reloadLibrary.
+	calls := lib findCalls asArray.
+	calls do: [ :c |
+		self
+			assert: (c methodClass lookupSelector: c selector)
+			identicalTo: (c propertyAt: #ffiNonCompiledMethod) ]
+]
+
+{ #category : #running }
 WinLibraryTest >> testUnLoadLibrary [
 
 	| lib |
