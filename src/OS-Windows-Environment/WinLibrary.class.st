@@ -83,6 +83,20 @@ WinLibrary class >> primLoadLibrary: lpFileName [
 ]
 
 { #category : #actions }
+WinLibrary >> findCalls [
+
+	| set |
+	set := Set new.
+	set addAll:
+		(FFIMethodRegistry uniqueInstance compiledMethods select: [ :e |
+			 e methodClass = self libraryClass ]).
+	set addAll:
+		(FFIMethodRegistry uniqueInstance compiledMethods select: [ :m |
+			 ('*{1}*' format: (Array with: LibVideoCapture name))  match: m codeForNoSource ]).
+	^ set
+]
+
+{ #category : #actions }
 WinLibrary >> freeLibrary [
 
 	self isLoaded ifFalse:[ ^self].
