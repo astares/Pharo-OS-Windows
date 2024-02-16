@@ -8,6 +8,18 @@ Class {
 }
 
 { #category : #running }
+WinLibraryTest >> setUp [
+
+	super setUp.
+]
+
+{ #category : #running }
+WinLibraryTest >> tearDown [
+
+	super tearDown
+]
+
+{ #category : #running }
 WinLibraryTest >> testLoadLibrary [
 
 	| lib |
