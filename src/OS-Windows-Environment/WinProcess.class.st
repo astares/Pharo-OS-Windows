@@ -128,7 +128,7 @@ WinProcess class >> createProcess: szExe currentDirectory: szCurrentDirectory st
 WinProcess class >> createProcess: szExe startupInfo: lpStartupInfo processInformation: pi [
 	"Retrieves the contents of the STARTUPINFO structure that was specified when the calling process was created."
 
-	^ self ffiCall: #(BOOL CreateProcessA(0, LPCTSTR szExe, 0, 0, false, 0, 0, 0, WinStartupInfo* lpStartupInfo, WinProcessInformation* pi)) module: #kernel32
+	^ self ffiCall: #(BOOL CreateProcessA(int 0, LPCTSTR szExe, int 0, int 0, bool false, int 0, int 0, int 0, WinStartupInfo* lpStartupInfo, WinProcessInformation* pi)) module: #kernel32
 ]
 
 { #category : 'primitives' }
