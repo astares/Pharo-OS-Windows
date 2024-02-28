@@ -2,18 +2,20 @@
 SUnit tests for WinRectangle
 "
 Class {
-	#name : #WinRectangleTest,
-	#superclass : #WindowsSpecificTest,
-	#category : #'OS-Windows-UI-Tests-Graphics-Support'
+	#name : 'WinRectangleTest',
+	#superclass : 'WindowsSpecificTest',
+	#category : 'OS-Windows-UI-Tests-Graphics-Support',
+	#package : 'OS-Windows-UI-Tests',
+	#tag : 'Graphics-Support'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 WinRectangleTest >> defaultTestClass [
 
 	^WinRectangle
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 WinRectangleTest >> testConversionToPoint [
 
 	|instance|
@@ -21,7 +23,7 @@ WinRectangleTest >> testConversionToPoint [
 	self assert: instance asRectangle equals: ((1@3) corner: (2@4))
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 WinRectangleTest >> testInstanceCreation [
 	| instance |
 	instance := self defaultTestClass
@@ -36,7 +38,7 @@ WinRectangleTest >> testInstanceCreation [
 		assert: instance bottom equals: 4
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 WinRectangleTest >> testInstanceCreationFromRectangle [
 	| instance |
 	instance := self defaultTestClass

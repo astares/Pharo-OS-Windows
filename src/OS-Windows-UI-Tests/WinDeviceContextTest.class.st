@@ -2,49 +2,51 @@
 Test for the windows device context
 "
 Class {
-	#name : #WinDeviceContextTest,
-	#superclass : #WindowsSpecificTest,
-	#category : #'OS-Windows-UI-Tests-Graphics'
+	#name : 'WinDeviceContextTest',
+	#superclass : 'WindowsSpecificTest',
+	#category : 'OS-Windows-UI-Tests-Graphics',
+	#package : 'OS-Windows-UI-Tests',
+	#tag : 'Graphics'
 }
 
-{ #category : #'private - utilities' }
+{ #category : 'private - utilities' }
 WinDeviceContextTest >> checkValidDeviceContext: aDeviceContext [
 
 	self assert: aDeviceContext notNil.
 	self assert: aDeviceContext getHandle asInteger > 0
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 WinDeviceContextTest >> defaultTestClass [
 
-	^WinDeviceContext
+	^ WinDeviceContext
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 WinDeviceContextTest >> testAccessingDesktopDeviceContext [
 
 	self checkValidDeviceContext: self defaultTestClass desktopDeviceContext
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 WinDeviceContextTest >> testAccessingDeviceContextOfActiveWindow [
 
 	self checkValidDeviceContext: WinWindow activeWindow deviceContext
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 WinDeviceContextTest >> testAccessingDeviceContextOfFocusWindow [
 
 	self checkValidDeviceContext: WinWindow focusWindow deviceContext
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 WinDeviceContextTest >> testAccessingDeviceContextOfPharoWindow [
 
 	self checkValidDeviceContext: WinWindow pharoWindow deviceContext
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 WinDeviceContextTest >> testAccessingPharoWindowDeviceContext [
 
 	self checkValidDeviceContext: self defaultTestClass pharoWindowDeviceContext

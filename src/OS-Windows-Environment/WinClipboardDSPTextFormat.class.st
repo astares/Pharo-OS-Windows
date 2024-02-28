@@ -2,12 +2,14 @@
 Native clipboard format for text display format associated with a private format (CF_DSPTEXT)
 "
 Class {
-	#name : #WinClipboardDSPTextFormat,
-	#superclass : #WinStandardClipboardFormat,
-	#category : #'OS-Windows-Environment-Clipboard-Formats'
+	#name : 'WinClipboardDSPTextFormat',
+	#superclass : 'WinStandardClipboardFormat',
+	#category : 'OS-Windows-Environment-Clipboard-Formats',
+	#package : 'OS-Windows-Environment',
+	#tag : 'Clipboard-Formats'
 }
 
-{ #category : #'accessing - defaults' }
+{ #category : 'accessing - defaults' }
 WinClipboardDSPTextFormat class >> formatSymbol [
 
 	^ #CF_DSPTEXT

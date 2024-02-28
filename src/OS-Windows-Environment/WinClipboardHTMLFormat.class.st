@@ -2,30 +2,32 @@
 HTML Clipboard format (CF_HTML)
 "
 Class {
-	#name : #WinClipboardHTMLFormat,
-	#superclass : #WinCustomClipboardFormat,
-	#category : #'OS-Windows-Environment-Clipboard-Formats'
+	#name : 'WinClipboardHTMLFormat',
+	#superclass : 'WinCustomClipboardFormat',
+	#category : 'OS-Windows-Environment-Clipboard-Formats',
+	#package : 'OS-Windows-Environment',
+	#tag : 'Clipboard-Formats'
 }
 
-{ #category : #'private - accessing' }
+{ #category : 'private - accessing' }
 WinClipboardHTMLFormat class >> formatHTML [
 
 	^ 'HTML Format'
 ]
 
-{ #category : #'accessing - defaults' }
+{ #category : 'accessing - defaults' }
 WinClipboardHTMLFormat class >> formatSymbol [
 
 	^ #CF_HTML
 ]
 
-{ #category : #'class initialization' }
+{ #category : 'class initialization' }
 WinClipboardHTMLFormat class >> initialize [
 
 	self register
 ]
 
-{ #category : #registration }
+{ #category : 'registration' }
 WinClipboardHTMLFormat class >> register [
 
 	self formatID: (self registerClipboardFormat: self formatHTML)

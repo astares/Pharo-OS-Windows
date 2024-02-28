@@ -2,17 +2,19 @@
 Access to the windows shell
 "
 Class {
-	#name : #WinShell,
-	#superclass : #Object,
+	#name : 'WinShell',
+	#superclass : 'Object',
 	#pools : [
 		'WinBaseConstants',
 		'WinTypes',
 		'WinUserConstants'
 	],
-	#category : #'OS-Windows-Environment-Shell'
+	#category : 'OS-Windows-Environment-Shell',
+	#package : 'OS-Windows-Environment',
+	#tag : 'Shell'
 }
 
-{ #category : #primitives }
+{ #category : 'primitives' }
 WinShell class >> shellAbout: hWnd application: szApp other: szOtherStuff icon: hIcon [
 	"
 		self shellAbout: Win32Window getFocus application: 'Pharo' other: 'More' icon: (WinHandle new)
@@ -25,7 +27,7 @@ WinShell class >> shellAbout: hWnd application: szApp other: szOtherStuff icon: 
      			HICON hIcon)) module: #shell32
 ]
 
-{ #category : #operations }
+{ #category : 'operations' }
 WinShell class >> shellBrowse: url [
 	"
 	self shellBrowse: 'http://www.pharo-project.org'
@@ -33,7 +35,7 @@ WinShell class >> shellBrowse: url [
 	^self shellExecute: 'open' file: url parameters: '' directory: '' show: SW_SHOW
 ]
 
-{ #category : #primitives }
+{ #category : 'primitives' }
 WinShell class >> shellExecute: lpOperation file: lpFile parameters: lpParameters directory: lpDirectory show: nShowCmd [
 
 	^self ffiCall: #(
@@ -46,7 +48,7 @@ WinShell class >> shellExecute: lpOperation file: lpFile parameters: lpParameter
         			INT nShowCmd)) module: #shell32
 ]
 
-{ #category : #primitives }
+{ #category : 'primitives' }
 WinShell class >> shellExecute: hwnd operation: lpOperation file: lpFile parameters: lpParameters directory: lpDirectory show: nShowCmd [
 
 	^self ffiCall: #(
@@ -59,7 +61,7 @@ WinShell class >> shellExecute: hwnd operation: lpOperation file: lpFile paramet
         			INT nShowCmd)) module: #shell32
 ]
 
-{ #category : #operations }
+{ #category : 'operations' }
 WinShell class >> shellExplore: folder [
 	"
 	self shellExplore: 'c:\'
@@ -68,7 +70,7 @@ WinShell class >> shellExplore: folder [
 	^self shellExecute: 'explore' file: folder parameters: '' directory: '' show: SW_SHOW
 ]
 
-{ #category : #operations }
+{ #category : 'operations' }
 WinShell class >> shellOpen: file [
 	"
 	self shellOpen: 'c:\pharo.pdf'
@@ -77,7 +79,7 @@ WinShell class >> shellOpen: file [
 	^self shellExecute: 'open' file: file parameters: '' directory: '' show: SW_SHOW
 ]
 
-{ #category : #operations }
+{ #category : 'operations' }
 WinShell class >> shellPrint: file [
 	"
 	self shellPrint: 'c:\index.html'
@@ -86,7 +88,7 @@ WinShell class >> shellPrint: file [
 	^self shellExecute: 'print' file: file parameters: '' directory: '' show: SW_SHOW
 ]
 
-{ #category : #operations }
+{ #category : 'operations' }
 WinShell class >> shellRunDLL: cmd [
 	"
 	self shellRunDLL: 'shell32.dll,Control_RunDLL odbccp32.cpl'

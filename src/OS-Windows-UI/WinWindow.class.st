@@ -7,45 +7,75 @@ kinds of windows.
 
 "
 Class {
-	#name : #WinWindow,
-	#superclass : #WinHandle,
+	#name : 'WinWindow',
+	#superclass : 'WinHandle',
 	#pools : [
 		'WinBaseConstants',
 		'WinTypes',
 		'WinUserConstants'
 	],
-	#category : #'OS-Windows-UI-Desktop'
+	#category : 'OS-Windows-UI-Desktop',
+	#package : 'OS-Windows-UI',
+	#tag : 'Desktop'
 }
 
-{ #category : #'accessing instances' }
+{ #category : 'accessing - instances' }
 WinWindow class >> activeWindow [
+	"Retrieves the window to the active window associated with the thread that calls the function. "
+
+	^ self fromExternalHandle: self activeWindowHandle
+]
+
+{ #category : 'accessing - handles' }
+WinWindow class >> activeWindowHandle [
 	"Retrieves the window handle to the active window associated with the thread that calls the function. "
 
 	^ self ffiCall: #(HWND GetActiveWindow()) module: #user32
 ]
 
-{ #category : #'accessing instances' }
+{ #category : 'accessing - instances' }
 WinWindow class >> captureWindow [
 	"Return retrieves the window (if any) that has captured the mouse. Only one window at a time can capture the mouse; this window receives mouse input whether or not the cursor is within its borders."
+
+	^ self fromExternalHandle: self captureWindowHandle
+]
+
+{ #category : 'accessing - handles' }
+WinWindow class >> captureWindowHandle [
+	"Return the handle of the window (if any) that has captured the mouse. Only one window at a time can capture the mouse; this window receives mouse input whether or not the cursor is within its borders."
 
 	^ self ffiCall: #(HWND GetCapture()) module: #user32
 ]
 
-{ #category : #'accessing instances' }
+{ #category : 'accessing - instances' }
 WinWindow class >> clipboardOwnerWindow [
+	"Retrieves the window that is the current owner of the clipboard."
+
+	^ self fromExternalHandle: self clipboardOwnerWindowHandle
+]
+
+{ #category : 'accessing - handles' }
+WinWindow class >> clipboardOwnerWindowHandle [
 	"Retrieves the window handle of the current owner of the clipboard."
 
 	^self ffiCall: #( HWND GetClipboardOwner()) module: #user32
 ]
 
-{ #category : #'accessing instances' }
+{ #category : 'accessing - instances' }
 WinWindow class >> clipboardViewerWindow [
+	"Returns the first window in the clipboard viewer chain."
+
+	^ self fromExternalHandle: self clipboardViewerWindowHandle
+]
+
+{ #category : 'accessing - handles' }
+WinWindow class >> clipboardViewerWindowHandle [
 	"Retrieves the handle of the first window in the clipboard viewer chain."
 
 	^self ffiCall: #( HWND GetClipboardViewer()) module: #user32
 ]
 
-{ #category : #primitives }
+{ #category : 'primitives' }
 WinWindow class >> createWindowExA: dwExStyle lpClassName: lpClassName lpWindowName: lpWindowName dwStyle: dwStyle
 x: x y: y width: nWidth height: nHeight hWndParent: hWndParent hMenu: hMenu
 hInstance: hInstance lParam: lpParam [
@@ -66,28 +96,49 @@ hInstance: hInstance lParam: lpParam [
 		module: #user32
 ]
 
-{ #category : #'accessing instances' }
+{ #category : 'accessing - instances' }
 WinWindow class >> desktopWindow [
+	"Return the handle of the windows desktop window"
+
+	^ self fromExternalHandle: self desktopWindowHandle
+]
+
+{ #category : 'accessing - handles' }
+WinWindow class >> desktopWindowHandle [
 	"Return the handle of the windows desktop window"
 
 	^ self ffiCall: #( HWND GetDesktopWindow()) module: #user32
 ]
 
-{ #category : #'accessing instances' }
+{ #category : 'accessing - instances' }
 WinWindow class >> focusWindow [
-	"Return the HWND currently having the input focus"
+	"Return the window currently having the input focus"
+
+	^ self fromExternalHandle: self focusWindowHandle
+]
+
+{ #category : 'accessing - handles' }
+WinWindow class >> focusWindowHandle [
+	"Return the handle of the window currently having the input focus"
 
 	^ self ffiCall: #(HWND GetFocus ()) module: #user32
 ]
 
-{ #category : #'accessing instances' }
+{ #category : 'accessing - instances' }
 WinWindow class >> foregroundWindow [
+	"Returns the foreground window (the window with which the user is currently working)."
+
+	^ self fromExternalHandle: self foregroundWindowHandle
+]
+
+{ #category : 'accessing - handles' }
+WinWindow class >> foregroundWindowHandle [
 	"Returns the handle of the foreground window (the window with which the user is currently working)."
 
 	^self ffiCall: #( HWND GetForegroundWindow()) module: #user32
 ]
 
-{ #category : #'accessing instances' }
+{ #category : 'accessing - instances' }
 WinWindow class >> pharoWindow [
 	<script: 'self pharoWindow inspect'>
 
@@ -99,13 +150,13 @@ WinWindow class >> pharoWindow [
 	^ self fromExternalHandle: handle
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 WinWindow class >> windowFromPoint: point [
 
 	^self ffiCall: #(HWND WindowFromPoint(POINT point)) module: #user32
 ]
 
-{ #category : #comparing }
+{ #category : 'comparing' }
 WinWindow >> = anotherWindow [
 	"Compare using the external give handle"
 
@@ -113,14 +164,14 @@ WinWindow >> = anotherWindow [
 		  self getHandle = anotherWindow getHandle ]
 ]
 
-{ #category : #positioning }
+{ #category : 'positioning' }
 WinWindow >> centerOnDesktop [
 	"Center the given window on the desktop"
 
 	self moveTo: (self class desktopWindow windowRectangle extent // 2 - (self windowRectangle extent // 2))
 ]
 
-{ #category : #primitives }
+{ #category : 'primitives' }
 WinWindow >> closeWindow [
 	"close the window"
 
@@ -128,7 +179,7 @@ WinWindow >> closeWindow [
 		ffiCall: #( BOOL CloseWindow #( HWND self )) module: #user32
 ]
 
-{ #category : #primitives }
+{ #category : 'primitives' }
 WinWindow >> closeWindow: aHandle [
 	"close the specified window"
 
@@ -137,63 +188,63 @@ WinWindow >> closeWindow: aHandle [
 		module: #user32
 ]
 
-{ #category : #visibility }
+{ #category : 'visibility' }
 WinWindow >> destroy [
 	"destroy the window - note this does not end the OS process"
 	^ self destroyWindow
 ]
 
-{ #category : #primitives }
+{ #category : 'primitives' }
 WinWindow >> destroyWindow [
 	"destroy the window - note this does not end the OS process"
 
 	^ self ffiCall: #( BOOL DestroyWindow ( HWND self )) module: #user32
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 WinWindow >> deviceContext [
 
 	^ self ffiCall: #(HDC GetDC (HWND self)) module: #user32
 ]
 
-{ #category : #primitives }
+{ #category : 'primitives' }
 WinWindow >> getWindow: wCmd [
 	"Retrieves the handle of a window that has the specified relationship (Z order or owner) to the specified window."
 
 	^self ffiCall: #(HWND GetWindow(HWND self, UINT wCmd)) module: #user32
 ]
 
-{ #category : #primitives }
+{ #category : 'primitives' }
 WinWindow >> getWindowLong: hWnd index: nIndex [
 
 	^self ffiCall: #(LONG GetWindowLongA(HWND hWnd, int nIndex)) module: #user32
 ]
 
-{ #category : #primitives }
+{ #category : 'primitives' }
 WinWindow >> getWindowLongAtIndex: nIndex [
 
 	^self ffiCall: #(LONG GetWindowLongA(HWND self, int nIndex)) module: #user32
 ]
 
-{ #category : #primitives }
+{ #category : 'primitives' }
 WinWindow >> getWindowRect: rect [
 
 	^self ffiCall: #(BOOL GetWindowRect(HWND self, RECT* rect)) module: #user32
 ]
 
-{ #category : #primitives }
+{ #category : 'primitives' }
 WinWindow >> getWindowText: hWnd buffer: lpString bufferSize: nMaxCount [
 
 	^self ffiCall: #(int GetWindowTextA(HWND hWnd, char* lpString, int nMaxCount)) module: #user32
 ]
 
-{ #category : #comparing }
+{ #category : 'comparing' }
 WinWindow >> hash [
 
 	^ self getHandle asInteger hash
 ]
 
-{ #category : #visibility }
+{ #category : 'visibility' }
 WinWindow >> hide [
 	"hide the window"
 
@@ -201,7 +252,7 @@ WinWindow >> hide [
 			module: #user32
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 WinWindow >> isEnabled [
 	"Retrieves the enable state of the specified window"
 
@@ -210,7 +261,7 @@ WinWindow >> isEnabled [
 		  module: #user32
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 WinWindow >> isEnabled: hwnd [
 	"Retrieves the enable state of the specified window"
 
@@ -219,28 +270,28 @@ WinWindow >> isEnabled: hwnd [
 		  module: #user32
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 WinWindow >> isIconic [
 	"Determines whether the specified window is minimized (iconic). "
 
 	^self ffiCall: #(BOOL IsIconic(HWND self)) module: #user32
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 WinWindow >> isVisible [
 	"Retrieves the visibility state of the specified window. . "
 
 	^self ffiCall: #(BOOL IsWindowVisible(HWND self)) module: #user32
 ]
 
-{ #category : #testing }
+{ #category : 'testing' }
 WinWindow >> isZoomed [
 	"Determines whether a window is maximized. "
 
 	^self ffiCall: #(BOOL IsZoomed(HWND self)) module: #user32
 ]
 
-{ #category : #positioning }
+{ #category : 'positioning' }
 WinWindow >> moveTo: aPoint [
 
 	|rect|
@@ -248,7 +299,7 @@ WinWindow >> moveTo: aPoint [
 	self moveWindowX: aPoint x y: aPoint y width: rect width height: rect height
 ]
 
-{ #category : #primitives }
+{ #category : 'primitives' }
 WinWindow >> moveWindowX: x y: y width: nWidth height: nHeight [
 	"move window example"
 
@@ -263,7 +314,7 @@ WinWindow >> moveWindowX: x y: y width: nWidth height: nHeight [
 		module: #user32
 ]
 
-{ #category : #primitives }
+{ #category : 'primitives' }
 WinWindow >> openIcon: hWnd [
 
 	^ self
@@ -271,13 +322,13 @@ WinWindow >> openIcon: hWnd [
 		module: #user32
 ]
 
-{ #category : #primitives }
+{ #category : 'primitives' }
 WinWindow >> releaseDC: hdc [
 
 	^self ffiCall: #(int ReleaseDC(HWND self, HDC hdc)) module: #user32
 ]
 
-{ #category : #visibility }
+{ #category : 'visibility' }
 WinWindow >> setNonResizable [
 
 	| newStyle |
@@ -285,19 +336,19 @@ WinWindow >> setNonResizable [
 	self setWindowLong: self index: GWL_STYLE newVale: newStyle
 ]
 
-{ #category : #primitives }
+{ #category : 'primitives' }
 WinWindow >> setWindowLong: hWnd index: nIndex newVale: dwNewLong [
 
 	^self ffiCall: #(LONG SetWindowLongA(HWND hWnd, int nIndex, LONG dwNewLong)) module: #user32
 ]
 
-{ #category : #primitives }
+{ #category : 'primitives' }
 WinWindow >> setWindowText: lpString [
 
 	^self ffiCall: #(BOOL SetWindowTextA(HWND self, LPCTSTR lpString)) module: #user32
 ]
 
-{ #category : #visibility }
+{ #category : 'visibility' }
 WinWindow >> show [
 	"show the window"
 
@@ -305,19 +356,19 @@ WinWindow >> show [
 			  module: #user32
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 WinWindow >> title [
 
 	^self windowText
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 WinWindow >> title: aString [
 
 	^self setWindowText: aString
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 WinWindow >> windowRectangle [
 
 	|rect|
@@ -327,14 +378,14 @@ WinWindow >> windowRectangle [
 		ifFalse: [ self error: 'failed' ]
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 WinWindow >> windowStyle [
 	"Retrieves the window styles"
 
 	^self getWindowLongAtIndex: GWL_STYLE
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 WinWindow >> windowText [
 	"self focusWindow windowText"
 	| len str |

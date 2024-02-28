@@ -1,1 +1,1 @@
-Package { #name : #'OS-Windows-UI-Tests' }
+Package { #name : 'OS-Windows-UI-Tests' }

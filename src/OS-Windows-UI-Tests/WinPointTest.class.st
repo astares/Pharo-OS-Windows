@@ -2,24 +2,26 @@
 SUnit tests for WinPoint
 "
 Class {
-	#name : #WinPointTest,
-	#superclass : #WindowsSpecificTest,
-	#category : #'OS-Windows-UI-Tests-Graphics-Support'
+	#name : 'WinPointTest',
+	#superclass : 'WindowsSpecificTest',
+	#category : 'OS-Windows-UI-Tests-Graphics-Support',
+	#package : 'OS-Windows-UI-Tests',
+	#tag : 'Graphics-Support'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 WinPointTest >> defaultTestClass [
 
 	^WinPoint
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 WinPointTest >> testConversionToPoint [
 
 	self assert: (self defaultTestClass x: 1 y: 2) asPoint equals: (1@2)
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 WinPointTest >> testInstanceCreation [
 
 	|instance|
@@ -29,7 +31,7 @@ WinPointTest >> testInstanceCreation [
 		assert: instance y equals: 2
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 WinPointTest >> testInstanceCreationFromPoint [
 
 	|instance|

@@ -1,1 +1,1 @@
-Package { #name : #'OS-Windows-UI' }
+Package { #name : 'OS-Windows-UI' }

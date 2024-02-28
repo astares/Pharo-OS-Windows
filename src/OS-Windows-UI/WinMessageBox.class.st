@@ -2,17 +2,19 @@
 Represents a native windows message box
 "
 Class {
-	#name : #WinMessageBox,
-	#superclass : #Object,
+	#name : 'WinMessageBox',
+	#superclass : 'Object',
 	#pools : [
 		'WinBaseConstants',
 		'WinTypes',
 		'WinUserConstants'
 	],
-	#category : #'OS-Windows-UI-Dialogs'
+	#category : 'OS-Windows-UI-Dialogs',
+	#package : 'OS-Windows-UI',
+	#tag : 'Dialogs'
 }
 
-{ #category : #primitives }
+{ #category : 'primitives' }
 WinMessageBox class >> messageBox: hWnd text: lpText title: lpCaption flags: uType [
 
 	^ self ffiCall: #(int MessageBoxA(
@@ -23,7 +25,7 @@ WinMessageBox class >> messageBox: hWnd text: lpText title: lpCaption flags: uTy
 		)) module: #user32
 ]
 
-{ #category : #examples }
+{ #category : 'examples' }
 WinMessageBox class >> test [
 
 	self messageBox: WinWindow focusWindow text: 'Hello from Pharo' title: 'Pharo' flags: MB_YESNO

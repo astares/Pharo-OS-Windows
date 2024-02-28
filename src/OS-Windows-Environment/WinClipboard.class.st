@@ -2,24 +2,26 @@
 The native Windows clipboard
 "
 Class {
-	#name : #WinClipboard,
-	#superclass : #WinHandle,
+	#name : 'WinClipboard',
+	#superclass : 'WinHandle',
 	#pools : [
 		'WinBaseConstants',
 		'WinTypes',
 		'WinUserConstants'
 	],
-	#category : #'OS-Windows-Environment-Clipboard'
+	#category : 'OS-Windows-Environment-Clipboard',
+	#package : 'OS-Windows-Environment',
+	#tag : 'Clipboard'
 }
 
-{ #category : #cleanup }
+{ #category : 'cleanup' }
 WinClipboard class >> cleanUp: anObject [
 
 	super cleanUp: anObject.
 	self resetClipboard
 ]
 
-{ #category : #'api - utils' }
+{ #category : 'api - utils' }
 WinClipboard class >> clearClipboard [
 	<script>
 
@@ -29,7 +31,7 @@ WinClipboard class >> clearClipboard [
 		closeClipboard
 ]
 
-{ #category : #private }
+{ #category : 'private' }
 WinClipboard class >> clipboardDataValue: aDatum id: anId [
 	"Get clipboard content"
 
@@ -51,14 +53,14 @@ WinClipboard class >> clipboardDataValue: aDatum id: anId [
 	^ aDatum readStream
 ]
 
-{ #category : #'api - utils' }
+{ #category : 'api - utils' }
 WinClipboard class >> closeClipboard [
 	<script>
 
 	^ self ffiCall: #(BOOL CloseClipboard #()) module: #user32
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 WinClipboard class >> currentClipboardEntries [
 	"Return a list of entries for the current clipboard"
 	<script: 'WinClipboard currentClipboardEntries inspect'>
@@ -99,7 +101,7 @@ WinClipboard class >> currentClipboardEntries [
 	^ oc
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 WinClipboard class >> currentClipboardFormatIDs [
 	"Return a list a numeric types into the current clipboard"
 	<script: 'WinClipboard currentClipboardFormatIDs inspect'>
@@ -118,20 +120,20 @@ WinClipboard class >> currentClipboardFormatIDs [
 	^ oc
 ]
 
-{ #category : #'api - utils' }
+{ #category : 'api - utils' }
 WinClipboard class >> emptyClipboard [
 	<script>
 
 	^ self ffiCall: #(BOOL EmptyClipboard #()) module: #user32
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 WinClipboard class >> getClipboardData: aFormat [
 
 	^ self ffiCall: #(void* GetClipboardData #(UINT aFormat)) module: #user32
 ]
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 WinClipboard class >> getTextClipboardData [
 	<script: 'self getTextClipboardData inspect'>
 	| datum aStringOrNil |
@@ -142,7 +144,7 @@ WinClipboard class >> getTextClipboardData [
 	^ aStringOrNil
 ]
 
-{ #category : #'api - utils' }
+{ #category : 'api - utils' }
 WinClipboard class >> openClipboard [
 	<script>
 
@@ -150,19 +152,19 @@ WinClipboard class >> openClipboard [
 	^ self openClipboard: (ExternalAddress fromAddress: 0)
 ]
 
-{ #category : #'api - utils' }
+{ #category : 'api - utils' }
 WinClipboard class >> openClipboard: aHWnd [
 
 	^ self ffiCall: #(BOOL OpenClipboard #(HWND aHWnd)) module: #user32
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 WinClipboard class >> resetClipboard [
 
 	WinClipboardFormat reset
 ]
 
-{ #category : #initialization }
+{ #category : 'initialization' }
 WinClipboard class >> setClipboardTextData: aFormat value: aString [
 
 	^ self ffiCall:  #(void * SetClipboardData #(UINT aFormat, char * aString)) module: #user32

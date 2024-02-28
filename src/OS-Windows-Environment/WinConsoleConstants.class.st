@@ -2,8 +2,8 @@
 This pool includes constants as defined in wincon.h header file
 "
 Class {
-	#name : #WinConsoleConstants,
-	#superclass : #SharedPool,
+	#name : 'WinConsoleConstants',
+	#superclass : 'SharedPool',
 	#classVars : [
 		'BACKGROUND_BLUE',
 		'BACKGROUND_GREEN',
@@ -61,10 +61,12 @@ Class {
 		'SMALL_RECT',
 		'WINDOW_BUFFER_SIZE_EVENT'
 	],
-	#category : #'OS-Windows-Environment-Console-Support'
+	#category : 'OS-Windows-Environment-Console-Support',
+	#package : 'OS-Windows-Environment',
+	#tag : 'Console-Support'
 }
 
-{ #category : #'private - initialization' }
+{ #category : 'private - initialization' }
 WinConsoleConstants class >> initConsoleConstants [
 	"
 	Initializes the console constants as defined in winconenvironment .h
@@ -128,7 +130,7 @@ WinConsoleConstants class >> initConsoleConstants [
 	MOUSE_WHEELED := 4
 ]
 
-{ #category : #'private - initialization' }
+{ #category : 'private - initialization' }
 WinConsoleConstants class >> initTypeConstants [
 
 	COORD := #WinConsoleCoordinates.
@@ -145,7 +147,7 @@ WinConsoleConstants class >> initTypeConstants [
 	PCONSOLE_FONT_INFO := 'CONSOLE_FONT_INFO*'
 ]
 
-{ #category : #'class initialization' }
+{ #category : 'class initialization' }
 WinConsoleConstants class >> initialize [
 	"Initializes the receiver class
 
