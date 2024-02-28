@@ -2,18 +2,20 @@
 Test for WinProxy
 "
 Class {
-	#name : #WinProxyTest,
-	#superclass : #WindowsSpecificTest,
-	#category : #'OS-Windows-Environment-Tests-Network'
+	#name : 'WinProxyTest',
+	#superclass : 'WindowsSpecificTest',
+	#category : 'OS-Windows-Environment-Tests-Network',
+	#package : 'OS-Windows-Environment-Tests',
+	#tag : 'Network'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 WinProxyTest >> testIsEnabled [
 
 	self assert: (WinProxy isEnabled isKindOf:  Boolean)
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 WinProxyTest >> testServerAddressWhenEnabled [
 
 	WinProxy isEnabled ifFalse: [ ^self ].
@@ -21,7 +23,7 @@ WinProxyTest >> testServerAddressWhenEnabled [
 	self assert: (WinProxy address substrings: '.') size = 4  "Regular IP address"
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 WinProxyTest >> testServerPortWhenEnabled [
 
 	WinProxy isEnabled ifFalse: [ ^self ].

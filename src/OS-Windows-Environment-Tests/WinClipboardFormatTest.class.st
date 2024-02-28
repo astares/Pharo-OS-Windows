@@ -2,12 +2,14 @@
 A WinClipboardFormatTest is a test class for testing the behavior of WinClipboardFormat
 "
 Class {
-	#name : #WinClipboardFormatTest,
-	#superclass : #TestCase,
-	#category : #'OS-Windows-Environment-Tests-Clipboard-Formats'
+	#name : 'WinClipboardFormatTest',
+	#superclass : 'TestCase',
+	#category : 'OS-Windows-Environment-Tests-Clipboard-Formats',
+	#package : 'OS-Windows-Environment-Tests',
+	#tag : 'Clipboard-Formats'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 WinClipboardFormatTest >> testFormatSymbol [
 
 	| formats |
@@ -15,19 +17,19 @@ WinClipboardFormatTest >> testFormatSymbol [
 	formats do: [ :each | self assert: each formatID isInteger ]
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 WinClipboardFormatTest >> testIsAbstract [
 
 	self assert: WinClipboardFormat isAbstract
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 WinClipboardFormatTest >> testIsNotCustomFormatByDefault [
 
 	self deny: WinClipboardFormat isCustomFormat
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 WinClipboardFormatTest >> testIsStandardFormatByDefault [
 
 	self assert: WinClipboardFormat isStandardFormat

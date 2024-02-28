@@ -2,12 +2,14 @@
 A WinStandardClipboardFormatTest is a test class for testing the behavior of WinStandardClipboardFormat
 "
 Class {
-	#name : #WinStandardClipboardFormatTest,
-	#superclass : #TestCase,
-	#category : #'OS-Windows-Environment-Tests-Clipboard-Formats'
+	#name : 'WinStandardClipboardFormatTest',
+	#superclass : 'TestCase',
+	#category : 'OS-Windows-Environment-Tests-Clipboard-Formats',
+	#package : 'OS-Windows-Environment-Tests',
+	#tag : 'Clipboard-Formats'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 WinStandardClipboardFormatTest >> standardClipboardFormats [
 
 	^ #( CF_BITMAP
@@ -38,25 +40,25 @@ WinStandardClipboardFormatTest >> standardClipboardFormats [
 		  CF_WAVE)
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 WinStandardClipboardFormatTest >> testIsAbstract [
 
 	self assert: WinStandardClipboardFormat isAbstract
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 WinStandardClipboardFormatTest >> testIsNotCustomFormatByDefault [
 
 	self deny: WinStandardClipboardFormat isCustomFormat
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 WinStandardClipboardFormatTest >> testIsStandardFormatByDefault [
 
 	self assert: WinStandardClipboardFormat isStandardFormat
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 WinStandardClipboardFormatTest >> testStandardClipboardFormats [
 
 	WinStandardClipboardFormat allSubInstancesDo: [:each |

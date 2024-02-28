@@ -9,38 +9,40 @@ vmProcess
 
 "
 Class {
-	#name : #WinProcessTest,
-	#superclass : #WindowsSpecificTest,
+	#name : 'WinProcessTest',
+	#superclass : 'WindowsSpecificTest',
 	#instVars : [
 		'vmProcess'
 	],
 	#pools : [
 		'WinBaseConstants'
 	],
-	#category : #'OS-Windows-Environment-Tests-Processing'
+	#category : 'OS-Windows-Environment-Tests-Processing',
+	#package : 'OS-Windows-Environment-Tests',
+	#tag : 'Processing'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 WinProcessTest >> defaultTestClass [
 
 	^WinProcess
 ]
 
-{ #category : #running }
+{ #category : 'running' }
 WinProcessTest >> setUp [
 
 	super setUp.
 	vmProcess := self defaultTestClass currentProcess
 ]
 
-{ #category : #running }
+{ #category : 'running' }
 WinProcessTest >> tearDown [
 
 	vmProcess := nil.
 	super tearDown
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 WinProcessTest >> testAllProcessIdentifiers [
 
 	self
@@ -48,31 +50,31 @@ WinProcessTest >> testAllProcessIdentifiers [
 		assert: (self defaultTestClass allProcessIdentifiers includes: self defaultTestClass currentProcessId)
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 WinProcessTest >> testCurrentProcess [
 
 	self assert: self defaultTestClass currentProcess getHandle value > 0
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 WinProcessTest >> testCurrentProcessExitCodeWhileRunning [
 
 	self assert: WinProcess currentProcess getExitCode equals: STILL_ACTIVE
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 WinProcessTest >> testCurrentProcessId [
 
 	self assert: self defaultTestClass currentProcessId > 0
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 WinProcessTest >> testCurrentProcessIsRunning [
 
 	self assert: WinProcess currentProcess isRunning
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 WinProcessTest >> testGetVMModuleHandle [
 
 	| handle |
@@ -82,7 +84,7 @@ WinProcessTest >> testGetVMModuleHandle [
 		assert: handle getHandle value > 0
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 WinProcessTest >> testIsNotRunningUnderWOW64 [
 	"Pharo is running with a 64bit VM (so it is not running as a 32 bit app under
 	 WOW64 on 64 bit systems anymore). We assume running on a 64 bit machine here"
@@ -90,13 +92,13 @@ WinProcessTest >> testIsNotRunningUnderWOW64 [
 	self deny: WinProcess currentProcess isWow64Process
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 WinProcessTest >> testPriorityClasses [
 
 	self assert: self defaultTestClass currentProcess getPriorityClass isInteger
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 WinProcessTest >> testStartAndTerminateCommandShell [
 
 	|processInfo process |
@@ -106,13 +108,13 @@ WinProcessTest >> testStartAndTerminateCommandShell [
 	processInfo process terminateProcessWithExitCode: 0
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 WinProcessTest >> testStartedFromShortcut [
 
 	self assert: (self defaultTestClass startupInfo wasStartedFromAShortcut isKindOf: Boolean)
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 WinProcessTest >> testStartupInfo [
 
 	self assert: (self defaultTestClass startupInfo) notNil

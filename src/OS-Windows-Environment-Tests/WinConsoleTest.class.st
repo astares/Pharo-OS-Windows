@@ -2,31 +2,33 @@
 SUnit tests for WinConsole
 "
 Class {
-	#name : #WinConsoleTest,
-	#superclass : #WindowsSpecificTest,
+	#name : 'WinConsoleTest',
+	#superclass : 'WindowsSpecificTest',
 	#instVars : [
 		'stdoutConsole'
 	],
 	#pools : [
 		'WinBaseConstants'
 	],
-	#category : #'OS-Windows-Environment-Tests-Console'
+	#category : 'OS-Windows-Environment-Tests-Console',
+	#package : 'OS-Windows-Environment-Tests',
+	#tag : 'Console'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 WinConsoleTest >> defaultTestClass [
 
 	^WinConsole
 ]
 
-{ #category : #running }
+{ #category : 'running' }
 WinConsoleTest >> setUp [
 
 	super setUp.
 	stdoutConsole := self defaultTestClass createOutputConsoleForCurrentProcess
 ]
 
-{ #category : #running }
+{ #category : 'running' }
 WinConsoleTest >> tearDown [
 
 	stdoutConsole := nil.
@@ -36,25 +38,25 @@ WinConsoleTest >> tearDown [
 	(Delay forMilliseconds: 10) wait
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 WinConsoleTest >> testConsoleSize [
 
 	self assert: stdoutConsole screenBuffer size species = Point
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 WinConsoleTest >> testCursorHasSize [
 
 	self assert: stdoutConsole cursor size isInteger
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 WinConsoleTest >> testCursorIsVisibleByDefault [
 
 	self assert: stdoutConsole cursor isVisible
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 WinConsoleTest >> testCursorSettingSize [
 
 	|size|
@@ -63,13 +65,13 @@ WinConsoleTest >> testCursorSettingSize [
 	self assert: stdoutConsole cursor size equals: size
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 WinConsoleTest >> testFontSize [
 
 	self assert: stdoutConsole font fontSize isPoint
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 WinConsoleTest >> testIsConsoleType [
 
 	| fileType |

@@ -2,47 +2,49 @@
 Tests for the native windows OS thread wrappers
 "
 Class {
-	#name : #WinThreadTest,
-	#superclass : #WindowsSpecificTest,
+	#name : 'WinThreadTest',
+	#superclass : 'WindowsSpecificTest',
 	#instVars : [
 		'vmThread'
 	],
-	#category : #'OS-Windows-Environment-Tests-Processing'
+	#category : 'OS-Windows-Environment-Tests-Processing',
+	#package : 'OS-Windows-Environment-Tests',
+	#tag : 'Processing'
 }
 
-{ #category : #accessing }
+{ #category : 'accessing' }
 WinThreadTest >> defaultTestClass [
 
 	^WinThread
 ]
 
-{ #category : #running }
+{ #category : 'running' }
 WinThreadTest >> setUp [
 
 	super setUp.
 	vmThread := WinThread currentThread
 ]
 
-{ #category : #running }
+{ #category : 'running' }
 WinThreadTest >> tearDown [
 
 	vmThread := nil.
 	super tearDown
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 WinThreadTest >> testCurrentThread [
 
 	self assert: self defaultTestClass currentThread getHandle value > 0
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 WinThreadTest >> testCurrentThreadId [
 
 	self assert: self defaultTestClass currentThreadId > 0
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 WinThreadTest >> testIsThreadAllAccess [
 	"by default the main thread of the VM is not all access"
 

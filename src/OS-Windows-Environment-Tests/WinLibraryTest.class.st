@@ -2,24 +2,14 @@
 A WinLibraryTest is a test class for testing the behavior of WinLibrary
 "
 Class {
-	#name : #WinLibraryTest,
-	#superclass : #TestCase,
-	#category : #'OS-Windows-Environment-Tests-Processing'
+	#name : 'WinLibraryTest',
+	#superclass : 'TestCase',
+	#category : 'OS-Windows-Environment-Tests-Processing',
+	#package : 'OS-Windows-Environment-Tests',
+	#tag : 'Processing'
 }
 
-{ #category : #running }
-WinLibraryTest >> setUp [
-
-	super setUp.
-]
-
-{ #category : #running }
-WinLibraryTest >> tearDown [
-
-	super tearDown
-]
-
-{ #category : #running }
+{ #category : 'running' }
 WinLibraryTest >> testLoadLibrary [
 
 	| lib |
@@ -27,12 +17,12 @@ WinLibraryTest >> testLoadLibrary [
 	self assert: lib getHandle isNull not
 ]
 
-{ #category : #running }
+{ #category : 'running' }
 WinLibraryTest >> testReloadLibrary [
-"reload the lib test "
+	"reload the lib test"
+
 	| lib calls |
-	lib := WinLibrary fromLibraryClass:
-		       TFTestLibraryUsingSameThreadRunner.
+	lib := WinLibrary fromLibraryClass: TFTestLibraryUsingSameThreadRunner.
 	self assert: lib getHandle isNull not.
 	lib reloadLibrary.
 	calls := lib findCalls asArray.
@@ -42,7 +32,7 @@ WinLibraryTest >> testReloadLibrary [
 			identicalTo: (c propertyAt: #ffiNonCompiledMethod) ]
 ]
 
-{ #category : #running }
+{ #category : 'running' }
 WinLibraryTest >> testUnLoadLibrary [
 
 	| lib |

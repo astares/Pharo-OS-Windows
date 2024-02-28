@@ -2,28 +2,30 @@
 A WinClipboardUnicodeTextFormatTest is a test class for testing the behavior of WinClipboardUnicodeTextFormat
 "
 Class {
-	#name : #WinClipboardUnicodeTextFormatTest,
-	#superclass : #TestCase,
+	#name : 'WinClipboardUnicodeTextFormatTest',
+	#superclass : 'TestCase',
 	#pools : [
 		'WinUserConstants'
 	],
-	#category : #'OS-Windows-Environment-Tests-Clipboard-Formats'
+	#category : 'OS-Windows-Environment-Tests-Clipboard-Formats',
+	#package : 'OS-Windows-Environment-Tests',
+	#tag : 'Clipboard-Formats'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 WinClipboardUnicodeTextFormatTest >> testFormatFromID [
 
 	self assert: (WinClipboardFormat formatFromID: CF_UNICODETEXT) equals: WinClipboardUnicodeTextFormat
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 WinClipboardUnicodeTextFormatTest >> testFormatID [
 
 	self assert: WinClipboardUnicodeTextFormat formatID equals: CF_UNICODETEXT.
 	self assert: WinClipboardUnicodeTextFormat formatID equals: 13
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 WinClipboardUnicodeTextFormatTest >> testGeneral [
 
 	self

@@ -2,28 +2,30 @@
 A WinClipboardWaveFormatTest is a test class for testing the behavior of WinClipboardWaveFormat
 "
 Class {
-	#name : #WinClipboardWaveFormatTest,
-	#superclass : #TestCase,
+	#name : 'WinClipboardWaveFormatTest',
+	#superclass : 'TestCase',
 	#pools : [
 		'WinUserConstants'
 	],
-	#category : #'OS-Windows-Environment-Tests-Clipboard-Formats'
+	#category : 'OS-Windows-Environment-Tests-Clipboard-Formats',
+	#package : 'OS-Windows-Environment-Tests',
+	#tag : 'Clipboard-Formats'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 WinClipboardWaveFormatTest >> testFormatFromID [
 
 	self assert: (WinClipboardFormat formatFromID: CF_WAVE) equals: WinClipboardWaveFormat
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 WinClipboardWaveFormatTest >> testFormatID [
 
 	self assert: WinClipboardWaveFormat formatID equals: CF_WAVE.
 	self assert: WinClipboardWaveFormat formatID equals: 12
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 WinClipboardWaveFormatTest >> testGeneral [
 
 	self

@@ -2,28 +2,30 @@
 A WinClipboardDSPBitmapFormatTest is a test class for testing the behavior of WinClipboardDSPBitmapFormat
 "
 Class {
-	#name : #WinClipboardDSPBitmapFormatTest,
-	#superclass : #TestCase,
+	#name : 'WinClipboardDSPBitmapFormatTest',
+	#superclass : 'TestCase',
 	#pools : [
 		'WinUserConstants'
 	],
-	#category : #'OS-Windows-Environment-Tests-Clipboard-Formats'
+	#category : 'OS-Windows-Environment-Tests-Clipboard-Formats',
+	#package : 'OS-Windows-Environment-Tests',
+	#tag : 'Clipboard-Formats'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 WinClipboardDSPBitmapFormatTest >> testFormatFromID [
 
 	self assert: (WinClipboardFormat formatFromID: CF_DSPBITMAP) equals: WinClipboardDSPBitmapFormat
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 WinClipboardDSPBitmapFormatTest >> testFormatID [
 
 	self assert: WinClipboardDSPBitmapFormat formatID equals: CF_DSPBITMAP.
 	self assert: WinClipboardDSPBitmapFormat formatID equals: 16r0082
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 WinClipboardDSPBitmapFormatTest >> testGeneral [
 
 	self

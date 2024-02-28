@@ -2,24 +2,26 @@
 A WinCustomClipboardFormatTest is a test class for testing the behavior of WinCustomClipboardFormat
 "
 Class {
-	#name : #WinCustomClipboardFormatTest,
-	#superclass : #TestCase,
-	#category : #'OS-Windows-Environment-Tests-Clipboard-Formats'
+	#name : 'WinCustomClipboardFormatTest',
+	#superclass : 'TestCase',
+	#category : 'OS-Windows-Environment-Tests-Clipboard-Formats',
+	#package : 'OS-Windows-Environment-Tests',
+	#tag : 'Clipboard-Formats'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 WinCustomClipboardFormatTest >> testIsAbstract [
 
 	self assert: WinCustomClipboardFormat isAbstract
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 WinCustomClipboardFormatTest >> testIsCustomFormatByDefault [
 
 	self assert: WinCustomClipboardFormat isCustomFormat
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 WinCustomClipboardFormatTest >> testIsNotStandardFormatByDefault [
 
 	self deny: WinCustomClipboardFormat isStandardFormat
