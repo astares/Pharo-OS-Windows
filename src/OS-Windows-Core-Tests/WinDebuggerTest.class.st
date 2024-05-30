@@ -2,12 +2,14 @@
 SUnit tests for WinDebugger
 "
 Class {
-	#name : #WinDebuggerTest,
-	#superclass : #WindowsSpecificTest,
-	#category : #'OS-Windows-Core-Tests-Debugging'
+	#name : 'WinDebuggerTest',
+	#superclass : 'WindowsSpecificTest',
+	#category : 'OS-Windows-Core-Tests-Debugging',
+	#package : 'OS-Windows-Core-Tests',
+	#tag : 'Debugging'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 WinDebuggerTest >> testIsAbleToOutputDebugString [
 	self
 		shouldnt: [ WinDebugger outputDebugString: 'Test Case' ]
@@ -15,7 +17,7 @@ WinDebuggerTest >> testIsAbleToOutputDebugString [
 		description: 'Not possible to write windows debug stream'
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 WinDebuggerTest >> testIsDebuggerPresent [
 	"Usually there is no debugger attached to the Pharo VM process"
 

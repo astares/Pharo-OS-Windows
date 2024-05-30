@@ -28,8 +28,8 @@ WinLibraryTest >> testReloadLibrary [
 	calls := lib findCalls asArray.
 	calls do: [ :c |
 		self
-			assert: (c methodClass lookupSelector: c selector)
-			identicalTo: (c propertyAt: #ffiNonCompiledMethod) ]
+			assert: (c methodClass lookupSelector: c selector) sourceCode
+			equals: (c propertyAt: #ffiNonCompiledMethod) sourceCode ]
 ]
 
 { #category : 'running' }

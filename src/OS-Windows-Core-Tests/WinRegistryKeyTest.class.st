@@ -2,46 +2,48 @@
 SUnit tests for WinRegistryKey
 "
 Class {
-	#name : #WinRegistryKeyTest,
-	#superclass : #WindowsSpecificTest,
+	#name : 'WinRegistryKeyTest',
+	#superclass : 'WindowsSpecificTest',
 	#pools : [
 		'WinRegistryConstants'
 	],
-	#category : #'OS-Windows-Core-Tests-Registry'
+	#category : 'OS-Windows-Core-Tests-Registry',
+	#package : 'OS-Windows-Core-Tests',
+	#tag : 'Registry'
 }
 
-{ #category : #'tests - defaults' }
+{ #category : 'tests - defaults' }
 WinRegistryKeyTest >> testAllUsers [
 
 	self assert: WinRegistryKey allUsers getHandle = HKEY_USERS
 ]
 
-{ #category : #'tests - defaults' }
+{ #category : 'tests - defaults' }
 WinRegistryKeyTest >> testClassesRoot [
 
 	self assert: WinRegistryKey classesRoot getHandle = HKEY_CLASSES_ROOT
 ]
 
-{ #category : #'tests - defaults' }
+{ #category : 'tests - defaults' }
 WinRegistryKeyTest >> testCurrentConfig [
 
 	self assert:
 		WinRegistryKey currentConfig getHandle = HKEY_CURRENT_CONFIG
 ]
 
-{ #category : #'tests - defaults' }
+{ #category : 'tests - defaults' }
 WinRegistryKeyTest >> testCurrentUser [
 
 	self assert: WinRegistryKey currentUser getHandle = HKEY_CURRENT_USER
 ]
 
-{ #category : #'tests - defaults' }
+{ #category : 'tests - defaults' }
 WinRegistryKeyTest >> testDynamicData [
 
 	self assert: WinRegistryKey dynamicData getHandle = HKEY_DYN_DATA
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 WinRegistryKeyTest >> testKeyNames [
 
 	self
@@ -54,21 +56,21 @@ WinRegistryKeyTest >> testKeyNames [
 		assert: WinRegistryKey performanceData keyName equals: #HKEY_PERFORMANCE_DATA
 ]
 
-{ #category : #'tests - defaults' }
+{ #category : 'tests - defaults' }
 WinRegistryKeyTest >> testLocalMachine [
 
 	self assert:
 		WinRegistryKey localMachine getHandle = HKEY_LOCAL_MACHINE
 ]
 
-{ #category : #'tests - defaults' }
+{ #category : 'tests - defaults' }
 WinRegistryKeyTest >> testPerformanceData [
 
 	self assert:
 		WinRegistryKey performanceData getHandle = HKEY_PERFORMANCE_DATA
 ]
 
-{ #category : #tests }
+{ #category : 'tests' }
 WinRegistryKeyTest >> testPrinting [
 
 	self
@@ -80,7 +82,7 @@ WinRegistryKeyTest >> testPrinting [
 		assert: (WinRegistryKey dynamicData printString endsWith: ' - HKEY_DYN_DATA')
 ]
 
-{ #category : #'tests - queries' }
+{ #category : 'tests - queries' }
 WinRegistryKeyTest >> testQueryBinaryValue [
 
 	| value |
@@ -92,7 +94,7 @@ WinRegistryKeyTest >> testQueryBinaryValue [
 		assert: (value isKindOf: ByteArray)
 ]
 
-{ #category : #'tests - queries' }
+{ #category : 'tests - queries' }
 WinRegistryKeyTest >> testQueryDWord [
 
 	| value |
@@ -104,7 +106,7 @@ WinRegistryKeyTest >> testQueryDWord [
 		assert: value > 0
 ]
 
-{ #category : #'tests - queries' }
+{ #category : 'tests - queries' }
 WinRegistryKeyTest >> testQueryStringValue [
 
 	| value |

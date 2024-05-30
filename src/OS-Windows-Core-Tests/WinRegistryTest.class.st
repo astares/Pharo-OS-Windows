@@ -2,16 +2,18 @@
 SUnit tests for WinRegistry
 "
 Class {
-	#name : #WinRegistryTest,
-	#superclass : #WindowsSpecificTest,
+	#name : 'WinRegistryTest',
+	#superclass : 'WindowsSpecificTest',
 	#pools : [
 		'WinErrorConstants',
 		'WinRegistryConstants'
 	],
-	#category : #'OS-Windows-Core-Tests-Registry'
+	#category : 'OS-Windows-Core-Tests-Registry',
+	#package : 'OS-Windows-Core-Tests',
+	#tag : 'Registry'
 }
 
-{ #category : #'tests - queries' }
+{ #category : 'tests - queries' }
 WinRegistryTest >> testQueryBinaryValue [
 
 	|hKey value |
@@ -24,7 +26,7 @@ WinRegistryTest >> testQueryBinaryValue [
 		assert: (value isKindOf: ByteArray)
 ]
 
-{ #category : #'tests - queries' }
+{ #category : 'tests - queries' }
 WinRegistryTest >> testQueryDWord [
 
 	|hKey value |
@@ -37,7 +39,7 @@ WinRegistryTest >> testQueryDWord [
 		assert: value > 0
 ]
 
-{ #category : #'tests - queries' }
+{ #category : 'tests - queries' }
 WinRegistryTest >> testQueryStringValue [
 
 	|hKey value |
@@ -48,7 +50,7 @@ WinRegistryTest >> testQueryStringValue [
 	self assert: value notEmpty
 ]
 
-{ #category : #'tests - primitives' }
+{ #category : 'tests - primitives' }
 WinRegistryTest >> testRegistryKeyOpenAndClose [
 
 	| hKey |
@@ -64,7 +66,7 @@ WinRegistryTest >> testRegistryKeyOpenAndClose [
 	self assert: (WinRegistry regCloseKey: hKey) = ERROR_SUCCESS
 ]
 
-{ #category : #'tests - primitives' }
+{ #category : 'tests - primitives' }
 WinRegistryTest >> testSubkeyCreationAndDeletion [
 	"Due to permissions we can only create registry key HKEY_CURRENT_USER\SOFTWARE\"
 

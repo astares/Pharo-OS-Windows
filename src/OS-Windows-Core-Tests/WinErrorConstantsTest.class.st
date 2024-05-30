@@ -2,15 +2,17 @@
 SUnit tests for WinErrorConstants pool
 "
 Class {
-	#name : #WinErrorConstantsTest,
-	#superclass : #WindowsSpecificTest,
+	#name : 'WinErrorConstantsTest',
+	#superclass : 'WindowsSpecificTest',
 	#pools : [
 		'WinErrorConstants'
 	],
-	#category : #'OS-Windows-Core-Tests-Support'
+	#category : 'OS-Windows-Core-Tests-Support',
+	#package : 'OS-Windows-Core-Tests',
+	#tag : 'Support'
 }
 
-{ #category : #tests }
+{ #category : 'tests' }
 WinErrorConstantsTest >> testErrorNameFromNumber [
 
 	self
