@@ -101,6 +101,7 @@ WinInternetExplorer class >> internetExplorerRegistryKey [
 
 { #category : 'instance creation' }
 WinInternetExplorer class >> open [
+	<script>
 
 	self openWithArguments: String empty
 ]
@@ -116,8 +117,9 @@ WinInternetExplorer class >> open: aUrl [
 
 { #category : 'instance creation' }
 WinInternetExplorer class >> openKioskMode [
+	<script>
 
-	^self openWithArguments: '-k'
+	^ self openWithArguments: '-k'
 ]
 
 { #category : 'instance creation' }
@@ -142,6 +144,7 @@ WinInternetExplorer class >> openWithArguments: arg [
 
 { #category : 'accessing' }
 WinInternetExplorer class >> updateVersion [
+	<sampleInstance>
 
 	^ (WinRegistryKey localMachine
 		queryValue: 'svcUpdateVersion'
@@ -150,6 +153,7 @@ WinInternetExplorer class >> updateVersion [
 
 { #category : 'accessing' }
 WinInternetExplorer class >> version [
+	<sampleInstance>
 
 	^ (WinRegistryKey localMachine
 		queryValue: 'svcVersion'

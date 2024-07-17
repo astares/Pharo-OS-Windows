@@ -22,14 +22,14 @@ Class {
 WinShellFolder class >> appData [
 	"Return the application data folder location"
 
-	^self named: 'AppData'
+	^ self named: 'AppData'
 ]
 
 { #category : 'accessing' }
 WinShellFolder class >> cache [
 	"Return the cache folder"
 
-	^self named: 'Cache'
+	^ self named: 'Cache'
 ]
 
 { #category : 'accessing' }
@@ -43,28 +43,28 @@ WinShellFolder class >> cookies [
 WinShellFolder class >> desktop [
 	"Return the desktop folder"
 
-	^self named: 'Desktop'
+	^ self named: 'Desktop'
 ]
 
 { #category : 'accessing' }
 WinShellFolder class >> favorites [
 	"Return the favorites IE folder"
 
-	^self named: 'Favorites'
+	^ self named: 'Favorites'
 ]
 
 { #category : 'accessing' }
 WinShellFolder class >> fonts [
 	"Return the fonts folder"
 
-	^self named: 'Fonts'
+	^ self named: 'Fonts'
 ]
 
 { #category : 'accessing' }
 WinShellFolder class >> history [
 	"Return the IE history folder"
 
-	^self named: 'History'
+	^ self named: 'History'
 ]
 
 { #category : 'instance creation' }
@@ -87,7 +87,7 @@ WinShellFolder class >> named: aName path: aFolderName [
 WinShellFolder class >> netHood [
 	"Return the NetHood folder"
 
-	^self named: 'NetHood'
+	^ self named: 'NetHood'
 ]
 
 { #category : 'accessing' }
