@@ -40,7 +40,7 @@ WinShell class >> shellExecute: lpOperation file: lpFile parameters: lpParameter
 
 	^self ffiCall: #(
 			HINSTANCE ShellExecuteA(
-     				0,
+     				INT 0,
      				LPCTSTR lpOperation,
          			LPCTSTR lpFile,
      				LPCTSTR lpParameters,
