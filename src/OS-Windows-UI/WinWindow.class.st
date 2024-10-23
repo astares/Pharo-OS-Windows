@@ -248,7 +248,7 @@ WinWindow >> hash [
 WinWindow >> hide [
 	"hide the window"
 
-	^ self ffiCall: #( BOOL ShowWindow ( HWND self, SW_HIDE ))
+	^ self ffiCall: #( BOOL ShowWindow ( HWND self, int SW_HIDE ))
 			module: #user32
 ]
 
@@ -309,7 +309,7 @@ WinWindow >> moveWindowX: x y: y width: nWidth height: nHeight [
 				int y,
 				int nWidth,
    				int nHeight,
- 				false
+ 				int false
 				))
 		module: #user32
 ]
@@ -352,7 +352,7 @@ WinWindow >> setWindowText: lpString [
 WinWindow >> show [
 	"show the window"
 
-	^ self ffiCall: #( BOOL ShowWindow ( HWND self, SW_SHOW ))
+	^ self ffiCall: #( BOOL ShowWindow ( HWND self, int SW_SHOW ))
 			  module: #user32
 ]
 
