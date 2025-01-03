@@ -17,14 +17,14 @@ Class {
 WinUserSession class >> exitWindows [
 	"Return an instance with a pseudohandle for the current thread."
 
-	^ self ffiCall: #(BOOL ExitWindowsEx(0, 0)) module: #user32
+	^ self ffiCall: #(BOOL ExitWindowsEx(int 0, int 0)) module: #user32
 ]
 
 { #category : 'private - primitives' }
 WinUserSession class >> exitWindowsEx: uFlags [
 	"Either logs off, shuts down, or shuts down and restarts the system. "
 
-	^ self ffiCall: #(BOOL ExitWindowsEx(DWORD uFlags, 0)) module: #user32
+	^ self ffiCall: #(BOOL ExitWindowsEx(DWORD uFlags,int 0)) module: #user32
 ]
 
 { #category : 'accessing' }

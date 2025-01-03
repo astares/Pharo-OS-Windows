@@ -503,5 +503,5 @@ WinConsole >> write: aString [
 WinConsole >> writeFile: lpBuffer size: nNumberOfBytesToWrite [
 	"Writes data to the specified file or input/output (I/O) device."
 
-	^self ffiCall: #(BOOL WriteFile(HANDLE self, LPCVOID lpBuffer, DWORD nNumberOfBytesToWrite, 0, 0)) module: #kernel32
+	^self ffiCall: #(BOOL WriteFile(HANDLE self, LPCVOID lpBuffer, DWORD nNumberOfBytesToWrite, int 0, int 0)) module: #kernel32
 ]
