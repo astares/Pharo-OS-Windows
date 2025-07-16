@@ -2,8 +2,8 @@
 This pool includes constants as defined in shlwapi.h header file
 "
 Class {
-	#name : 'WinShellConstants',
-	#superclass : 'SharedPool',
+	#name : #WinShellConstants,
+	#superclass : #SharedPool,
 	#classVars : [
 		'OS_EMBEDDED',
 		'OS_NT',
@@ -19,12 +19,10 @@ Class {
 		'OS_WIN98_GOLD',
 		'OS_WINDOWS'
 	],
-	#category : 'OS-Windows-Environment-Shell-Support',
-	#package : 'OS-Windows-Environment',
-	#tag : 'Shell-Support'
+	#category : 'OS-Windows-Environment-Shell-Support'
 }
 
-{ #category : 'private - initialization' }
+{ #category : #'private - initialization' }
 WinShellConstants class >> initOSConstants [
 
 	OS_WINDOWS := 0.
@@ -42,11 +40,11 @@ WinShellConstants class >> initOSConstants [
 	OS_EMBEDDED := 13
 ]
 
-{ #category : 'private - initialization' }
+{ #category : #'private - initialization' }
 WinShellConstants class >> initShellConstants [
 ]
 
-{ #category : 'class initialization' }
+{ #category : #'class initialization' }
 WinShellConstants class >> initialize [
 	"Initializes the receiver class"
 

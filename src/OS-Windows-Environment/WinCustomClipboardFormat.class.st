@@ -2,41 +2,39 @@
 Abstract superclass for custom clipboard formats
 "
 Class {
-	#name : 'WinCustomClipboardFormat',
-	#superclass : 'WinClipboardFormat',
+	#name : #WinCustomClipboardFormat,
+	#superclass : #WinClipboardFormat,
 	#classInstVars : [
 		'formatID'
 	],
-	#category : 'OS-Windows-Environment-Clipboard-Formats',
-	#package : 'OS-Windows-Environment',
-	#tag : 'Clipboard-Formats'
+	#category : 'OS-Windows-Environment-Clipboard-Formats'
 }
 
-{ #category : 'accessing - defaults' }
+{ #category : #'accessing - defaults' }
 WinCustomClipboardFormat class >> formatID [
 
 	^ formatID ifNil: [ self register. formatID ]
 ]
 
-{ #category : 'accessing - defaults' }
+{ #category : #'accessing - defaults' }
 WinCustomClipboardFormat class >> formatID: anObject [
 
 	formatID := anObject
 ]
 
-{ #category : 'testing' }
+{ #category : #testing }
 WinCustomClipboardFormat class >> isAbstract [
 
 	^ self == WinCustomClipboardFormat
 ]
 
-{ #category : 'testing' }
+{ #category : #testing }
 WinCustomClipboardFormat class >> isStandardFormat [
 
 	^ false
 ]
 
-{ #category : 'registration' }
+{ #category : #registration }
 WinCustomClipboardFormat class >> register [
 
 	self formatID: (self registerClipboardFormat: self formatSymbol)

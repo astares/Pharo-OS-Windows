@@ -2,8 +2,8 @@
 Utility class to handle native windows clipboard formats
 "
 Class {
-	#name : 'WinClipboardFormat',
-	#superclass : 'Object',
+	#name : #WinClipboardFormat,
+	#superclass : #Object,
 	#pools : [
 		'WinTypes',
 		'WinUserConstants'
@@ -11,12 +11,10 @@ Class {
 	#classInstVars : [
 		'clipboardFormats'
 	],
-	#category : 'OS-Windows-Environment-Clipboard-Formats',
-	#package : 'OS-Windows-Environment',
-	#tag : 'Clipboard-Formats'
+	#category : 'OS-Windows-Environment-Clipboard-Formats'
 }
 
-{ #category : 'accessing - formats' }
+{ #category : #'accessing - formats' }
 WinClipboardFormat class >> concreteFormats [
 	"Return a list of concrete subclasses (custom and standard formats)"
 	<script: 'self concreteFormats inspect'>
@@ -24,7 +22,7 @@ WinClipboardFormat class >> concreteFormats [
 	^ self allSubclasses reject: [ :each | each isAbstract ]
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 WinClipboardFormat class >> concreteFormatsMapping [
 	<script: 'self concreteFormatsMapping inspect'>
 
@@ -35,7 +33,7 @@ WinClipboardFormat class >> concreteFormatsMapping [
 	^ map
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 WinClipboardFormat class >> concreteFormatsReverseMapping [
 	<script: 'self concreteFormatsReverseMapping inspect'>
 
@@ -46,7 +44,7 @@ WinClipboardFormat class >> concreteFormatsReverseMapping [
 	^ map
 ]
 
-{ #category : 'accessing - formats' }
+{ #category : #'accessing - formats' }
 WinClipboardFormat class >> customFormats [
 	"Return a list of concrete subclasses who represent custom formats"
 	<script: 'self customFormats inspect'>
@@ -54,75 +52,75 @@ WinClipboardFormat class >> customFormats [
 	^ self concreteFormats select: [:each | each isCustomFormat ]
 ]
 
-{ #category : 'api - utils' }
+{ #category : #'api - utils' }
 WinClipboardFormat class >> enumClipboardFormats: aFormat [
 
 	^ self ffiCall: #(UINT EnumClipboardFormats #(UINT aFormat)) module: #user32
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 WinClipboardFormat class >> formatFromID: anID [
 
 	^ self concreteFormats detect: [:each | each formatID = anID ] ifNone: [ nil ]
 ]
 
-{ #category : 'accessing - defaults' }
+{ #category : #'accessing - defaults' }
 WinClipboardFormat class >> formatID [
 
 	^ self subclassResponsibility
 ]
 
-{ #category : 'accessing - defaults' }
+{ #category : #'accessing - defaults' }
 WinClipboardFormat class >> formatSymbol [
 
 	^ self subclassResponsibility
 ]
 
-{ #category : 'class initialization' }
+{ #category : #'class initialization' }
 WinClipboardFormat class >> initialize [
 
 	self registerCustomClipboardFormats
 ]
 
-{ #category : 'testing' }
+{ #category : #testing }
 WinClipboardFormat class >> isAbstract [
 
 	^ self == WinClipboardFormat
 ]
 
-{ #category : 'testing' }
+{ #category : #testing }
 WinClipboardFormat class >> isCustomFormat [
 
 	^ self isStandardFormat not
 ]
 
-{ #category : 'testing' }
+{ #category : #testing }
 WinClipboardFormat class >> isStandardFormat [
 
 	^ true
 ]
 
-{ #category : 'api - utils' }
+{ #category : #'api - utils' }
 WinClipboardFormat class >> registerClipboardFormat: aString [
 
 	^ self ffiCall: #(UINT RegisterClipboardFormatA #(LPTSTR aString)) module: #user32
 ]
 
-{ #category : 'class initialization' }
+{ #category : #'class initialization' }
 WinClipboardFormat class >> registerCustomClipboardFormats [
 	<script>
 
 	WinCustomClipboardFormat allSubclassesDo: [:each | each register ]
 ]
 
-{ #category : 'class initialization' }
+{ #category : #'class initialization' }
 WinClipboardFormat class >> reset [
 	<script>
 
 	clipboardFormats := nil
 ]
 
-{ #category : 'accessing - formats' }
+{ #category : #'accessing - formats' }
 WinClipboardFormat class >> standardFormats [
 	"Return a list of concrete subclasses who represent standard formats"
 	<script: 'self standardFormats inspect'>

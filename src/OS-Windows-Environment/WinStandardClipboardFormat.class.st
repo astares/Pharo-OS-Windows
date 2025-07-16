@@ -2,20 +2,18 @@
 Abstract superclass for standard clipboard formats
 "
 Class {
-	#name : 'WinStandardClipboardFormat',
-	#superclass : 'WinClipboardFormat',
-	#category : 'OS-Windows-Environment-Clipboard-Formats',
-	#package : 'OS-Windows-Environment',
-	#tag : 'Clipboard-Formats'
+	#name : #WinStandardClipboardFormat,
+	#superclass : #WinClipboardFormat,
+	#category : 'OS-Windows-Environment-Clipboard-Formats'
 }
 
-{ #category : 'accessing - defaults' }
+{ #category : #'accessing - defaults' }
 WinStandardClipboardFormat class >> formatID [
 
 	^ WinUserConstants classPool at: self formatSymbol
 ]
 
-{ #category : 'testing' }
+{ #category : #testing }
 WinStandardClipboardFormat class >> isAbstract [
 
 	^ self == WinStandardClipboardFormat

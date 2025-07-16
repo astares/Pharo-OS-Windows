@@ -13,8 +13,8 @@ on a library you can call :
 Caution, this mechanism is not guaranteed to be Threadsafe.
 "
 Class {
-	#name : 'WinLibrary',
-	#superclass : 'WinHandle',
+	#name : #WinLibrary,
+	#superclass : #WinHandle,
 	#instVars : [
 		'libraryPath',
 		'libraryClass'
@@ -23,12 +23,10 @@ Class {
 		'WinBaseConstants',
 		'WinTypes'
 	],
-	#category : 'OS-Windows-Environment-Processing',
-	#package : 'OS-Windows-Environment',
-	#tag : 'Processing'
+	#category : 'OS-Windows-Environment-Processing'
 }
 
-{ #category : 'instance creation' }
+{ #category : #'instance creation' }
 WinLibrary class >> fromLibraryClass: aFFILibraryClass [
 
 	| lib |
@@ -39,7 +37,7 @@ WinLibrary class >> fromLibraryClass: aFFILibraryClass [
 	^ lib
 ]
 
-{ #category : 'misc' }
+{ #category : #misc }
 WinLibrary class >> getLibraryModule: lpModuleName [
 
 	| val |
@@ -48,7 +46,7 @@ WinLibrary class >> getLibraryModule: lpModuleName [
 	^val.
 ]
 
-{ #category : 'misc' }
+{ #category : #misc }
 WinLibrary class >> loadLibrary: lpFileName [
 
 	| val |
@@ -57,7 +55,7 @@ WinLibrary class >> loadLibrary: lpFileName [
 	^val.
 ]
 
-{ #category : 'misc' }
+{ #category : #misc }
 WinLibrary class >> primFreeLibrary: aHandle [
 
 	^ self
@@ -65,7 +63,7 @@ WinLibrary class >> primFreeLibrary: aHandle [
 		  module: #Kernel32
 ]
 
-{ #category : 'misc' }
+{ #category : #misc }
 WinLibrary class >> primGetLibraryModule: lpModuleName [
 
 ^ self
@@ -75,7 +73,7 @@ WinLibrary class >> primGetLibraryModule: lpModuleName [
 	
 ]
 
-{ #category : 'misc' }
+{ #category : #misc }
 WinLibrary class >> primLoadLibrary: lpFileName [
 
 ^self
@@ -84,7 +82,7 @@ WinLibrary class >> primLoadLibrary: lpFileName [
 
 ]
 
-{ #category : 'actions' }
+{ #category : #actions }
 WinLibrary >> findCalls [
 
 	| set |
@@ -98,7 +96,7 @@ WinLibrary >> findCalls [
 	^ set
 ]
 
-{ #category : 'actions' }
+{ #category : #actions }
 WinLibrary >> freeLibrary [
 
 	self isLoaded ifFalse:[ ^self].
@@ -106,37 +104,37 @@ WinLibrary >> freeLibrary [
 		self setHandle: ExternalAddress null 
 ]
 
-{ #category : 'testing' }
+{ #category : #testing }
 WinLibrary >> isLoaded [
 ^self getHandle isNull not
 
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 WinLibrary >> libraryClass [
 
 	^ libraryClass
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 WinLibrary >> libraryClass: anObject [
 
 	libraryClass := anObject
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 WinLibrary >> libraryPath [
 
 	^ libraryPath
 ]
 
-{ #category : 'accessing' }
+{ #category : #accessing }
 WinLibrary >> libraryPath: anObject [
 
 	libraryPath := anObject
 ]
 
-{ #category : 'actions' }
+{ #category : #actions }
 WinLibrary >> loadLibrary [
 
 	| lib |
@@ -147,7 +145,7 @@ WinLibrary >> loadLibrary [
 	^self.
 ]
 
-{ #category : 'actions' }
+{ #category : #actions }
 WinLibrary >> recompileCalls [
 "warning for test only"
 	| calls |
@@ -155,14 +153,14 @@ WinLibrary >> recompileCalls [
 	calls do: [ :k | k methodClass recompile: k selector ]
 ]
 
-{ #category : 'actions' }
+{ #category : #actions }
 WinLibrary >> reloadLibrary [
 
 	self unloadLibrary.
 	self loadLibrary.
 ]
 
-{ #category : 'actions' }
+{ #category : #actions }
 WinLibrary >> resetCalls [
 
 	| calls |
@@ -171,7 +169,7 @@ WinLibrary >> resetCalls [
 	
 ]
 
-{ #category : 'actions' }
+{ #category : #actions }
 WinLibrary >> unloadLibrary [
 
 	self isLoaded ifTrue: [

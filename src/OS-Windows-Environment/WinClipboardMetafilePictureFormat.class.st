@@ -2,14 +2,12 @@
 Native clipboard format for metafile picture format as defined by the METAFILEPICT structure (CF_METAFILEPICT)
 "
 Class {
-	#name : 'WinClipboardMetafilePictureFormat',
-	#superclass : 'WinStandardClipboardFormat',
-	#category : 'OS-Windows-Environment-Clipboard-Formats',
-	#package : 'OS-Windows-Environment',
-	#tag : 'Clipboard-Formats'
+	#name : #WinClipboardMetafilePictureFormat,
+	#superclass : #WinStandardClipboardFormat,
+	#category : 'OS-Windows-Environment-Clipboard-Formats'
 }
 
-{ #category : 'accessing - defaults' }
+{ #category : #'accessing - defaults' }
 WinClipboardMetafilePictureFormat class >> formatSymbol [
 
 	^ #CF_METAFILEPICT
